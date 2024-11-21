@@ -40,7 +40,7 @@ const AppWrapper = () => {
 root.render(
   <React.StrictMode>
 
-    <BrowserRouter {...routerConfig}>    
+    <BrowserRouter {...routerConfig} basename="/portfolio">    
         <AppWrapper/>
     </BrowserRouter>
   </React.StrictMode>

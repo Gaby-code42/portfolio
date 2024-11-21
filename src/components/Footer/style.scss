@@ -1,3 +1,6 @@
+$breakpoint-mobile-small: 480px;
+$breakpoint-mobile-large: 768px;
+$breakpoint-tablet: 1024px;
 
 .footer{
   &__container{
@@ -5,6 +8,17 @@
     margin-top: 200px;
     position: relative;
     justify-content: space-around;
+    @media (max-width: $breakpoint-tablet) {
+      margin-top: 100px;
+    }
+  
+    @media (max-width: $breakpoint-mobile-large) {
+      
+    }
+  
+    @media (max-width: $breakpoint-mobile-small) {
+      
+    }
   }
 
   &__container::after {

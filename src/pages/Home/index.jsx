@@ -27,11 +27,11 @@ const Home = () => {
       </div>
       <div>
       <h2 className='skill__title'>Skills</h2>
-      <div className="circles-container">
+      <div className="circles__container">
         {circlesData.map((circle, index) => (
-          <div key={index} className="circle-wrapper">
+          <div key={index} className="circles__wrapper">
             <h3 
-            className='circle__name'
+            className='circles__name'
             >{circle.title}</h3>
             <CircleProgressBar percentage={circle.percentage} onChange={() => {}} />
           </div>

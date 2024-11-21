@@ -1,15 +1,42 @@
+$breakpoint-mobile-small: 480px;
+$breakpoint-mobile-large: 768px;
+$breakpoint-tablet: 1024px;
+
 .description {
     display: flex;       
     flex-direction: column;  
     font-family: 'mulish', sans-serif;
     align-items: flex-start;
     text-align: left;
-    width: 40%;
+
+    @media (max-width: $breakpoint-tablet) {
+        font-size: 25px;    
+    }
+
+    @media (max-width: $breakpoint-mobile-large) {
+        
+    }
+
+    @media (max-width: $breakpoint-mobile-small) {
+        align-items: center;
+    }
     &__subtitle {
         order: -1;
         margin: 0;
         font-weight: 400;
         font-size: 35px;
+
+        @media (max-width: $breakpoint-tablet) {
+            font-size: 25px;    
+        }
+
+        @media (max-width: $breakpoint-mobile-large) {
+
+        }
+
+        @media (max-width: $breakpoint-mobile-small) {
+
+        }
     }
       
     &__title {
@@ -25,6 +52,37 @@
         padding: 0;
         line-height: 1;
         transform: translateX(-6px);
+  
+        @media (max-width: $breakpoint-tablet) {
+            font-size: 60px;
+    
+        }
+
+        @media (max-width: $breakpoint-mobile-large) {
+            
+
+        }
+
+        @media (max-width: $breakpoint-mobile-small) {
+            font-size: 46px;
+            text-align: center;
+        }
+    }
+
+    &__text{
+        font-size: clamp(0.8rem, 2vw, 1rem);
+        text-align: justify;
+        width: 40%;
+        @media (max-width: $breakpoint-tablet) {
+            width: 60%;
+        }
+
+        @media (max-width: $breakpoint-mobile-large) {
+            width: 80%;
+        }
+        @media (max-width: $breakpoint-mobile-small) {
+
+        } 
     }  
   }
   
@@ -39,23 +97,18 @@
     font-size: 55px; 
     font-weight: 900;
     font-family: 'Mulish', sans-serif;
+
+    @media (max-width: $breakpoint-tablet) {
+        
+    }
+
+    @media (max-width: $breakpoint-mobile-large) {
+       
+    }
+    @media (max-width: $breakpoint-mobile-small) {
+        background-size: auto;
+        text-align: center;
+        font-size: 40px;
+    } 
 }
 
-.circles-container{
-    display: flex;
-    gap: 40px;
-    font-family: 'mulish', sans-serif;
-}
-
-.circle-wrapper{
-    display:flex ;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.circle__name{
-    font-size: 28px;
-    font-family: 'roboto',sans-serif;
-}

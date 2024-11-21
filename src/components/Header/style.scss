@@ -1,3 +1,7 @@
+$breakpoint-mobile-small: 480px;
+$breakpoint-mobile-large: 768px;
+$breakpoint-tablet: 1024px;
+
 .NavContainer{
   display: flex;
   align-items: center;
@@ -5,12 +9,43 @@
   margin-bottom: 180px;
   position: relative;
   padding-bottom: 47px;
+  width: 100%;
+  
+  @media (max-width: $breakpoint-tablet) {
+    padding-bottom: 35px;
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: $breakpoint-mobile-large) {
+    
+  }
+
+  @media (max-width: $breakpoint-mobile-small) {
+    justify-content: center;
+    padding-bottom:20px;
+    margin-bottom: 40px;
+  }
   &__box{
     list-style-type: none;
     display:flex;
     gap:20px;
     font-size: 21px;
     font-family: 'mulish',sans-serif;
+
+    
+  @media (max-width: $breakpoint-tablet) {
+    gap:10px
+  }
+
+  @media (max-width: $breakpoint-mobile-large) {
+    font-size: 16px;
+    padding: 0; 
+    gap: 20px;  
+  }
+
+  @media (max-width: $breakpoint-mobile-small) {
+    
+  }
   &__link{
     text-decoration: none;
     color: white;
@@ -40,4 +75,17 @@
   font-size: 31px;
   font-weight: 800;
   color: white;
+
+  
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 20px;
+  }
+
+  @media (max-width: $breakpoint-mobile-large) {
+    
+  }
+
+  @media (max-width: $breakpoint-mobile-small) {
+    display:none
+  }
 }
