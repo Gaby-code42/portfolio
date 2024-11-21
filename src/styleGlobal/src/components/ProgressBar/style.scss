@@ -1,0 +1,42 @@
+.circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+}
+
+.circle-progress-wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.circle-progress-wrapper svg {
+  width: 100%;
+  height: 100%;
+}
+
+.circle-progress-background {
+  stroke: #e6e6e6; /* Couleur d'arrière-plan */
+  stroke-width: 10; /* Largeur du trait */
+}
+
+.circle-progress-foreground {
+  stroke: url(#gradient); /* Couleur avec gradient */
+  stroke-width: 10;
+  stroke-linecap: round; /* Arrondir le tracé pour un effet smooth */
+  transition: stroke-dashoffset 0.3s ease; /* Animation fluide */
+}
+
+.circle-percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: bold;
+  color: #4caf50; /* Couleur du texte */
+}

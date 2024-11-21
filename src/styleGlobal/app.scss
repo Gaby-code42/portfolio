@@ -1,0 +1,34 @@
+$breakpoint-mobile-small: 480px;
+$breakpoint-mobile-large: 768px;
+$breakpoint-tablet: 1024px;
+
+
+body {
+  margin: 0;
+  padding: 50px 100px;
+  color: white;
+
+  @media (max-width: $breakpoint-tablet) {
+   padding:20px 40px;
+  }
+
+  @media (max-width: $breakpoint-mobile-large) {
+    
+  }
+
+  @media (max-width: $breakpoint-mobile-small) {
+    
+  }
+}
+
+.home-background {
+  background: url('../assets/fond_home_Plan\ de\ travail\ 1.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.realisation-background {
+  background: url('../assets/background\ realisations_Plan\ de\ travail\ 1.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,61 @@
+.description {
+    display: flex;       
+    flex-direction: column;  
+    font-family: 'mulish', sans-serif;
+    align-items: flex-start;
+    text-align: left;
+    width: 40%;
+    &__subtitle {
+        order: -1;
+        margin: 0;
+        font-weight: 400;
+        font-size: 35px;
+    }
+      
+    &__title {
+        order: 0;
+        background: linear-gradient(90deg, #007CA2, #019960); 
+        background-clip: text; 
+        -webkit-background-clip: text; 
+        color: transparent; 
+        -webkit-text-fill-color: transparent; 
+        font-size: 90px; 
+        font-weight: 900;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        transform: translateX(-6px);
+    }  
+  }
+  
+  .skill__title {
+    margin-top: 20px;
+    margin-bottom: 0;
+    background: linear-gradient(90deg, #007CA2, #019960); 
+    background-size: 20% 100%; 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    font-size: 55px; 
+    font-weight: 900;
+    font-family: 'Mulish', sans-serif;
+}
+
+.circles-container{
+    display: flex;
+    gap: 40px;
+    font-family: 'mulish', sans-serif;
+}
+
+.circle-wrapper{
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.circle__name{
+    font-size: 28px;
+    font-family: 'roboto',sans-serif;
+}

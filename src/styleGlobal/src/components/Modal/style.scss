@@ -1,0 +1,31 @@
+.modal{ 
+    background-image: url('../../styleGlobal/contact_Plan\ de\ travail\ 1.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;                           
+    height: 100%; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+   
+  }
+  
+  .modal-content {
+    
+    border-radius: 8px;
+    max-width: 90vw;
+    max-height: 80vh; 
+  }
+  
+  .close-button {
+    position: relative;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+  }

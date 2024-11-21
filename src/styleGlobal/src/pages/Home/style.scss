@@ -1,0 +1,14 @@
+  
+  .circles-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .circle-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 250px;
+  }
