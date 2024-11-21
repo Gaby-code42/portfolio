@@ -10,7 +10,8 @@ $breakpoint-tablet: 1024px;
     text-align: left;
 
     @media (max-width: $breakpoint-tablet) {
-        font-size: 25px;    
+        font-size: 25px;
+            
     }
 
     @media (max-width: $breakpoint-mobile-large) {
@@ -35,6 +36,7 @@ $breakpoint-tablet: 1024px;
         }
 
         @media (max-width: $breakpoint-mobile-small) {
+        padding: 10px;
 
         }
     }
