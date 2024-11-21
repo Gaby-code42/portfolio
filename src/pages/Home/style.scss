@@ -9,36 +9,11 @@ $breakpoint-tablet: 1024px;
     align-items: flex-start;
     text-align: left;
 
-    @media (max-width: $breakpoint-tablet) {
-        font-size: 25px;
-            
-    }
-
-    @media (max-width: $breakpoint-mobile-large) {
-        
-    }
-
-    @media (max-width: $breakpoint-mobile-small) {
-        align-items: center;
-    }
     &__subtitle {
         order: -1;
         margin: 0;
         font-weight: 400;
         font-size: 35px;
-
-        @media (max-width: $breakpoint-tablet) {
-            font-size: 25px;    
-        }
-
-        @media (max-width: $breakpoint-mobile-large) {
-
-        }
-
-        @media (max-width: $breakpoint-mobile-small) {
-        padding: 10px;
-
-        }
     }
       
     &__title {
@@ -54,37 +29,12 @@ $breakpoint-tablet: 1024px;
         padding: 0;
         line-height: 1;
         transform: translateX(-6px);
-  
-        @media (max-width: $breakpoint-tablet) {
-            font-size: 60px;
-    
-        }
-
-        @media (max-width: $breakpoint-mobile-large) {
-            
-
-        }
-
-        @media (max-width: $breakpoint-mobile-small) {
-            font-size: 46px;
-            text-align: center;
-        }
     }
 
     &__text{
         font-size: clamp(0.8rem, 2vw, 1rem);
         text-align: justify;
         width: 40%;
-        @media (max-width: $breakpoint-tablet) {
-            width: 60%;
-        }
-
-        @media (max-width: $breakpoint-mobile-large) {
-            width: 80%;
-        }
-        @media (max-width: $breakpoint-mobile-small) {
-
-        } 
     }  
   }
   
@@ -99,18 +49,51 @@ $breakpoint-tablet: 1024px;
     font-size: 55px; 
     font-weight: 900;
     font-family: 'Mulish', sans-serif;
+}
 
-    @media (max-width: $breakpoint-tablet) {
-        
+@media (max-width: $breakpoint-tablet) {
+    .description {
+        font-size: 25px;
+
+        &__subtitle {
+            font-size: 25px;    
+        }
+
+        &__title {
+            font-size: 60px;
+        }
+
+        &__text {
+            width: 60%;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mobile-large) {
+    .description {
+        &__text {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mobile-small) {
+    .description {
+        align-items: center;
+
+        &__subtitle {
+            padding: 10px;
+        }
+
+        &__title {
+            font-size: 46px;
+            text-align: center;
+        }
     }
 
-    @media (max-width: $breakpoint-mobile-large) {
-       
-    }
-    @media (max-width: $breakpoint-mobile-small) {
+    .skill__title {
         background-size: auto;
         text-align: center;
         font-size: 40px;
-    } 
+    }
 }
-

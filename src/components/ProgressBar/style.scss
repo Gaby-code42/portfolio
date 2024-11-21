@@ -11,20 +11,6 @@ $breakpoint-tablet: 1024px;
   height: auto;
   text-align: center;
   flex-wrap: wrap;
-
-  @media (max-width: $breakpoint-tablet) {
-  width: 12vh;
-
-  }
-
-  @media (max-width: $breakpoint-mobile-large) {
-
-  }
-
-  @media (max-width: $breakpoint-mobile-small) {
-    width: 6vh;
-
-  }
 }
 
   &__progress-wrapper {
@@ -54,19 +40,7 @@ $breakpoint-tablet: 1024px;
     font-size: 41px;
     font-weight: 600;
     color: white;
-    @media (max-width: $breakpoint-tablet) {
-      font-size: 30px;
-
-    }
-
-    @media (max-width: $breakpoint-mobile-large) {
-      font-size: 18px;
-    }
-
-    @media (max-width: $breakpoint-mobile-small) {
-
-    }
-}
+  }
 }
 
 .circles{
@@ -74,19 +48,6 @@ $breakpoint-tablet: 1024px;
     display: flex;
     gap: 40px;
     font-family: 'roboto', sans-serif;
-
-    @media (max-width: $breakpoint-tablet) {
-    gap:20px
-
-    }
-
-    @media (max-width: $breakpoint-mobile-large) {
-  
-    }
-
-    @media (max-width: $breakpoint-mobile-small) {
-      justify-content: center;
-    }
   }
   &__wrapper{
     display:flex ;
@@ -98,17 +59,39 @@ $breakpoint-tablet: 1024px;
   &__name{
     font-size: 28px;
     font-family: 'roboto',sans-serif;
-    @media (max-width: $breakpoint-tablet) {
-        
-      }
-  
-      @media (max-width: $breakpoint-mobile-large) {
-    
-      }
-  
-      @media (max-width: $breakpoint-mobile-small) {
-        font-size: 12px;    
-      }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .circle__container {
+    width: 12vh;
   }
 
+  .circle__percentage {
+    font-size: 30px;
+  }
+
+  .circles__container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-large) {
+  .circle__percentage {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-small) {
+  .circle__container {
+    width: 6vh;
+  }
+
+  .circles__container {
+    justify-content: center;
+  }
+
+  .circles__name {
+    font-size: 12px;
+  }
 }

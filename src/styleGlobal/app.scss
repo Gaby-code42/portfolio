@@ -8,18 +8,6 @@ body {
   padding: 50px 100px;
   color: white;
   overflow-x: hidden;
-
-  @media (max-width: $breakpoint-tablet) {
-   padding:20px 40px;
-  }
-
-  @media (max-width: $breakpoint-mobile-large) {
-    padding: 10px 20px
-  }
-
-  @media (max-width: $breakpoint-mobile-small) {
-    padding: 5px 10px;
-  }
 }
 
 .home-background {
@@ -27,23 +15,32 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-
-  @media (max-width: $breakpoint-tablet) {
-    background-size: cover;
-    background-attachment: fixed;
-   }
- 
-   @media (max-width: $breakpoint-mobile-large) {
-     
-   }
- 
-   @media (max-width: $breakpoint-mobile-small) {
-    
-   }
 }
 
 .realisation-background {
   background: url('../assets/background\ realisations_Plan\ de\ travail\ 1.svg');
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  body {
+    padding: 20px 40px;
+  }
+
+  .home-background {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-large) {
+  body {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-small) {
+  body {
+    padding: 5px 10px;
+  }
 }
