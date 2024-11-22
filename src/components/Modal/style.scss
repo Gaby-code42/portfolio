@@ -1,5 +1,4 @@
-.modal{ 
-    background-image: url('../../styleGlobal/contact_Plan\ de\ travail\ 1.svg');
+.modal{
     background-repeat: no-repeat;
     background-position: center center;
     width: 100%;                           
@@ -16,16 +15,17 @@
   }
   
   .modal-content {
-    
     border-radius: 8px;
     max-width: 90vw;
     max-height: 80vh; 
   }
   
   .close-button {
-    position: relative;
+    position: absolute;
     border: none;
+    top:10px;
     background: transparent;
     font-size: 20px;
+    color:wheat;
     cursor: pointer;
   }

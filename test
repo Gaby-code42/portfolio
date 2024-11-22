@@ -10,3 +10,5 @@
   @media (max-width: $breakpoint-mobile-small) {
     
   }
+
+  <img src={SVGprojet} alt='background projet' className='imgBackground' />

@@ -1,7 +1,8 @@
+
 import React from 'react';
 import './style.scss'
 
-const Realisation = () => {
+function About (){
     return(
         <div>
 
@@ -9,4 +10,4 @@ const Realisation = () => {
     )
 }
 
-export default Realisation
+export default About

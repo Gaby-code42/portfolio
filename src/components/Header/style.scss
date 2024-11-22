@@ -15,13 +15,15 @@ $breakpoint-tablet: 1024px;
     list-style-type: none;
     display:flex;
     gap:20px;
-    font-size: 21px;
-    font-family: 'mulish',sans-serif;
-
 
   &__link{
     text-decoration: none;
     color: white;
+    background: none;
+    border:none;
+    font-size: 21px;
+    font-family: 'mulish',sans-serif;
+    padding: 0;
   }
 }
 }
@@ -68,9 +70,11 @@ $breakpoint-tablet: 1024px;
   
   @media (max-width: $breakpoint-mobile-large) {
     .NavContainer__box {
-      font-size: 16px;
       padding: 0;
       gap: 20px;
+      &__link{
+        font-size: 16px;
+      }
     }
   }
   

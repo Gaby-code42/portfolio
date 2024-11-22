@@ -11,7 +11,7 @@ body {
 }
 
 .home-background {
-  background: url('../assets/fond_home_Plan\ de\ travail\ 1.svg');
+  background: url('../assets/test_fond_home_Plan\ de\ travail\ 1.svg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -27,20 +27,21 @@ body {
   body {
     padding: 20px 40px;
   }
-
-  .home-background {
-    background-attachment: fixed;
-  }
 }
 
 @media (max-width: $breakpoint-mobile-large) {
   body {
     padding: 10px 20px;
+    
   }
 }
 
 @media (max-width: $breakpoint-mobile-small) {
   body {
     padding: 5px 10px;
+  }
+  .home-background {
+    background-position: left ;
+    margin-bottom: 30px;
   }
 }

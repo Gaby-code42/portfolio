@@ -2,11 +2,14 @@ import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home' 
+import About from './pages/About';
+import Realisation from './pages/Realisation'
+import Project from './pages/Project';
 import Footer from './components/Footer'
 import Header from './components/Header'
-import Realisation from './pages/Realisation'
 import useBodyClass from './hooks/bodyBackground';
 import './styleGlobal/app.scss'
+
 
 
 
@@ -31,6 +34,8 @@ const AppWrapper = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/realisation" element={<Realisation />} />
+        <Route path="/about" element={<About/>}/>
+        <Route path="/realisation/:id" element={<Project/>}/>
       </Routes>
       <Footer />
     </>
