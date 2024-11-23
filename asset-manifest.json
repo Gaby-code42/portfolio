@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.280de17e.css",
-    "main.js": "/portfolio/static/js/main.0603d08d.js",
-    "static/media/fond_home_Plan de travail 1.svg": "/portfolio/static/media/fond_home_Plan de travail 1.f037954a99d027e7a4ca.svg",
-    "static/media/background realisations_Plan de travail 1.svg": "/portfolio/static/media/background realisations_Plan de travail 1.5b993e01fdcd57fc2d2d.svg",
+    "main.css": "/portfolio/static/css/main.8abd1650.css",
+    "main.js": "/portfolio/static/js/main.56f0630b.js",
+    "static/media/test_fond_home_Plan de travail 1.svg": "/portfolio/static/media/test_fond_home_Plan de travail 1.9fe2865c22aaa6cee414.svg",
+    "static/media/background realisations_Plan de travail 1.svg": "/portfolio/static/media/background realisations_Plan de travail 1.281890de9a6b94888783.svg",
+    "static/media/design_projet_Plandetravail1.svg": "/portfolio/static/media/design_projet_Plandetravail1.8220feebd954b4e95a1b3282f8312287.svg",
     "index.html": "/portfolio/index.html",
-    "main.280de17e.css.map": "/portfolio/static/css/main.280de17e.css.map",
-    "main.0603d08d.js.map": "/portfolio/static/js/main.0603d08d.js.map"
+    "main.8abd1650.css.map": "/portfolio/static/css/main.8abd1650.css.map",
+    "main.56f0630b.js.map": "/portfolio/static/js/main.56f0630b.js.map"
   },
   "entrypoints": [
-    "static/css/main.280de17e.css",
-    "static/js/main.0603d08d.js"
+    "static/css/main.8abd1650.css",
+    "static/js/main.56f0630b.js"
   ]
 }
