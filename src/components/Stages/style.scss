@@ -1,3 +1,7 @@
+$breakpoint-mobile-small: 480px;
+$breakpoint-mobile-large: 768px;
+$breakpoint-tablet: 1024px;
+
 .pagination__dots{
     display: flex;
     justify-content: center;
@@ -22,4 +26,16 @@
     
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre sous l'icône pour l'effet de profondeur */
     transform: translateY(-4px); /* Déplacer l'icône vers le haut lors du survol */
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    
+  }
+
+  @media (max-width: $breakpoint-mobile-large) {
+    
+  }
+
+  @media (max-width: $breakpoint-mobile-small) {
+    
   }

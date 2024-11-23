@@ -30,8 +30,7 @@ const Carousel = ({ images }) => {
 
     return (
         <div className="carouselBox">
-            <div className="sizingHud"></div>
-            <div className="carouselBox__sidebar">
+                     
             <CarouselSidebar
                 title={`Projet ${ProjectData.title}`}
                 details={ProjectData.details[currentIndex]}
@@ -44,7 +43,6 @@ const Carousel = ({ images }) => {
                 activeImage={ActiveDot}
                 inactiveImage={InactiveDot}
             />                
-            </div>
             <img src={MySvgCard} alt='description' className="backgroundCard"/>
             <div className="Carousel">
                 <img 

@@ -1,42 +1,44 @@
+$breakpoint-mobile-small: 480px;
+$breakpoint-mobile-large: 768px;
+$breakpoint-tablet: 1024px;
+
+
 .Carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex;   
     overflow: hidden;
     border-radius: 25px;
+    width: 50%; 
+    max-width: 800px; 
+    height: 31vw;
     position: absolute;
-    right: 8vw;
-    top: 3.5vw;
+    right:8vw;
+    top:8vh;
+    
 
-    &__Image{
-        width: 48vw;
-        height: auto;
-        object-fit: cover;
-        justify-content: center;
+    &__Image {
+        height: 100%; /* Adapte l'image à la hauteur du carrousel */
+        object-fit: cover; /* Ajuste l'image au conteneur */
     }
-    &__Dots{
+
+    &__Dots {
         display: flex;
-        position: absolute;
-        top:30vw;
-        left:3vw;
-        gap:1vh;
+        padding: 9vh 12vw;
+        gap: 1vh;
     }
-    &__Button{       
+
+    &__Button {       
         background: transparent;
         border: none;               
     }
 }
 
-.carouselBox{
+.carouselBox {
     display: flex;
-    position: relative;
-    &__sidebar{
-        position: absolute;
-        width: 53%;
-        left: 2vw;
-        top: -1vh;
+    position: relative;    
+    &__blocText {
+        position: relative;
     }
-    &__title{
+    &__title {
         font-size: 55px;
         background: linear-gradient(90deg, #089FE0, #019960); 
         background-clip: text; 
@@ -44,20 +46,77 @@
         color: transparent; 
         -webkit-text-fill-color: transparent;
         font-family: "roboto", sans-serif;
-        display: inline;
-    }
-    &__description{
         position: absolute;
-        top:20vh;
-        padding-left: 2vw;
+        top: -9vw;
+        left: 5vw;
+    }
+    &__description {
+        padding: 0 6vw;
         text-align: justify;
         font-family: "roboto", sans-serif;
+        width: 30vw;
+        height: 25vh;
     }
-    &__details{
-        position: absolute;
-        top:10vh;
-        padding-left: 2vw;
+    &__details {
+        padding: 7vh 6vw;
         font-size: 30px;
         font-family: "roboto", sans-serif;
+    }
+    &__sidebar{
+        width: 50%;
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .carouselBox{
+        &__title{
+            font-size: 30px;
+        }
+        &__details{
+            padding: 0 6vw;
+            font-size: 20px;
+        }
+        &__description{
+            font-size: 12px;
+        }
+    }
+    .Carousel{
+        top: 2vh;
+        &__Dots{
+            padding: 0 0 5vw 8vw;
+        }
+    }
+}
+
+
+@media (max-width: $breakpoint-mobile-large) {
+  
+}
+
+@media (max-width: $breakpoint-mobile-small) {
+    .carouselBox{
+        
+        &__title{
+            left:18vw;
+            width: 24vh;
+        }
+        &__details{
+            padding: 7vh 12vw;
+            font-size: 20px;
+        }
+        &__description{
+            font-size: 12px;
+            width: 75vw;
+            padding-top: 21vh;
+            padding-left: 10.5vw;
+        }
+    }
+    .Carousel{
+        top: 15vh;
+        width: 81%;
+        height: 24vh;
+        &__Dots{
+            padding: 0 0 8vw 20vw;
+        }
     }
 }

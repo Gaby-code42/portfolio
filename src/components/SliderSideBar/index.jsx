@@ -18,10 +18,11 @@ const CarouselSidebar = ({
   }) => {
     return (
       <div className="carouselBox__sidebar">
+        <div className="carouselBox__blocText">
         <h2 className="carouselBox__title">{title}</h2>
         <h3 className="carouselBox__details">{details}</h3>
         <p className="carouselBox__description">{description}</p>
-        
+        </div>
         <div className="Carousel__Dots">
             <button onClick={onPrevious} className="Carousel__Button">
                 <img src={LeftArrow} alt="fleche de gauche" />

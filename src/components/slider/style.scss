@@ -1,13 +1,30 @@
+$breakpoint-mobile-small: 480px;
+$breakpoint-mobile-large: 768px;
+$breakpoint-tablet: 1024px;
+
 .backgroundCard{
     position: absolute;
     z-index: -1; 
     top:-12vh;
 }
-
-.sizingHud{
-width: 100vw;
-height: 80vh;
+@media (max-width: $breakpoint-tablet) {
+    
 }
+
+@media (max-width: $breakpoint-mobile-large) {
+  
+}
+
+@media (max-width: $breakpoint-mobile-small) {
+  .backgroundCard{
+    transform: rotate(-90deg);
+    width: 90vh;
+    top:14vh;
+    right: -50vw;
+  }
+}
+
+
 
 
 
