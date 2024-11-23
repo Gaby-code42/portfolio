@@ -7,7 +7,6 @@ $breakpoint-tablet: 1024px;
     flex-direction: column;  
     font-family: 'mulish', sans-serif;
     align-items: flex-start;
-    text-align: left;
 
     &__subtitle {
         order: -1;
@@ -18,7 +17,7 @@ $breakpoint-tablet: 1024px;
       
     &__title {
         order: 0;
-        background: linear-gradient(90deg, #007CA2, #019960); 
+        background: linear-gradient(90deg, #089FE0, #0FAE62); 
         background-clip: text; 
         -webkit-background-clip: text; 
         color: transparent; 
@@ -41,7 +40,7 @@ $breakpoint-tablet: 1024px;
   .skill__title {
     margin-top: 20px;
     margin-bottom: 0;
-    background: linear-gradient(90deg, #007CA2, #019960); 
+    background: linear-gradient(90deg, #089FE0, #0FAE62); 
     background-size: 20% 100%; 
     background-clip: text; 
     -webkit-background-clip: text; 

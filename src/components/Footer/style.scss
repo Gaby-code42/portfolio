@@ -30,12 +30,16 @@ $breakpoint-tablet: 1024px;
   &__name{
     justify-self: center;
     border-bottom: 1px solid white;
-    padding: 10px 5px 26px 5px;    
+    padding: 10px 5px 26px 5px;
+    font-size: 20px;    
+    font-weight: 800;
   }
 
   &__job{
     justify-self: center;
     padding: 10px 5px 10px 5px;
+    font-size: 20px;
+    font-weight: 800;
   }
 
   &__nav {
@@ -45,6 +49,10 @@ $breakpoint-tablet: 1024px;
     margin: 0;
     gap:10px;
     padding: 0;
+
+    &__title{
+      font-size: 24px;
+    }
 
     &__link{
       text-decoration: none;

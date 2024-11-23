@@ -1,0 +1,25 @@
+.pagination__dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh ;
+}
+
+
+.pagination__icon.active-icon{
+    color:#089FE0;
+}
+
+.pagination__icon {
+    display: flex;
+    gap:20px;
+    font-size: 2vw; /* Taille de l'icône */
+    color: white; /* Couleur de l'icône */
+    transition: all 0.3s ease; /* Transition pour l'effet d'ombre */
+  }
+  
+.pagination__icon:hover {
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre sous l'icône pour l'effet de profondeur */
+    transform: translateY(-4px); /* Déplacer l'icône vers le haut lors du survol */
+  }

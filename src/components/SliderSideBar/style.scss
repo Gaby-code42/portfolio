@@ -1,0 +1,63 @@
+.Carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 25px;
+    position: absolute;
+    right: 8vw;
+    top: 3.5vw;
+
+    &__Image{
+        width: 48vw;
+        height: auto;
+        object-fit: cover;
+        justify-content: center;
+    }
+    &__Dots{
+        display: flex;
+        position: absolute;
+        top:30vw;
+        left:3vw;
+        gap:1vh;
+    }
+    &__Button{       
+        background: transparent;
+        border: none;               
+    }
+}
+
+.carouselBox{
+    display: flex;
+    position: relative;
+    &__sidebar{
+        position: absolute;
+        width: 53%;
+        left: 2vw;
+        top: -1vh;
+    }
+    &__title{
+        font-size: 55px;
+        background: linear-gradient(90deg, #089FE0, #019960); 
+        background-clip: text; 
+        -webkit-background-clip: text; 
+        color: transparent; 
+        -webkit-text-fill-color: transparent;
+        font-family: "roboto", sans-serif;
+        display: inline;
+    }
+    &__description{
+        position: absolute;
+        top:20vh;
+        padding-left: 2vw;
+        text-align: justify;
+        font-family: "roboto", sans-serif;
+    }
+    &__details{
+        position: absolute;
+        top:10vh;
+        padding-left: 2vw;
+        font-size: 30px;
+        font-family: "roboto", sans-serif;
+    }
+}

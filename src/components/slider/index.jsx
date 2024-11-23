@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import './style.scss'
-import LeftArrow from '../../assets/fleche gauche.png'
-import RightArrow from '../../assets/fleche droite.png'
 import Data from '../../data/index.json'
+import './style.scss'
+import CarouselSidebar from "../SliderSideBar";
+import ActiveDot from '../../assets/active.png'
+import InactiveDot from '../../assets/inactif.png'
+import MySvgCard from '../../assets/design_projet_Plandetravail1.svg'
+
 
 const Carousel = ({ images }) => {
 
@@ -21,14 +24,28 @@ const Carousel = ({ images }) => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
     };
 
+    const handleDotClick = (index) => {
+        setCurrentIndex(index);
+      };
+
     return (
-        <div className="test">
-            <div>
-                <button onClick={Previous} className="Carousel__Button__Previous"><img src={LeftArrow} alt="fleche de gauche"/></button>
-                <button onClick={Next} className="Carousel__Button__Next"><img src={RightArrow} alt="fleche de gauche"/></button>
-                <span className="Carousel__indicatorImage">{currentIndex+1}/{images.length}</span>
+        <div className="carouselBox">
+            <div className="sizingHud"></div>
+            <div className="carouselBox__sidebar">
+            <CarouselSidebar
+                title={`Projet ${ProjectData.title}`}
+                details={ProjectData.details[currentIndex]}
+                description={ProjectData.description[currentIndex]}
+                images={images}
+                currentIndex={currentIndex}
+                onPrevious={Previous}
+                onNext={Next}
+                onDotClick={handleDotClick}
+                activeImage={ActiveDot}
+                inactiveImage={InactiveDot}
+            />                
             </div>
-            <p>{ProjectData.description[currentIndex]}</p>
+            <img src={MySvgCard} alt='description' className="backgroundCard"/>
             <div className="Carousel">
                 <img 
                 src={images[currentIndex]}
