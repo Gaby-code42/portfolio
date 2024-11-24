@@ -4,31 +4,31 @@ $breakpoint-tablet: 1024px;
 
 
 .Carousel {
-    display: flex;   
+    display: flex;  
+    align-items: center; 
     overflow: hidden;
     border-radius: 25px;
     width: 50%; 
     max-width: 800px; 
-    height: 31vw;
-    position: absolute;
-    right:8vw;
-    top:8vh;
-    
+    height: 31vw;    
 
     &__Image {
-        height: 100%; /* Adapte l'image à la hauteur du carrousel */
-        object-fit: cover; /* Ajuste l'image au conteneur */
+        height: 110%; 
+        object-fit: cover; 
     }
 
     &__Dots {
         display: flex;
-        padding: 9vh 12vw;
+        padding: 6.5vw 12vw;
         gap: 1vh;
     }
 
-    &__Button {       
+    &__Button {    
         background: transparent;
-        border: none;               
+        border: none;   
+        img{
+            width: 4vw;
+        }            
     }
 }
 .NavContainer{
@@ -36,86 +36,95 @@ $breakpoint-tablet: 1024px;
 }
 .carouselBox {
     display: flex;
-    position: relative;    
+    position: relative;
+    align-items: center;
+    height: 57vw;
     &__blocText {
         position: relative;
     }
     &__title {
-        font-size: 55px;
-        background: linear-gradient(90deg, #089FE0, #019960); 
+        font-size: calc(1vh + 2vw);
+        background: linear-gradient(180deg, #089FE0, #0FAE62); 
         background-clip: text; 
         -webkit-background-clip: text; 
         color: transparent; 
         -webkit-text-fill-color: transparent;
         font-family: "roboto", sans-serif;
+        padding-left: 4.5vw;
+        margin: 0;
+
     }
     &__description {
         padding: 0 6vw;
         text-align: justify;
         font-family: "roboto", sans-serif;
         width: 30vw;
-        height: 55vh;
+        height: 17vw;
     }
     &__details {
-        padding: 7vh 6vw;
+        padding: 0 6vw;  
         font-size: 30px;
         font-family: "roboto", sans-serif;
     }
     &__sidebar{
-        width: 50%;
+        width: 43%;
     }
 }
 
 @media (max-width: $breakpoint-tablet) {
     .carouselBox{
-        &__title{
-            font-size: 30px;
-        }
         &__details{
             padding: 0 6vw;
             font-size: 20px;
         }
         &__description{
             font-size: 12px;
-        }
-    }
-    .Carousel{
-        top: 2vh;
-        &__Dots{
-            padding: 0 0 5vw 8vw;
+            overflow: auto;
         }
     }
 }
 
 
 @media (max-width: $breakpoint-mobile-large) {
-  
+.carouselBox{
+    &__title{
+        top:0;
+    }
+    &__details{
+        font-size: 15px;
+    }   
+    }
 }
 
 @media (max-width: $breakpoint-mobile-small) {
     .carouselBox{
-        
+        flex-direction: column;
+        height: 100vh;        
         &__title{
-            left:18vw;
             width: 24vh;
+            padding-top: 2.2vh
         }
         &__details{
-            padding: 7vh 12vw;
             font-size: 20px;
         }
         &__description{
-            font-size: 12px;
-            width: 75vw;
-            padding-top: 21vh;
-            padding-left: 10.5vw;
+        padding: 0;
+        width: 66vw;
+        height: 38vw
+        }
+        &__sidebar{
+            width: auto;
         }
     }
-    .Carousel{
-        top: 15vh;
-        width: 81%;
-        height: 24vh;
+    .Carousel{        
+        width: 67%;
+        height: 30vh;
         &__Dots{
-            padding: 0 0 8vw 20vw;
+            justify-content: center;
+            padding: 3vh 0 ;
         }
+    }
+    .Carousel__Button img {
+        width: 8vw;
     }
 }
