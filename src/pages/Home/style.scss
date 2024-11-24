@@ -2,11 +2,15 @@ $breakpoint-mobile-small: 480px;
 $breakpoint-mobile-large: 768px;
 $breakpoint-tablet: 1024px;
 
+.home{
+    padding-left: 10vh;
+}
 .description {
     display: flex;       
     flex-direction: column;  
     font-family: 'mulish', sans-serif;
     align-items: flex-start;
+    padding-top:6vh;
 
     &__subtitle {
         order: -1;
@@ -77,6 +81,10 @@ $breakpoint-tablet: 1024px;
 }
 
 @media (max-width: $breakpoint-mobile-small) {
+    .home{
+        padding: 0;
+    }
+
     .description {
         align-items: center;
 

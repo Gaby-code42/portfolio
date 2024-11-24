@@ -1,15 +1,16 @@
 $breakpoint-mobile-small: 480px;
-$breakpoint-mobile-large: 768px;
+$breakpoint-mobile-large: 767px;
 $breakpoint-tablet: 1024px;
 
 .NavContainer{
+  padding: 5vh 10vh ;
+  padding-bottom: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 180px;
+  margin-bottom: 100px;
   position: relative;
-  padding-bottom: 47px;
-  width: 100%;
+  
   
   &__box{
     list-style-type: none;
@@ -80,8 +81,8 @@ $breakpoint-tablet: 1024px;
   
   @media (max-width: $breakpoint-mobile-small) {
     .NavContainer {
+      padding: 5vh 4vh;
       justify-content: center;
-      padding-bottom: 20px;
       margin-bottom: 40px;
     }
   

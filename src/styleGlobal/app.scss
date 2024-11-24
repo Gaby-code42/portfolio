@@ -6,7 +6,6 @@ $breakpoint-tablet: 1024px;
 
 body {
   margin: 0;
-  padding: 50px 100px;
   color: white;
   overflow-x: hidden;
 }
@@ -25,22 +24,15 @@ body {
 }
 
 @media (max-width: $breakpoint-tablet) {
-  body {
-    padding: 20px 40px;
-  }
+
 }
 
 @media (max-width: $breakpoint-mobile-large) {
-  body {
-    padding: 10px 20px;
-    
-  }
+ 
 }
 
 @media (max-width: $breakpoint-mobile-small) {
-  body {
-    padding: 5px 10px;
-  }
+
   .home-background {
     background-position: left ;
     margin-bottom: 30px;

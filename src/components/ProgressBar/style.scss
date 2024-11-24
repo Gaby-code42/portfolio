@@ -1,5 +1,5 @@
 $breakpoint-mobile-small: 480px;
-$breakpoint-mobile-large: 768px;
+$breakpoint-mobile-large: 767px;
 $breakpoint-tablet: 1024px;
 
 .circle{
@@ -74,12 +74,21 @@ $breakpoint-tablet: 1024px;
   .circles__container {
     gap: 20px;
   }
+  .circles__name{
+    font-size: 19px;
+  }
 }
 
 @media (max-width: $breakpoint-mobile-large) {
-  .circle__percentage {
+  .circle{
+    &__percentage {
     font-size: 18px;
+    }
   }
+  .circles__name{
+    font-size: 19px;
+  }
+  
 }
 
 @media (max-width: $breakpoint-mobile-small) {

@@ -4,19 +4,26 @@ import { Link } from 'react-router-dom'
 import './style.scss'
 
 const Realisation = () => {
-    const ProjectCard = Data.map((project)=>{
-        const encodedTitle = encodeURIComponent(project.id)
 
+    const ProjectCard = Data.map((Project)=>{
+    const encodedTitle = encodeURIComponent(Project.id)
         return(
-            <li key={project.id}>
-                <Link to={`/realisation/${encodedTitle}`}>text
+            <li key={Project.id} className='cards__list__card'>
+                <Link to={`/realisation/${encodedTitle}`}>
+                <img src={Project.pictures[0]} alt={Project.title} />
                 </Link>
-            </li>
+            </li>      
         )
     })
+    
     return(
-        <div>
-        {ProjectCard}      
+        <div className='cards'>
+        <div className='cards__BannerTitle'>
+        <h2> Mes réalisations </h2>
+        </div>    
+        <ul className='cards__list'>
+        {ProjectCard}
+        </ul>      
         </div>
     )
 }

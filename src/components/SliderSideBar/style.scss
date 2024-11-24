@@ -1,5 +1,5 @@
 $breakpoint-mobile-small: 480px;
-$breakpoint-mobile-large: 768px;
+$breakpoint-mobile-large: 767px;
 $breakpoint-tablet: 1024px;
 
 
@@ -31,7 +31,9 @@ $breakpoint-tablet: 1024px;
         border: none;               
     }
 }
-
+.NavContainer{
+    margin-bottom: 100px;
+}
 .carouselBox {
     display: flex;
     position: relative;    
@@ -46,16 +48,13 @@ $breakpoint-tablet: 1024px;
         color: transparent; 
         -webkit-text-fill-color: transparent;
         font-family: "roboto", sans-serif;
-        position: absolute;
-        top: -9vw;
-        left: 5vw;
     }
     &__description {
         padding: 0 6vw;
         text-align: justify;
         font-family: "roboto", sans-serif;
         width: 30vw;
-        height: 25vh;
+        height: 55vh;
     }
     &__details {
         padding: 7vh 6vw;

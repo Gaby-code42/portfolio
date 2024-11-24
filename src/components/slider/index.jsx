@@ -5,7 +5,7 @@ import './style.scss'
 import CarouselSidebar from "../SliderSideBar";
 import ActiveDot from '../../assets/active.png'
 import InactiveDot from '../../assets/inactif.png'
-import MySvgCard from '../../assets/design_projet_Plandetravail1.svg'
+
 
 
 const Carousel = ({ images }) => {
@@ -43,7 +43,6 @@ const Carousel = ({ images }) => {
                 activeImage={ActiveDot}
                 inactiveImage={InactiveDot}
             />                
-            <img src={MySvgCard} alt='description' className="backgroundCard"/>
             <div className="Carousel">
                 <img 
                 src={images[currentIndex]}
