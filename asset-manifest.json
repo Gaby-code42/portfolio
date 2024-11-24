@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.a40f91ec.css",
+    "main.css": "/portfolio/static/css/main.49d3047c.css",
     "main.js": "/portfolio/static/js/main.3b18d871.js",
     "static/media/test_fond_home_Plan de travail 1.svg": "/portfolio/static/media/test_fond_home_Plan de travail 1.9fe2865c22aaa6cee414.svg",
     "static/media/background realisations_Plan de travail 1.svg": "/portfolio/static/media/background realisations_Plan de travail 1.281890de9a6b94888783.svg",
     "static/media/design_projet_Plandetravail1.svg": "/portfolio/static/media/design_projet_Plandetravail1.8220feebd954b4e95a1b.svg",
+    "static/media/design_projet_vertical_Plandetravail1.svg": "/portfolio/static/media/design_projet_vertical_Plandetravail1.f7fabde168bc4eeb2544.svg",
     "index.html": "/portfolio/index.html",
-    "main.a40f91ec.css.map": "/portfolio/static/css/main.a40f91ec.css.map",
+    "main.49d3047c.css.map": "/portfolio/static/css/main.49d3047c.css.map",
     "main.3b18d871.js.map": "/portfolio/static/js/main.3b18d871.js.map"
   },
   "entrypoints": [
-    "static/css/main.a40f91ec.css",
+    "static/css/main.49d3047c.css",
     "static/js/main.3b18d871.js"
   ]
 }
