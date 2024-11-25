@@ -10,7 +10,7 @@ $breakpoint-tablet: 1024px;
     text-align: justify;
     font-family: "mulish", sans-serif;
     &__title{
-        font-size: 3vw;
+        font-size: calc(2vw + 2vh);
         font-weight: 800;
         background: linear-gradient(90deg, #089FE0, #0FAE62);  
         background-clip: text; 
@@ -63,5 +63,41 @@ $breakpoint-tablet: 1024px;
     }  
     a{
         padding: 10px;
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    
+}
+
+@media (max-width: $breakpoint-mobile-large) {
+  
+}
+
+@media (max-width: $breakpoint-mobile-small) {
+    .aboutContainer{
+        img{
+            order:1
+        }
+        &__subContainer{
+            order:2
+        }
+        &__htmlCss{
+            flex-direction: column;
+        }
+        &__javascript{
+            flex-direction: column;
+        }
+        &__react{
+            flex-direction: column
+            
+        }
+        &__nodeJs{
+            flex-direction: column;
+        }
+        &__dev{
+            flex-direction: column;
+        }
+
     }
 }
