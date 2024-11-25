@@ -8,21 +8,104 @@ $breakpoint-tablet: 1024px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    margin: 5vw;
+   
+        &__title{
+            font-size: calc(3vh + 2vw);
+            background: linear-gradient(180deg, #089FE0, #0FAE62); 
+            background-clip: text; 
+            -webkit-background-clip: text; 
+            color: transparent; 
+            -webkit-text-fill-color: transparent;
+            font-family: "roboto", sans-serif;
+        }
         &__list{
             display: flex;
             list-style: none;
-            gap: 1vh;
+            gap: 3vw;
             padding: 0;
+        
             &__card{
-                
+                width: 50%;
+                border: 2px solid #089FE0;
+                border-radius: 25px;
+                padding: 3vw;      
+                background-color: rgba(8, 159, 224, 0.2);
                 img{
                     overflow: hidden;
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    border-radius: 5px;
+                    border-radius: 25px;
+                    
+               }
+            }
+            &__cardText{
+                height: 18vh;
+            }
+            &__cardVisuel{
+                height: 70%;
+                a{
+                    color: white;
+                    text-decoration: none; /* Supprime le soulignement */
+                    color: inherit;
+                }
+                h3{
+                    font-size: 2vw;
+                }
+                p{
+                    font-size: calc(1vw + 2px);
                 }
             }
         }
     } 
+
+
+  @media (max-width: $breakpoint-tablet) {
+    
+  }
+
+  @media (max-width: $breakpoint-mobile-large) {
+    .cards{
+    &__list{
+        &__cardText{
+            height: 25vh;
+        }
+        &__cardVisuel{
+            p{
+                font-size: calc(1vw + 5px);
+            }
+        }
+        &__card{
+            img{
+                height: 50vh;;
+            }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile-small) {
+    .cards{
+        &__list{
+            flex-direction: column;
+            align-items: center;     
+            &__card{
+                width: 80%;
+                img{
+                    height: 30vh;
+                }
+            }       
+            &__cardVisuel{
+                h3{
+                    font-size: 4vw;
+                }
+                p{
+                    font-size: calc(3vw + 2px);
+                }
+            }
+        }
+    }
+  }
     

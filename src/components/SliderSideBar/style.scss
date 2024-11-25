@@ -114,11 +114,15 @@ $breakpoint-tablet: 1024px;
         }
         &__sidebar{
             width: auto;
+            order: 2;
+
         }
     }
-    .Carousel{        
+    .Carousel{     
+        margin-top: 7vh;   
         width: 67%;
         height: 30vh;
+        order:1;
         &__Dots{
             justify-content: center;
             padding: 3vh 0 ;

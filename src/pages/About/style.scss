@@ -1,3 +1,34 @@
 $breakpoint-mobile-small: 480px;
 $breakpoint-mobile-large: 768px;
 $breakpoint-tablet: 1024px;
+
+.aboutContainer{
+    img{
+        width:500px;
+        height: 500px;
+        object-fit: contain;
+    }
+    &__htmlCss{
+        background-color: rgba(8, 159, 224, 0.1); ;
+        display: flex;
+    }
+    &__javascript{
+        display: flex;
+    }
+    &__react{
+        background-color: rgba(8, 159, 224, 0.1);
+        display: flex;
+    }
+    &__nodeJs{
+        display: flex;
+    }
+    &__dev{
+        background-color: rgba(8, 159, 224, 0.2);
+        display: flex;
+    }
+    &__subContainer{
+        
+        width: 80%;
+    }
+
+}
