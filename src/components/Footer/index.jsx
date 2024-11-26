@@ -30,13 +30,13 @@ function Footer(){
                 <nav>
                     <ul className='reseaux'>
                        <li>
-                            <a href="https://www.instagram.com/votre_profil" target="_blank" rel="noopener noreferrer" className="reseaux__link" alt="lien vers la page instagram de Raphael"><FontAwesomeIcon icon={faInstagram} size="2x" /></a>
+                            <a href="https://www.instagram.com/votre_profil" target="_blank" rel="noopener noreferrer" className="reseaux__link" aria-label="lien vers la page instagram de Raphael"><FontAwesomeIcon icon={faInstagram} size="2x" /></a>
                        </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/votre_profil" target="_blank" rel="noopener noreferrer" className="reseaux__link" alt="lien vers la page linkdin de Raphael"><FontAwesomeIcon icon={faLinkedin} size="2x" /></a>
+                            <a href="https://www.linkedin.com/in/votre_profil" target="_blank" rel="noopener noreferrer" className="reseaux__link" aria-label="lien vers la page linkdin de Raphael"><FontAwesomeIcon icon={faLinkedin} size="2x" /></a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/votre_profil" target="_blank" rel="noopener noreferrer" className="reseaux__link" alt="lien vers la page twitter de Raphael"><FontAwesomeIcon icon={faTwitter} size="2x" /></a>
+                            <a href="https://twitter.com/votre_profil" target="_blank" rel="noopener noreferrer" className="reseaux__link" aria-label="lien vers la page twitter de Raphael"><FontAwesomeIcon icon={faTwitter} size="2x" /></a>
                         </li>
                     </ul>
                 </nav>
