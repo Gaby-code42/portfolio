@@ -14,6 +14,7 @@ function Project (){
         <div className='background__projet'>
             <Carousel images = {ProjectData.pictures}/>
         </div>
+        
     )
 }
 

@@ -24,6 +24,8 @@ const Carousel = ({ images }) => {
         setCurrentIndex(index);
       };
 
+    const imagePath = require(`../../data/image/${ProjectData.pictures[currentIndex]}`)
+
     return (
         <div className="carouselBox">
                      
@@ -36,16 +38,24 @@ const Carousel = ({ images }) => {
                 currentIndex={currentIndex}
                 onPrevious={Previous}
                 onNext={Next}
-                onDotClick={handleDotClick}
-
-            />                
+                onDotClick={handleDotClick}  
+                link={ProjectData.link}
+            />   
+                    {currentIndex === 4 && (
+            <div className="carouselBox__link">
+            <a href={ProjectData.link} target="_blank" rel="noopener noreferrer">
+            {ProjectData.link}
+            </a>
+            </div>
+        )}         
             <div className="Carousel">
                 <img 
-                src={images[currentIndex]}
+                src={imagePath}
                 alt={`Slide ${currentIndex}`}
                 className="Carousel__Image"
                 />            
             </div>
+           
         </div>
 
     );

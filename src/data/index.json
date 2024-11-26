@@ -2,29 +2,28 @@
     {
     "id":"1",
     "title":"React",
-    
-    "pictures": ["https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg",
-        "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg",
-        "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg",
-        "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg",
-        ""],
+    "pictures": ["react.png", "test.png"],
     "details":["Description.","Problématique.","Résolution.","Compétences acquises.","Pour aller plus loin."],
     "shortdescription":"Venez découvrir mon projet React , projet que réalisé lors de mon cursus avec OpenClassRoom. Il aura pour but de créer une interface utilisateur pour un site d'hébergement 'Kasa'",
-    "description":["'Kasa' est un projet développé avec React dans le cadre de ma formation chez OpenClassrooms. L'objectif de ce projet est de créer une interface utilisateur pour un site d'hébergement, permettant à des hôtes de mettre en ligne leurs appartements et aux utilisateurs de réserver des logements. Le site repose sur une base de données JSON, contenant des informations relatives aux appartements, telles que les photos, les descriptions, et d'autres détails pertinents."],
+    "description":[
+                "'Kasa' est un projet développé avec React dans le cadre de ma formation chez OpenClassrooms. Ce site d'hébergement permet aux utilisateurs de consulter une liste d'appartements sous forme de cartes. En cliquant sur une carte, l'utilisateur est redirigé vers une page d'annonce dédiée, qui affiche un carrousel d'images et des accordéons avec des informations supplémentaires sur l'appartement.Le projet inclut également une page d'erreur pour gérer les liens ou les pages invalides. Les données de l’application, telles que les descriptions, les images et les informations sur les logements, sont stockées dans une base de données JSON. Ce projet m’a permis de travailler sur la gestion des états avec React, la création d’interfaces interactives et l'optimisation de l'expérience utilisateur avec des fonctionnalités comme les carrousels et les accordéons.",
+                "Les principales problématiques rencontrées dans le projet 'Kasa' concernaient la gestion des données, l’interactivité des éléments et la gestion des erreurs. Tout d'abord, la gestion des données a été réalisée via un dossier JSON, ce qui m'a permis d'apprendre à structurer et manipuler des données statiques de manière dynamique dans l'application. Ensuite, la création d'un carrousel d'images a présenté un défi en termes de gestion de l'état et de la navigation fluide entre les images. J'ai également intégré des accordéons avec un effet de slide pour afficher des informations supplémentaires de manière interactive, en veillant à une transition fluide et accessible. Enfin, la mise en place d'une page d'erreur a été nécessaire pour gérer les erreurs de navigation et améliorer l'expérience utilisateur, en affichant un message clair lorsqu'une page n'existait pas ou était incorrecte.",
+                "Pour surmonter les problématiques rencontrées, j'ai adopté des solutions simples et efficaces. Pour gérer les données via un fichier JSON, j'ai structuré les informations de manière claire et j'ai utilisé les hooks useState et useEffect de React pour charger et afficher dynamiquement les données dans l'application. Pour le carrousel, bien qu'il n'y ait pas d'animation complexe, j'ai mis en place une logique de navigation simple en permettant à l'utilisateur de passer d'une image à l'autre en cliquant sur des boutons 'précédent' et 'suivant'. En ce qui concerne les accordéons avec effet de slide, j'ai utilisé des transitions CSS pour rendre l'affichage des informations supplémentaires plus fluide et agréable. Enfin, pour la gestion des erreurs, j'ai créé une page dédiée qui redirige l'utilisateur vers un message d'erreur en cas de page introuvable, améliorant ainsi l'expérience utilisateur et la navigation sur le site.",
+                "Ce projet m'a permis de développer plusieurs compétences techniques et pratiques. J'ai renforcé mes connaissances en React, en particulier dans l'utilisation des hooks (useState, useEffect) pour la gestion dynamique des données. J'ai également appris à manipuler des fichiers JSON pour structurer et afficher des données dans une application React. La création du carrousel m'a permis de mieux comprendre la gestion de l'état et de la navigation entre les éléments. L'implémentation des accordéons avec effet de slide m'a donné l'occasion de maîtriser les transitions CSS pour améliorer l'interactivité de l'interface. Enfin, la gestion des erreurs m'a permis d'améliorer mes compétences en gestion de la navigation, en créant des pages d'erreur pour gérer les liens cassés et les routes incorrectes, offrant ainsi une expérience utilisateur plus fluide et sécurisée.",
+                "Pour aller plus loin, plusieurs améliorations peuvent être apportées à ce projet. Tout d'abord, il serait intéressant d'implémenter un système de filtration par note, permettant aux utilisateurs de trier les appartements en fonction de la qualité des avis. Une barre de recherche pourrait également être ajoutée pour permettre aux utilisateurs de trouver plus facilement des appartements en fonction de critères spécifiques (localisation, prix, type de logement, etc.). La navigation pourrait être améliorée en ajoutant des menus ou des catégories, afin de rendre l'interface encore plus intuitive. Une autre amélioration serait d'intégrer une API pour rendre les données plus dynamiques, par exemple en récupérant les informations des appartements directement depuis une base de données distante, permettant ainsi de maintenir les informations à jour sans avoir à modifier le fichier JSON manuellement. Enfin, je prévois de partager le code source du projet sur GitHub afin de rendre le projet accessible et permettre à d'autres développeurs d'y contribuer. Vous pouvez consulter mon projet GitHub "
+            ],
     "date":["Date de réalisation : 5 octobre 2024"],
-    "technologies": []
+    "link": ["https://github.com/Gaby-code42/kasa"]
     }
     ,
     {
      "id":"2",
      "title":"Node.js",
      "details":["Description.","Problématique.","Résolution.","Compétences acquises.","Pour aller plus loin."],
-     "pictures": [
-        "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg",
-        "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg"],
+     "pictures": ["test.png", "react.png" ],
      "shortdescription":"Venez découvrir mon projet Node.js et MongoDb , projet réalisé lors de mon cursus avec OpenClassRoom. Il aura pour but la gestion backend d'une librairie en ligne , avec l'utilisation d'une API Restful",
      "description":[],
      "date":["Date de réalisation : 18 octobre 2024"],
-     "technologies": []
+     "link": ["https://github.com/Gaby-code42/Backend_"]
     }
 ]

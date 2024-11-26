@@ -7,11 +7,15 @@ const Realisation = () => {
 
     const ProjectCard = Data.map((Project)=>{
     const encodedTitle = encodeURIComponent(Project.id)
+    const imagePath = require(`../../data/image/${Project.pictures[0]}`) 
+     
+
         return(
+            
             <li key={Project.id} className='cards__list__card'>
                 <div className='cards__list__cardVisuel'>
                 <Link  to={`/realisation/${encodedTitle}`}>
-                <img src={Project.pictures[0]} alt={Project.title}/>
+                <img src={imagePath} alt={Project.title}/>
                 <div className='cards__list__cardText'>
                 <h3>{Project.title}</h3>
                 <p>{Project.shortdescription || "Pas de description disponible"}</p>

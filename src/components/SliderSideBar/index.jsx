@@ -16,6 +16,7 @@ const CarouselSidebar = ({
     onDotClick,
     activeImage,
     inactiveImage,
+ 
   }) => {
     return (
       <div className="carouselBox__sidebar">

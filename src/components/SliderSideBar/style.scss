@@ -10,7 +10,7 @@ $breakpoint-tablet: 1024px;
     border-radius: 25px;
     width: 50%; 
     max-width: 800px; 
-    height: 31vw;    
+    height: 26vw;    
 
     &__Image {
         height: 110%; 
@@ -19,7 +19,7 @@ $breakpoint-tablet: 1024px;
 
     &__Dots {
         display: flex;
-        padding: 6.5vw 12vw;
+        padding: 5.5vw 12vw;
         gap: 1vh;
     }
 
@@ -59,6 +59,7 @@ $breakpoint-tablet: 1024px;
         font-family: "roboto", sans-serif;
         width: 30vw;
         height: 17vw;
+        font-size: 1vw;
     }
     &__date{
         padding: 0 6vw;
@@ -70,6 +71,15 @@ $breakpoint-tablet: 1024px;
     }
     &__sidebar{
         width: 43%;
+    }
+    &__link{
+        position: absolute;
+        bottom: 35%;
+        top:65%;
+        left: 15%;
+        a{
+        color:white;
+    }
     }
 }
 
