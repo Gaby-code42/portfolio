@@ -1,22 +1,31 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.5ec2705f.css",
-    "main.js": "/portfolio/static/js/main.9199136b.js",
+    "main.css": "/portfolio/static/css/main.8f2110d0.css",
+    "main.js": "/portfolio/static/js/main.994b492e.js",
+    "static/media/react1.png": "/portfolio/static/media/react1.b1d8f3043ba49e8cf13a.png",
+    "static/media/node1.png": "/portfolio/static/media/node1.4b330e253db549133e22.png",
+    "static/media/node3.png": "/portfolio/static/media/node3.1363fd70d92c5848f855.png",
+    "static/media/end.png": "/portfolio/static/media/end.a98385af11333be47987.png",
+    "static/media/react4.png": "/portfolio/static/media/react4.67913dcb16156fd20904.png",
     "static/media/test_fond_home_Plan de travail 1.svg": "/portfolio/static/media/test_fond_home_Plan de travail 1.9fe2865c22aaa6cee414.svg",
     "static/media/background realisations_Plan de travail 1.svg": "/portfolio/static/media/background realisations_Plan de travail 1.281890de9a6b94888783.svg",
+    "static/media/react2.png": "/portfolio/static/media/react2.a8110eb48a8d18af56d4.png",
+    "static/media/node4.png": "/portfolio/static/media/node4.e9887df57bfc1124aefb.png",
     "static/media/Node_logo_NodeJS.png": "/portfolio/static/media/Node_logo_NodeJS.e1d9233897fbe03fda7b.png",
     "static/media/pngwing.com.png": "/portfolio/static/media/pngwing.com.820a10e8cc164d8c58a8.png",
+    "static/media/node2.png": "/portfolio/static/media/node2.1536d65a06a1bec9c257.png",
+    "static/media/react3.png": "/portfolio/static/media/react3.b2f1c80a06f85487a54b.png",
     "static/media/html-css-logo-png-png-image-873073.png": "/portfolio/static/media/html-css-logo-png-png-image-873073.9a68af768b4fd4c08dd9.png",
     "static/media/Image-Source-PlusPNG.com.png": "/portfolio/static/media/Image-Source-PlusPNG.com.7fbff05fbadd6ec1f5e2.png",
     "static/media/JavaScript-Logo.png": "/portfolio/static/media/JavaScript-Logo.ec1c0379d0e87cc38946.png",
     "static/media/design_projet_Plandetravail1.svg": "/portfolio/static/media/design_projet_Plandetravail1.8220feebd954b4e95a1b.svg",
     "static/media/design_projet_vertical_Plandetravail1.svg": "/portfolio/static/media/design_projet_vertical_Plandetravail1.f7fabde168bc4eeb2544.svg",
     "index.html": "/portfolio/index.html",
-    "main.5ec2705f.css.map": "/portfolio/static/css/main.5ec2705f.css.map",
-    "main.9199136b.js.map": "/portfolio/static/js/main.9199136b.js.map"
+    "main.8f2110d0.css.map": "/portfolio/static/css/main.8f2110d0.css.map",
+    "main.994b492e.js.map": "/portfolio/static/js/main.994b492e.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ec2705f.css",
-    "static/js/main.9199136b.js"
+    "static/css/main.8f2110d0.css",
+    "static/js/main.994b492e.js"
   ]
 }
