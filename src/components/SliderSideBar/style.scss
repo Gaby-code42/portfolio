@@ -3,23 +3,20 @@ $breakpoint-mobile-large: 767px;
 $breakpoint-tablet: 1024px;
 
 
-.Carousel {
-    display: flex;  
-    align-items: center; 
-    overflow: hidden;
-    border-radius: 25px;
-    width: 50%; 
-    max-width: 800px; 
-    height: 26vw;    
+.Carousel { 
+    height: calc(20vw + 20vh);
+    width: 50vw;
+    display: flex;
 
     &__Image {
-        height: 110%; 
-        object-fit: cover; 
+        width: 100%;
+        border-radius: 25px;
+
     }
 
     &__Dots {
         display: flex;
-        padding: 5.5vw 12vw;
+        padding: 7vw 12vw;
         gap: 1vh;
     }
 
@@ -63,6 +60,8 @@ $breakpoint-tablet: 1024px;
     }
     &__date{
         padding: 0 6vw;
+        position: absolute;
+
     }
     &__details {
         padding: 0 6vw;  
@@ -127,11 +126,13 @@ $breakpoint-tablet: 1024px;
         &__sidebar{
             width: auto;
             order: 2;
-
+        }
+        &__date{
+            font-size: 8px;
         }
     }
     .Carousel{     
-        margin-top: 7vh;   
+        margin-top: 9vh;   
         width: 67%;
         height: 30vh;
         order:1;

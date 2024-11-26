@@ -33,6 +33,7 @@ $breakpoint-tablet: 1024px;
                 border-radius: 25px;
                 padding: 3vw;      
                 background-color: rgba(8, 159, 224, 0.2);
+                height: 70vh;
                 img{
                     overflow: hidden;
                     width: 100%;
@@ -90,10 +91,12 @@ $breakpoint-tablet: 1024px;
   @media (max-width: $breakpoint-mobile-small) {
     .cards{
         &__list{
+            height: 100%;
             flex-direction: column;
             align-items: center;     
             &__card{
                 width: 80%;
+                height: 50vh;    
                 img{
                     height: 30vh;
                 }
