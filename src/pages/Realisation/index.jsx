@@ -24,7 +24,7 @@ const Realisation = () => {
     
     return(
         <div className='cards'>
-        <h2 className='cards__title'> Mes réalisations </h2>   
+        <h1 className='cards__title'> Mes réalisations </h1>   
         <div>        
         <ul className='cards__list'>
         {ProjectCard}

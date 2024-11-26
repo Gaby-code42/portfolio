@@ -10,11 +10,11 @@ import PngDev from '../../assets/pngwing.com.png'
 function About (){
     return(
         <div className='aboutContainer'>
-            <h2 className='aboutContainer__title'> Mes Compétences</h2>
+            <h1 className='aboutContainer__title'> Mes Compétences</h1>
             <div className='aboutContainer__htmlCss'>
             <div className='aboutContainer__subContainer'>
             
-        <h3>Intégration web avec HTML - CSS</h3>
+        <h2>Intégration web avec HTML - CSS</h2>
         <p>
             Les compétences essentielles pour l'intégration web avec HTML et CSS incluent l'utilisation de Flexbox et CSS Grid,
             deux méthodes puissantes pour créer des mises en page flexibles et réactives.
@@ -89,7 +89,7 @@ function About (){
             </div>
             <div className='aboutContainer__dev'>
             <div className='aboutContainer__subContainer'>
-            <h3>Optimisation et débug</h3>
+            <h2>Optimisation et débug</h2>
         <p>
             Techniques pour améliorer les performances des sites web et identifier les problèmes.
             <br/>
@@ -110,7 +110,7 @@ function About (){
             <li>Google Keyword Planner et KWFinder, utilisés pour la recherche de mots-clés et l'optimisation du contenu.</li>
             <li>Google Search Console, qui permet de suivre les performances SEO et les erreurs de site.</li>
         </ul>
-        <h3>Gestion de projet et outils de développeurs</h3>
+        <h2>Gestion de projet et outils de développeurs</h2>
         <p>
             Outils et méthodes pour gérer efficacement un projet web et suivre son déroulement.
         <br/>
