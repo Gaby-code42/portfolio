@@ -52,7 +52,6 @@ $breakpoint-tablet: 1024px;
         font-family: "roboto", sans-serif;
         padding-left: 4.5vw;
         margin: 0;
-
     }
     &__description {
         padding: 0 6vw;
@@ -60,6 +59,9 @@ $breakpoint-tablet: 1024px;
         font-family: "roboto", sans-serif;
         width: 30vw;
         height: 17vw;
+    }
+    &__date{
+        padding: 0 6vw;
     }
     &__details {
         padding: 0 6vw;  

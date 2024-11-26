@@ -3,14 +3,10 @@ import { useParams } from "react-router-dom";
 import Data from '../../data/index.json'
 import './style.scss'
 import CarouselSidebar from "../SliderSideBar";
-import ActiveDot from '../../assets/active.png'
-import InactiveDot from '../../assets/inactif.png'
-
-
 
 const Carousel = ({ images }) => {
 
-    const { id } = useParams();
+    const { id} = useParams();
     const decodedTitle = decodeURIComponent(id);
     const ProjectData = Data.find((Project) => Project.id === decodedTitle)
 
@@ -35,13 +31,13 @@ const Carousel = ({ images }) => {
                 title={`Projet ${ProjectData.title}`}
                 details={ProjectData.details[currentIndex]}
                 description={ProjectData.description[currentIndex]}
+                date={ProjectData.date[currentIndex]}
                 images={images}
                 currentIndex={currentIndex}
                 onPrevious={Previous}
                 onNext={Next}
                 onDotClick={handleDotClick}
-                activeImage={ActiveDot}
-                inactiveImage={InactiveDot}
+
             />                
             <div className="Carousel">
                 <img 

@@ -8,6 +8,7 @@ const CarouselSidebar = ({
     title,
     details,
     description,
+    date,
     images,
     currentIndex,
     onPrevious,
@@ -22,6 +23,7 @@ const CarouselSidebar = ({
         <h1 className="carouselBox__title">{title}</h1>
         <h2 className="carouselBox__details">{details}</h2>
         <p className="carouselBox__description">{description}</p>
+        <p className="carouselBox__date">{date}</p>
         </div>
         <div className="Carousel__Dots">
             <button onClick={onPrevious} className="Carousel__Button">
