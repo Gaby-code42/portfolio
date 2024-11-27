@@ -77,12 +77,14 @@ $breakpoint-tablet: 1024px;
         top:65%;
         left: 15%;
         a{
+        font-size: 15px;
         color:white;
     }
     }
 }
 
 @media (max-width: $breakpoint-tablet) {
+
     .carouselBox{
         &__details{
             padding: 0 6vw;
@@ -92,25 +94,29 @@ $breakpoint-tablet: 1024px;
             font-size: 12px;
             overflow: auto;
         }
+        &__link{
+            left:6%
+        }  
     }
 }
 
 
 @media (max-width: $breakpoint-mobile-large) {
 .carouselBox{
-    &__title{
-        top:0;
-    }
-    &__details{
+        &__title{
+            top:0;
+        }
+        &__details{
         font-size: 15px;
-    }   
+        }
+
     }
 }
 
 @media (max-width: $breakpoint-mobile-small) {
     .carouselBox{
         flex-direction: column;
-        height: 100vh;        
+        height: 85vh;        
         &__title{
             width: 24vh;
             padding-top: 2.2vh
@@ -130,11 +136,18 @@ $breakpoint-tablet: 1024px;
         &__date{
             font-size: 8px;
         }
+        &__link{
+            left:auto;
+            top:77%;
+            a{
+                font-size: 8px;
+            }
+        }  
     }
     .Carousel{     
         margin-top: 9vh;   
         width: 67%;
-        height: 30vh;
+        height: 25vh;
         order:1;
         &__Dots{
             justify-content: center;

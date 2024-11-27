@@ -82,12 +82,21 @@ $breakpoint-tablet: 1024px;
   
   @media (max-width: $breakpoint-mobile-small) {
     .NavContainer {
-      padding: 5vh 4vh;
+
+      padding: 5vh 3vh;
       justify-content: center;
       margin-bottom: 40px;
+      
     }
   
     .Logo {
       display: none;
+    }
+  }
+
+  .NavContainer__box {
+
+    &__link{
+      font-size: 14px;
     }
   }
