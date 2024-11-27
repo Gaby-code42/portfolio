@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.8f2110d0.css",
+    "main.css": "/portfolio/static/css/main.9d27dc3e.css",
     "main.js": "/portfolio/static/js/main.994b492e.js",
     "static/media/react1.png": "/portfolio/static/media/react1.b1d8f3043ba49e8cf13a.png",
     "static/media/node1.png": "/portfolio/static/media/node1.4b330e253db549133e22.png",
@@ -21,11 +21,11 @@
     "static/media/design_projet_Plandetravail1.svg": "/portfolio/static/media/design_projet_Plandetravail1.8220feebd954b4e95a1b.svg",
     "static/media/design_projet_vertical_Plandetravail1.svg": "/portfolio/static/media/design_projet_vertical_Plandetravail1.f7fabde168bc4eeb2544.svg",
     "index.html": "/portfolio/index.html",
-    "main.8f2110d0.css.map": "/portfolio/static/css/main.8f2110d0.css.map",
+    "main.9d27dc3e.css.map": "/portfolio/static/css/main.9d27dc3e.css.map",
     "main.994b492e.js.map": "/portfolio/static/js/main.994b492e.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f2110d0.css",
+    "static/css/main.9d27dc3e.css",
     "static/js/main.994b492e.js"
   ]
 }
