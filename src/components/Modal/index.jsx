@@ -1,18 +1,19 @@
-import React from 'react';
+import React from "react";
+import "./style.scss"; // Style pour la modale
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleXmark}  from "@fortawesome/free-solid-svg-icons";
 
-import './style.scss';
-
-const Modal = ({ show, handleClose, children }) => {
-  if (!show) return null;
+const Modal = ({ isOpen, onClose, children }) => {
+  if (!isOpen) return null;
 
   return (
-    <div className='modal'>
-    <div className="modal-overlay" onClick={handleClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="close-button" onClick={handleClose}>X</button>
+    <div className="modal__overlay" onClick={onClose}>
+      <div className="modal__content" onClick={(e) => e.stopPropagation()}>
+        <button className="modal__close" onClick={onClose}>
+        <FontAwesomeIcon icon={faCircleXmark} />
+        </button>
         {children}
       </div>
-    </div>
     </div>
   );
 };

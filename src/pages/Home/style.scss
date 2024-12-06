@@ -10,7 +10,7 @@ $breakpoint-tablet: 1024px;
     flex-direction: column;  
     font-family: 'mulish', sans-serif;
     align-items: flex-start;
-    padding-top:6vh;
+    padding-top: 20vh;
 
     &__subtitle {
         order: -1;
@@ -20,7 +20,6 @@ $breakpoint-tablet: 1024px;
     }
       
     &__title {
-        order: 0;
         background: linear-gradient(90deg, #089FE0, #0FAE62); 
         background-clip: text; 
         -webkit-background-clip: text; 
@@ -29,9 +28,9 @@ $breakpoint-tablet: 1024px;
         font-size: 90px; 
         font-weight: 900;
         margin: 0;
-        padding: 0;
+        padding: 0px;
         line-height: 1;
-        transform: translateX(-6px);
+        
     }
 
     &__text{

@@ -101,7 +101,8 @@ function About (){
             En parallèle, rédiger un cahier de recette pour tester un site garantit que toutes les fonctionnalités sont correctement implémentées et fonctionnelles avant la mise en production.
             Il est aussi important de posséder des connaissances intermédiaires en SEO (Search Engine Optimization), pour optimiser la visibilité du site sur les moteurs de recherche.
             Les compétences en accessibilité web sont essentielles pour rendre le site accessible à tous les utilisateurs, y compris ceux en situation de handicap.
-            Plusieurs outils d'accessibilité et d'optimisation de performances sont utilisés pour tester et améliorer ces aspects, comme :</p>
+            Plusieurs outils d'accessibilité et d'optimisation de performances sont utilisés pour tester et améliorer ces aspects, comme :
+            </p>
         <ul>
             <li>Wave, qui permet de tester l'accessibilité d'un site.</li>
             <li>Lighthouse, pour évaluer les performances, l'accessibilité et le SEO.</li>
@@ -119,6 +120,7 @@ function About (){
         Pour cela, plusieurs outils et méthodes permettent de suivre efficacement le projet et de coordonner les efforts des développeurs.
         Il est important de pouvoir organiser le travail, définir les priorités et communiquer au sein de l’équipe.
         Les compétences suivantes sont essentielles dans ce domaine :
+        </p>
         <ul>
             <li>Suivi du projet avec des outils comme Miro, Notion et l'utilisation d'un Kanban.</li>
             <li>Application de méthodes agiles telles que SCRUM, Kaizen et Pomodoro pour une gestion du temps et une productivité accrues.</li>
@@ -130,7 +132,6 @@ function About (){
             <li>Installation d’un environnement de développement front-end, une étape clé pour démarrer le projet de manière structurée.</li>
             <li>Utilisation de Slack pour assurer une communication fluide au sein de l’équipe de développement.</li>
         </ul>
-        </p>
             </div>
             <img src={PngDev} alt='logo node.js' className='aboutContainer__img'></img>
             </div>

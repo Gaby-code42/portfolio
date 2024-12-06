@@ -14,26 +14,9 @@ const CircleProgressBar = ({ percentage, onChange }) => {
     setOffset(newOffset);
   }, [percentage, circumference]);   // Le useEffect se déclenche à chaque changement de `percentage`
 
-  const handleClick = (e) => {
-    const svg = e.target.closest('svg');
-    const rect = svg.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-
-    const x = e.clientX - centerX;
-    const y = e.clientY - centerY;
-
-    const angle = Math.atan2(y, x);
-    const degrees = (angle * 180) / Math.PI + 90;
-
-    let newPercentage = ((degrees + 360) % 360) / 360 * 100;
-    if (newPercentage < 0) newPercentage += 100;
-    onChange(newPercentage);
-  };
-
   return (
     <div className="circle__container">
-      <div className="circle__progress-wrapper" onClick={handleClick}>
+      <div className="circle__progress-wrapper">
         <svg viewBox="0 0 120 120" preserveAspectRatio="xMidYMid meet">
           <defs>
             <linearGradient id="gradient" x1="35%" y1="0%" x2="80%" y2="90%">

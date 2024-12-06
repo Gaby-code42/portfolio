@@ -4,6 +4,7 @@ $breakpoint-tablet: 1024px;
 
 .circle{
   &__container {
+  z-index: -1;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,36 +1,37 @@
-import { useLocation , Link} from "react-router-dom";
-import React from 'react';
-import './style.scss'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import Modal from "../Modal"; // Assurez-vous que le chemin est correct
+import ModalHeader from "../ModalContent/ModalSidebar"
+import "./style.scss";
 
-function Header (){
-    const location = useLocation();
+function Header() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-    return(
-        <div className="NavContainer">
-            <div>
-                <Link className='Logo' to="/"> 
-                RAPHAEL BONACINA
-                </Link>
-            </div>
-            <nav>
-                <ul className="NavContainer__box"> 
-                <li>
-                    <Link to='/' className={`NavContainer__box__link ${location.pathname === '/' ? 'active__link' : ''}`}>Accueil</Link>
-                </li>
-                <li>
-                    <Link to='/realisation' className={`NavContainer__box__link ${location.pathname === '/realisation' ? 'active__link' : ''}`}>Réalisation</Link>
-                </li>
-                <li>
-                    <Link to='/about' className={`NavContainer__box__link ${location.pathname === '/about' ? 'active__link' : ''}`}>À propos</Link>
-                </li>
-                <li>
-                    <a className="NavContainer__box__link" href="mailto:tonemail@example.com?subject=Demande d'information&body=Bonjour, je souhaite en savoir plus sur vos services.">Contact</a>
-                </li>
-            </ul>
-            </nav>
-            
-        </div>
-    )
+  const openModal = () => setIsModalOpen(true);
+
+  const closeModal = () => setIsModalOpen(false);
+
+  return (
+    <div className="NavContainer">
+      <div>
+        <Link className="Logo" to="/">
+          RAPHAEL BONACINA
+        </Link>
+      </div>
+      <div>
+      <FontAwesomeIcon
+        icon={faBars}
+        onClick={openModal}
+        style={{ cursor: "pointer" }} // Assurez-vous que le pointeur change au survol
+      />
+      <Modal isOpen={isModalOpen} onClose={closeModal}>
+        <ModalHeader onClose={closeModal}/>
+      </Modal>
+      </div>
+    </div>
+  );
 }
 
-export default Header
+export default Header;

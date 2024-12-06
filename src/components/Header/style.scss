@@ -1,28 +1,30 @@
 $breakpoint-mobile-small: 480px;
 $breakpoint-mobile-large: 767px;
-$breakpoint-tablet: 1024px;
+$breakpoint-tablet: 1023px;
 
 .NavContainer{
   padding: 5vh 10vh ;
-  padding-bottom: 10vh;
+  padding-bottom: 5vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 100px;
-  position: relative;
-  
-  
+  position: fixed;
+  width: 90%;
+  background: linear-gradient(90deg, rgba(30, 23, 80, 0.6), rgba(91, 19, 19, 0.6));
   &__box{
+    padding-top: 5vh;
     list-style-type: none;
     display:flex;
-    gap:20px;
+    gap:40px;
+    flex-direction: column;
 
   &__link{
     text-decoration: none;
-    color: white;
+    color: black;
     background: none;
     border:none;
-    font-size: 21px;
+    font-size: 20px;
+    font-weight: 800;
     font-family: 'mulish',sans-serif;
     padding: 0;
   }
@@ -35,7 +37,7 @@ $breakpoint-tablet: 1024px;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 3px; 
+  height: 2px; 
   background: linear-gradient(to right, 
     rgba(255, 255, 255, 0) 0%, 
     rgba(255, 255, 255, 1) 25%, 
@@ -58,7 +60,7 @@ $breakpoint-tablet: 1024px;
     .NavContainer {
       padding-bottom: 35px;
       margin-bottom: 80px;
-      padding: 5vh 8vh;
+      padding: 5vh 4vh;
     }
   
     .NavContainer__box {
@@ -94,9 +96,3 @@ $breakpoint-tablet: 1024px;
     }
   }
 
-  .NavContainer__box {
-
-    &__link{
-      font-size: 14px;
-    }
-  }

@@ -9,7 +9,7 @@ $breakpoint-tablet: 1024px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 5vw;
+    margin: 0 5vh;   
    
         &__title{
             font-size: calc(3vh + 2vw);
@@ -19,6 +19,7 @@ $breakpoint-tablet: 1024px;
             color: transparent; 
             -webkit-text-fill-color: transparent;
             font-family: "roboto", sans-serif;
+            padding-top: 15vh;
         }
         &__list{
             display: flex;
@@ -65,12 +66,18 @@ $breakpoint-tablet: 1024px;
 
 
   @media (max-width: $breakpoint-tablet) {
-    
+    .cards{
+        &__list{
+                height: 80vh;
+        }
+    }
+
   }
 
   @media (max-width: $breakpoint-mobile-large) {
     .cards{
     &__list{
+        height: 45vh;
         &__cardText{
             height: 25vh;
         }
@@ -80,8 +87,10 @@ $breakpoint-tablet: 1024px;
             }
         }
         &__card{
+            height: 40vh;
             img{
-                height: 50vh;;
+                
+                height: 20vh;;
             }
         }
       }

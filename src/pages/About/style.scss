@@ -10,6 +10,7 @@ $breakpoint-tablet: 1024px;
     text-align: justify;
     font-family: "mulish", sans-serif;
     &__title{
+        padding-top: 15vh;
         font-size: calc(2vw + 2vh);
         font-weight: 800;
         background: linear-gradient(90deg, #089FE0, #0FAE62);  
