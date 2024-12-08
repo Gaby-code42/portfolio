@@ -30,7 +30,8 @@ $breakpoint-tablet: 1024px;
         margin: 0;
         padding: 0px;
         line-height: 1;
-        
+        z-index: -1;
+        transform: translateX(-6px)        
     }
 
     &__text{
