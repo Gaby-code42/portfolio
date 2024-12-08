@@ -4,12 +4,14 @@ $breakpoint-tablet: 1024px;
 
 .footer{
   &__container{
+    z-index: -1;
     padding: 10vh 10vh;
     display: flex;
     margin-top: 200px;
     position: relative;
     justify-content: space-around;
     font-family: "mulish", sans-serif;
+    
   
   }
 

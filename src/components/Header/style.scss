@@ -1,6 +1,6 @@
 $breakpoint-mobile-small: 480px;
-$breakpoint-mobile-large: 767px;
-$breakpoint-tablet: 1023px;
+$breakpoint-mobile-large: 768px;
+$breakpoint-tablet: 1024px;
 
 .NavContainer{
   padding: 5vh 10vh ;
@@ -12,23 +12,29 @@ $breakpoint-tablet: 1023px;
   width: 90%;
   background: linear-gradient(90deg, rgba(30, 23, 80, 0.6), rgba(91, 19, 19, 0.6));
   &__box{
-    padding-top: 5vh;
+    padding-top: 8vh;
+    padding-left: 0;
+    align-items: center;
+    justify-content: center;
     list-style-type: none;
     display:flex;
     gap:40px;
     flex-direction: column;
 
-  &__link{
-    text-decoration: none;
-    color: black;
-    background: none;
-    border:none;
-    font-size: 20px;
-    font-weight: 800;
-    font-family: 'mulish',sans-serif;
-    padding: 0;
+      &__link{
+        text-decoration: none;
+        color: white;
+        background: none;
+        border:none;
+        font-size: 2.5vh;
+        font-weight: 800;
+        font-family: 'mulish',sans-serif;
+        padding: 0;
+      }
+    }
+  &__BurgerButton{
+  height: 3vh;
   }
-}
 }
 
 .NavContainer::after {
@@ -60,35 +66,32 @@ $breakpoint-tablet: 1023px;
     .NavContainer {
       padding-bottom: 35px;
       margin-bottom: 80px;
-      padding: 5vh 4vh;
-    }
-  
-    .NavContainer__box {
-      gap: 10px;
-    }
-  
-    .Logo {
+      &__box{
+        &__link{
+        font-size: 2vh;
+      }
+    } 
+  }
+     .Logo {
       font-size: 20px;
     }
   }
   
   @media (max-width: $breakpoint-mobile-large) {
-    .NavContainer__box {
-      padding: 0;
-      gap: 20px;
-      &__link{
-        font-size: 16px;
+    .NavContainer{
+      &__box {
+        &__link{
+          font-size: 1.5vh;
+        }
       }
     }
   }
   
   @media (max-width: $breakpoint-mobile-small) {
     .NavContainer {
-
       padding: 5vh 3vh;
       justify-content: center;
       margin-bottom: 40px;
-      
     }
   
     .Logo {

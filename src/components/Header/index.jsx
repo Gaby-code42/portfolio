@@ -22,12 +22,17 @@ function Header() {
       </div>
       <div>
       <FontAwesomeIcon
+        className="NavContainer__BurgerButton"
         icon={faBars}
         onClick={openModal}
-        style={{ cursor: "pointer" }} // Assurez-vous que le pointeur change au survol
+         // Assurez-vous que le pointeur change au survol
       />
-      <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <ModalHeader onClose={closeModal}/>
+      <Modal
+            isOpen={isModalOpen}
+            onClose={closeModal}>
+      <ModalHeader 
+            onClose={closeModal}
+      />
       </Modal>
       </div>
     </div>
