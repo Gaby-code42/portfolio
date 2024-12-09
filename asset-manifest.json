@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.2b7a798e.css",
-    "main.js": "/portfolio/static/js/main.31f94740.js",
+    "main.css": "/portfolio/static/css/main.cd2b02ec.css",
+    "main.js": "/portfolio/static/js/main.b605e8b0.js",
     "static/media/react1.png": "/portfolio/static/media/react1.b1d8f3043ba49e8cf13a.png",
     "static/media/node1.png": "/portfolio/static/media/node1.4b330e253db549133e22.png",
     "static/media/node3.png": "/portfolio/static/media/node3.1363fd70d92c5848f855.png",
@@ -21,11 +21,11 @@
     "static/media/design_projet_Plandetravail1.svg": "/portfolio/static/media/design_projet_Plandetravail1.8220feebd954b4e95a1b.svg",
     "static/media/design_projet_vertical_Plandetravail1.svg": "/portfolio/static/media/design_projet_vertical_Plandetravail1.f7fabde168bc4eeb2544.svg",
     "index.html": "/portfolio/index.html",
-    "main.2b7a798e.css.map": "/portfolio/static/css/main.2b7a798e.css.map",
-    "main.31f94740.js.map": "/portfolio/static/js/main.31f94740.js.map"
+    "main.cd2b02ec.css.map": "/portfolio/static/css/main.cd2b02ec.css.map",
+    "main.b605e8b0.js.map": "/portfolio/static/js/main.b605e8b0.js.map"
   },
   "entrypoints": [
-    "static/css/main.2b7a798e.css",
-    "static/js/main.31f94740.js"
+    "static/css/main.cd2b02ec.css",
+    "static/js/main.b605e8b0.js"
   ]
 }
