@@ -19,7 +19,9 @@ $breakpoint-tablet: 1024px;
 
   @media (max-width: $breakpoint-mobile-small) {
     .background__projet{
-    background-image: url('../../assets/design_projet_vertical_Plandetravail1.svg');
-    height: 100vh;
+      background-image: url('../../assets/design_projet_vertical_Plandetravail1.svg');
+      height: 100vh;
+      padding-top: 13vh;
+      background-position-y: 12vh;
     }
   }

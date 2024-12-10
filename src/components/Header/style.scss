@@ -11,6 +11,7 @@ $breakpoint-tablet: 1024px;
   position: fixed;
   width: 90%;
   background: linear-gradient(90deg, rgba(30, 23, 80, 0.6), rgba(91, 19, 19, 0.6));
+  z-index: 2;
   &__box{
     padding-top: 8vh;
     padding-left: 0;
@@ -79,6 +80,7 @@ $breakpoint-tablet: 1024px;
   
   @media (max-width: $breakpoint-mobile-large) {
     .NavContainer{
+      padding: 5vh 4vh;
       &__box {
         &__link{
           font-size: 1.5vh;

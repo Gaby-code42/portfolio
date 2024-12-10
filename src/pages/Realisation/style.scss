@@ -2,7 +2,7 @@ $breakpoint-mobile-small: 480px;
 $breakpoint-mobile-large: 768px;
 $breakpoint-tablet: 1024px;
 
-.cards{
+.realisation{
     font-family: 'mulish', sans-serif;
     display: flex;
     flex-direction: column;
@@ -10,65 +10,60 @@ $breakpoint-tablet: 1024px;
     align-items: center;
     flex-wrap: wrap;
     margin: 0 5vh;   
-   
-        &__title{
-            font-size: calc(3vh + 2vw);
-            background: linear-gradient(180deg, #089FE0, #0FAE62); 
-            background-clip: text; 
-            -webkit-background-clip: text; 
-            color: transparent; 
-            -webkit-text-fill-color: transparent;
-            font-family: "roboto", sans-serif;
-            padding-top: 15vh;
-        }
-        &__list{
-            display: flex;
-            list-style: none;
-            gap: 3vw;
-            padding: 0;
-            height: 70vh;
-        
-            &__card{
-                width: 50%;
-                border: 2px solid #089FE0;
-                border-radius: 25px;
-                padding: 3vw;      
-                background-color: rgba(8, 159, 224, 0.2);
-                height: 70vh;
-                img{
-                    overflow: hidden;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    border-radius: 25px;
-                    
-               }
-            }
-            &__cardText{
-                height: 18vh;
-            }
-            &__cardVisuel{
-                height: 70%;
-                a{
-                    color: white;
-                    text-decoration: none; /* Supprime le soulignement */
-                    color: inherit;
-                }
-                h3{
-                    font-size: 2vw;
-                }
-                p{
-                    font-size: calc(1vw + 2px);
-                }
-            }
-        }
-    } 
 
+    &__title{
+        font-size: calc(3vh + 2vw);
+        background: linear-gradient(180deg, #089FE0, #0FAE62); 
+        background-clip: text; 
+        -webkit-background-clip: text; 
+        color: transparent; 
+        -webkit-text-fill-color: transparent;
+        font-family: "roboto", sans-serif;
+        padding-top: 15vh;
+    }
+} 
+.cards{
+    &__list{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    flex-wrap: wrap;  
+    padding: 0;  
+    li{ 
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 21.5%;
+        background-color:rgb(0, 247, 255, 0.1);
+        padding: 20px;
+        border-radius: 25px;
+        border: rgb(0, 225, 233) 2px solid;
+        box-shadow: 0px 0px 20px rgba(0, 247, 255, 0.6);
+    }
+    li:hover{
+        transform: scale(1.05); /* Agrandit légèrement l'élément */
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+    }
+    &__card{
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+    &__icons{
+        font-size: 15vh;
+    }
+    
+    }
+}
 
   @media (max-width: $breakpoint-tablet) {
     .cards{
         &__list{
-                height: 80vh;
+            gap:24px;
+            li{
+                width: 27%;
+            }
         }
     }
 
@@ -76,47 +71,21 @@ $breakpoint-tablet: 1024px;
 
   @media (max-width: $breakpoint-mobile-large) {
     .cards{
-    &__list{
-        height: 45vh;
-        &__cardText{
-            height: 25vh;
-        }
-        &__cardVisuel{
-            p{
-                font-size: calc(1vw + 5px);
+        &__list{
+            gap:31px;
+            li{
+                width: 41%;
             }
         }
-        &__card{
-            height: 40vh;
-            img{
-                
-                height: 20vh;;
-            }
-        }
-      }
     }
   }
 
   @media (max-width: $breakpoint-mobile-small) {
     .cards{
         &__list{
-            height: 100%;
-            flex-direction: column;
-            align-items: center;     
-            &__card{
-                width: 80%;
-                height: 50vh;    
-                img{
-                    height: 30vh;
-                }
-            }       
-            &__cardVisuel{
-                h3{
-                    font-size: 4vw;
-                }
-                p{
-                    font-size: calc(3vw + 2px);
-                }
+            gap:31px;
+            li{
+                width: 100%;
             }
         }
     }
