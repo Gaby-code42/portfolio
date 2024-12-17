@@ -1,25 +1,20 @@
 $breakpoint-mobile-small: 480px;
-$breakpoint-mobile-large: 767px;
+$breakpoint-mobile-large: 768px;
 $breakpoint-tablet: 1024px;
 
 
-.Carousel { 
+.Carousel {
     height: calc(20vw + 20vh);
     width: 50vw;
     display: flex;
-
     &__Image {
         width: 100%;
-        border-radius: 25px;
-
     }
-
     &__Dots {
         display: flex;
-        padding: 7vw 12vw;
+        padding: 6vw 10vw;
         gap: 1vh;
     }
-
     &__Button {    
         background: transparent;
         border: none;   
@@ -28,16 +23,17 @@ $breakpoint-tablet: 1024px;
         }            
     }
 }
-.NavContainer{
-    margin-bottom: 100px;
-}
-.carouselBox {
+.carouselBox{
+    background-image: url('../../assets/design_projet_Plandetravail1.svg');
+    background-repeat: no-repeat;
+    margin-top: 15%;
+    margin-left: 2%;
+    margin-right: 2%;
     display: flex;
-    position: relative;
     align-items: center;
-    height: 57vw;
     &__blocText {
-        position: relative;
+        padding-left: 3vh;
+
     }
     &__title {
         font-size: calc(1vh + 2vw);
@@ -47,45 +43,44 @@ $breakpoint-tablet: 1024px;
         color: transparent; 
         -webkit-text-fill-color: transparent;
         font-family: "roboto", sans-serif;
-        padding-left: 4.5vw;
         margin: 0;
     }
+    &__details {
+ 
+        font-size: 30px;
+        font-family: "roboto", sans-serif;
+    }
     &__description {
-        padding: 0 6vw;
         text-align: justify;
         font-family: "roboto", sans-serif;
         width: 30vw;
         height: 17vw;
         font-size: 1vw;
     }
-    &__date{
-        padding: 0 6vw;
-        position: absolute;
 
+    &__date{
+        position: absolute;
     }
-    &__details {
-        padding: 0 6vw;  
-        font-size: 30px;
-        font-family: "roboto", sans-serif;
-    }
+
     &__sidebar{
-        width: 43%;
+        width: 39%;
     }
     &__link{
-        position: absolute;
-        bottom: 35%;
-        top:65%;
-        left: 15%;
+    padding-top: 40px;
         a{
+    
         font-size: 15px;
         color:white;
+
     }
     }
 }
 
+
 @media (max-width: $breakpoint-tablet) {
 
     .carouselBox{
+
         &__details{
             padding: 0 6vw;
             font-size: 20px;
@@ -95,7 +90,8 @@ $breakpoint-tablet: 1024px;
             overflow: auto;
         }
         &__link{
-            left:6%
+            position: absolute;
+            padding-top: 20px;
         }  
     }
 }
@@ -103,26 +99,48 @@ $breakpoint-tablet: 1024px;
 
 @media (max-width: $breakpoint-mobile-large) {
 .carouselBox{
+    margin-top: 25%;
         &__title{
-            top:0;
+            font-size: 20px;
         }
         &__details{
         font-size: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         }
-
+        &__sidebar {
+            width: 43%;
+        }
+        &__link{
+            padding-top: 0px;
+            position: absolute;
+                a{            
+                font-size: 15px;
+                color:white;        
+            }
+        }
+    }
+.Carousel{
+    height: calc(10vw + 20vh);
+    &__Dots{
+        padding: 5vw 6vw;
     }
 }
+}
+
 
 @media (max-width: $breakpoint-mobile-small) {
     .carouselBox{
         flex-direction: column;
-        height: 85vh;        
+        background-image: none;
+        margin-top: 25vh;
+        border: #089FE0 2px solid;
         &__title{
-            width: 24vh;
             padding-top: 2.2vh
         }
         &__details{
             font-size: 20px;
+            padding: 0;
         }
         &__description{
         padding: 0;
@@ -130,25 +148,33 @@ $breakpoint-tablet: 1024px;
         height: 38vw
         }
         &__sidebar{
-            width: auto;
             order: 2;
+            border: #089FE0 2px solid;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         &__date{
             font-size: 8px;
+            position:static
         }
-        &__link{
-            left:auto;
-            top:77%;
-            a{
-                font-size: 8px;
-            }
-        }  
+        &__blocText {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        } 
     }
     .Carousel{     
         margin-top: 9vh;   
         width: 67%;
         height: 25vh;
         order:1;
+        border: #089FE0 2px solid;
+        padding: 4.5%;
         &__Dots{
             justify-content: center;
             padding: 3vh 0 ;

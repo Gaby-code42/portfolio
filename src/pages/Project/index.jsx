@@ -11,10 +11,7 @@ function Project (){
     const ProjectData = Data.find((Project) => Project.id === decodedTitle)
         
     return(
-        <div className='background__projet'>
-            <Carousel images = {ProjectData.pictures}/>
-        </div>
-        
+        <Carousel images = {ProjectData.pictures}/>
     )
 }
 

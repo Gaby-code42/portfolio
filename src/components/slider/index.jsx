@@ -40,14 +40,7 @@ const Carousel = ({ images }) => {
                 onNext={Next}
                 onDotClick={handleDotClick}  
                 link={ProjectData.link}
-            />   
-                    {currentIndex === 4 && (
-            <div className="carouselBox__link">
-            <a href={ProjectData.link} target="_blank" rel="noopener noreferrer">
-            {ProjectData.link}
-            </a>
-            </div>
-        )}         
+            />        
             <div className="Carousel">
                 <img 
                 src={imagePath}
