@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Modal from "../Modal"; // Assurez-vous que le chemin est correct
 import ModalHeader from "../ModalContent/ModalSidebar"
+import Logo from "../../assets/logo pro gaby-02.svg"
 import "./style.scss";
 
 function Header() {
@@ -20,6 +21,7 @@ function Header() {
           RAPHAEL BONACINA
         </Link>
       </div>
+      <img src={Logo} alt="Logo pro" className="LogoPro"></img>
       <div>
       <FontAwesomeIcon
         className="NavContainer__BurgerButton"

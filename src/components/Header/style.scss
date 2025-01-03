@@ -3,8 +3,7 @@ $breakpoint-mobile-large: 768px;
 $breakpoint-tablet: 1024px;
 
 .NavContainer{
-  padding: 5vh 11vh ;
-  padding-bottom: 5vh;
+  padding: 3vh 10vh ;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,6 +12,9 @@ $breakpoint-tablet: 1024px;
   background: linear-gradient(90deg, rgba(30, 23, 80, 0.6), rgba(91, 19, 19, 0.6));
   z-index: 2;
   top:0;
+  img{
+    height: 10vh;
+  }
   &__box{
     padding-top: 8vh;
     padding-left: 0;
@@ -67,8 +69,8 @@ $breakpoint-tablet: 1024px;
 
   @media (max-width: $breakpoint-tablet) {
     .NavContainer {
-      padding-bottom: 35px;
       margin-bottom: 80px;
+      padding: 3vh 7vh;
       &__box{
         &__link{
         font-size: 2vh;
@@ -82,7 +84,7 @@ $breakpoint-tablet: 1024px;
   
   @media (max-width: $breakpoint-mobile-large) {
     .NavContainer{
-      padding: 5vh 4vh;
+      padding: 3vh 4vh;
       &__box {
         &__link{
           font-size: 1.5vh;

@@ -8,6 +8,7 @@ import Project from './pages/Project';
 import Footer from './components/Footer'
 import Header from './components/Header'
 import useBodyClass from './hooks/bodyBackground';
+import { Helmet } from 'react-helmet';
 import './styleGlobal/app.scss'
 
 
@@ -32,10 +33,50 @@ const AppWrapper = () => {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/realisation" element={<Realisation />} />
-        <Route path="/about" element={<About/>}/>
-        <Route path="/realisation/:id" element={<Project/>}/>
+        <Route
+          path="/"
+          element={
+            <>
+              <Helmet>
+                <title>Accueil - Développeur Fullstack</title>
+              </Helmet>
+              <Home />
+            </>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <>
+              <Helmet>
+                <title>À propos - Développeur Fullstack</title>
+              </Helmet>
+              <About />
+            </>
+          }
+        />
+        <Route
+          path="/realisation"
+          element={
+            <>
+              <Helmet>
+                <title>Réalisations - Mes projets</title>
+              </Helmet>
+              <Realisation />
+            </>
+          }
+        />
+        <Route
+          path="/realisation/:id"
+          element={
+            <>
+              <Helmet>
+                <title>Détail du projet</title>
+              </Helmet>
+              <Project />
+            </>
+          }
+        />
       </Routes>
       <Footer />
     </>

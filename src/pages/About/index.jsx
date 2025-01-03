@@ -7,7 +7,7 @@ import PngReact from '../../assets/Image-Source-PlusPNG.com.png'
 import PngNode from '../../assets/Node_logo_NodeJS.png'
 import PngDev from '../../assets/pngwing.com.png'
 
-function About (){
+const About = () =>{
     return(
         <div className='aboutContainer'>
             <h1 className='aboutContainer__title'> Mes Compétences</h1>
