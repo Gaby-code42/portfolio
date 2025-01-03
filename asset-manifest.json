@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.cd2b02ec.css",
-    "main.js": "/portfolio/static/js/main.b605e8b0.js",
+    "main.css": "/portfolio/static/css/main.abf4fc7e.css",
+    "main.js": "/portfolio/static/js/main.ae522308.js",
     "static/media/react1.png": "/portfolio/static/media/react1.b1d8f3043ba49e8cf13a.png",
     "static/media/node1.png": "/portfolio/static/media/node1.4b330e253db549133e22.png",
     "static/media/node3.png": "/portfolio/static/media/node3.1363fd70d92c5848f855.png",
@@ -18,14 +18,14 @@
     "static/media/html-css-logo-png-png-image-873073.png": "/portfolio/static/media/html-css-logo-png-png-image-873073.9a68af768b4fd4c08dd9.png",
     "static/media/Image-Source-PlusPNG.com.png": "/portfolio/static/media/Image-Source-PlusPNG.com.7fbff05fbadd6ec1f5e2.png",
     "static/media/JavaScript-Logo.png": "/portfolio/static/media/JavaScript-Logo.ec1c0379d0e87cc38946.png",
-    "static/media/design_projet_Plandetravail1.svg": "/portfolio/static/media/design_projet_Plandetravail1.8220feebd954b4e95a1b.svg",
-    "static/media/design_projet_vertical_Plandetravail1.svg": "/portfolio/static/media/design_projet_vertical_Plandetravail1.f7fabde168bc4eeb2544.svg",
+    "static/media/design_projet_Plandetravail1.svg": "/portfolio/static/media/design_projet_Plandetravail1.261ed719ee2cd01132c6.svg",
+    "static/media/logo pro gaby-02.svg": "/portfolio/static/media/logo pro gaby-02.3f5c6c872d4f7cf4d0b162648402c1e5.svg",
     "index.html": "/portfolio/index.html",
-    "main.cd2b02ec.css.map": "/portfolio/static/css/main.cd2b02ec.css.map",
-    "main.b605e8b0.js.map": "/portfolio/static/js/main.b605e8b0.js.map"
+    "main.abf4fc7e.css.map": "/portfolio/static/css/main.abf4fc7e.css.map",
+    "main.ae522308.js.map": "/portfolio/static/js/main.ae522308.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd2b02ec.css",
-    "static/js/main.b605e8b0.js"
+    "static/css/main.abf4fc7e.css",
+    "static/js/main.ae522308.js"
   ]
 }
