@@ -3,12 +3,14 @@ $breakpoint-mobile-large: 768px;
 $breakpoint-tablet: 1024px;
 
 .NavContainer{
-  padding: 3vh 11vh ;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-sizing: border-box;
+  padding: 3vh 3vh;
+  margin: auto;
   position: fixed;
-  width: 90%;
+  width: 100%;
   background: linear-gradient(90deg, rgba(30, 23, 80, 0.6), rgba(91, 19, 19, 0.6));
   z-index: 2;
   top:0;
@@ -70,7 +72,6 @@ $breakpoint-tablet: 1024px;
   @media (max-width: $breakpoint-tablet) {
     .NavContainer {
       margin-bottom: 80px;
-      padding: 3vh 7vh;
       &__box{
         &__link{
         font-size: 2vh;
@@ -84,7 +85,6 @@ $breakpoint-tablet: 1024px;
   
   @media (max-width: $breakpoint-mobile-large) {
     .NavContainer{
-      padding: 3vh 4vh;
       &__box {
         &__link{
           font-size: 1.5vh;
@@ -95,8 +95,7 @@ $breakpoint-tablet: 1024px;
   
   @media (max-width: $breakpoint-mobile-small) {
     .NavContainer {
-      padding: 5vh 3vh;
-      justify-content: center;
+      justify-content: space-around;
       margin-bottom: 40px;
     }
   
