@@ -17,12 +17,10 @@ function Header() {
   return (
     <div className="NavContainer">
       <div>
-        <Link className="Logo" to="/">
+      <Link className="Logo" to="/">
           RAPHAEL BONACINA
-        </Link>
-      </div>
+      </Link>
       <img src={Logo} alt="Logo pro" className="LogoPro"></img>
-      <div>
       <FontAwesomeIcon
         className="NavContainer__BurgerButton"
         icon={faBars}
