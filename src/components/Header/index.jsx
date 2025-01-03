@@ -16,7 +16,7 @@ function Header() {
 
   return (
     <div className="NavContainer">
-      <div>
+      
       <Link className="Logo" to="/">
           RAPHAEL BONACINA
       </Link>
@@ -34,7 +34,6 @@ function Header() {
             onClose={closeModal}
       />
       </Modal>
-      </div>
     </div>
   );
 }
