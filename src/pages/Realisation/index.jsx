@@ -2,7 +2,7 @@ import React from 'react';
 import Data from '../../data/index.json'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faReact, faNode } from '@fortawesome/free-brands-svg-icons'
+import { faReact, faNode, faHtml5, faJs } from '@fortawesome/free-brands-svg-icons'
 import './style.scss'
 
 const Realisation = () => {
@@ -16,6 +16,11 @@ const Realisation = () => {
             return faNode;
           case 'faReact':
             return faReact;
+          case 'faHtml5':
+            return faHtml5;
+          case 'faJs':
+            return faJs;
+        
         default:
             return null;
         }
