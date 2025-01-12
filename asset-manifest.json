@@ -1,31 +1,38 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.756fae94.css",
-    "main.js": "/portfolio/static/js/main.86bacb0e.js",
+    "main.css": "/portfolio/static/css/main.a87a34be.css",
+    "main.js": "/portfolio/static/js/main.9098e71d.js",
+    "static/media/html2.png": "/portfolio/static/media/html2.573e86344e985a48fd7a.png",
     "static/media/react1.png": "/portfolio/static/media/react1.b1d8f3043ba49e8cf13a.png",
     "static/media/node1.png": "/portfolio/static/media/node1.4b330e253db549133e22.png",
     "static/media/node3.png": "/portfolio/static/media/node3.1363fd70d92c5848f855.png",
     "static/media/end.png": "/portfolio/static/media/end.a98385af11333be47987.png",
+    "static/media/html3.png": "/portfolio/static/media/html3.bd84ea19004f2b54cc53.png",
     "static/media/react4.png": "/portfolio/static/media/react4.67913dcb16156fd20904.png",
     "static/media/test_fond_home_Plan de travail 1.svg": "/portfolio/static/media/test_fond_home_Plan de travail 1.9fe2865c22aaa6cee414.svg",
     "static/media/background realisations_Plan de travail 1.svg": "/portfolio/static/media/background realisations_Plan de travail 1.281890de9a6b94888783.svg",
     "static/media/react2.png": "/portfolio/static/media/react2.a8110eb48a8d18af56d4.png",
+    "static/media/java1.png": "/portfolio/static/media/java1.b1cab3ce80336a96d42c.png",
     "static/media/node4.png": "/portfolio/static/media/node4.e9887df57bfc1124aefb.png",
+    "static/media/java4.png": "/portfolio/static/media/java4.d3a693ccb320a2972fbf.png",
+    "static/media/html1.png": "/portfolio/static/media/html1.72721cc97de7e0a5db57.png",
+    "static/media/java2.png": "/portfolio/static/media/java2.c69102016963db44f58b.png",
     "static/media/Node_logo_NodeJS.png": "/portfolio/static/media/Node_logo_NodeJS.e1d9233897fbe03fda7b.png",
     "static/media/pngwing.com.png": "/portfolio/static/media/pngwing.com.820a10e8cc164d8c58a8.png",
     "static/media/node2.png": "/portfolio/static/media/node2.1536d65a06a1bec9c257.png",
     "static/media/react3.png": "/portfolio/static/media/react3.b2f1c80a06f85487a54b.png",
     "static/media/html-css-logo-png-png-image-873073.png": "/portfolio/static/media/html-css-logo-png-png-image-873073.9a68af768b4fd4c08dd9.png",
+    "static/media/java3.png": "/portfolio/static/media/java3.bedf9c0b60aa3d03b7d8.png",
     "static/media/Image-Source-PlusPNG.com.png": "/portfolio/static/media/Image-Source-PlusPNG.com.7fbff05fbadd6ec1f5e2.png",
     "static/media/JavaScript-Logo.png": "/portfolio/static/media/JavaScript-Logo.ec1c0379d0e87cc38946.png",
     "static/media/design_projet_Plandetravail1.svg": "/portfolio/static/media/design_projet_Plandetravail1.261ed719ee2cd01132c6.svg",
     "static/media/logo pro gaby-02.svg": "/portfolio/static/media/logo pro gaby-02.3f5c6c872d4f7cf4d0b162648402c1e5.svg",
     "index.html": "/portfolio/index.html",
-    "main.756fae94.css.map": "/portfolio/static/css/main.756fae94.css.map",
-    "main.86bacb0e.js.map": "/portfolio/static/js/main.86bacb0e.js.map"
+    "main.a87a34be.css.map": "/portfolio/static/css/main.a87a34be.css.map",
+    "main.9098e71d.js.map": "/portfolio/static/js/main.9098e71d.js.map"
   },
   "entrypoints": [
-    "static/css/main.756fae94.css",
-    "static/js/main.86bacb0e.js"
+    "static/css/main.a87a34be.css",
+    "static/js/main.9098e71d.js"
   ]
 }
