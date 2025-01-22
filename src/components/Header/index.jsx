@@ -21,7 +21,6 @@ function Header() {
         className="NavContainer__BurgerButton"
         icon={faBars}
         onClick={openModal}
-         // Assurez-vous que le pointeur change au survol
       />
       <Modal
             isOpen={isModalOpen}
