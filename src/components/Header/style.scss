@@ -6,27 +6,14 @@ $breakpoint-tablet: 1024px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-sizing: border-box;
   padding: 3vh 3vh;
-  margin: auto;
-  position: fixed;
-  width: 100%;
+  position: sticky;
+  top:0;
   background: linear-gradient(90deg, rgba(30, 23, 80, 0.6), rgba(91, 19, 19, 0.6));
   z-index: 2;
-  top:0;
   img{
     height: 10vh;
   }
-  &__box{
-    padding-top: 8vh;
-    padding-left: 0;
-    align-items: center;
-    justify-content: center;
-    list-style-type: none;
-    display:flex;
-    gap:40px;
-    flex-direction: column;
-
       &__link{
         text-decoration: none;
         color: white;
@@ -38,11 +25,7 @@ $breakpoint-tablet: 1024px;
         padding: 0;
       }
     }
-  &__BurgerButton{
-  height: 3vh;
-  cursor: pointer;
-  }
-}
+
 
 .NavContainer::after {
   content: '';
@@ -58,6 +41,10 @@ $breakpoint-tablet: 1024px;
     rgba(255, 255, 255, 0) 100%);
   clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
 }
+.NavBar{
+  list-style: none;
+  display: flex;
+}
 
 .Logo{
   text-decoration: none;
@@ -71,32 +58,40 @@ $breakpoint-tablet: 1024px;
 
   @media (max-width: $breakpoint-tablet) {
     .NavContainer {
-      margin-bottom: 80px;
-      &__box{
         &__link{
-        font-size: 2vh;
-      }
+        font-size: 1.5vh;
     } 
   }
-     .Logo {
+    .Logo {
       font-size: 20px;
     }
   }
-  
+    .NavBar{
+      gap:4vh;
+
+  }
   @media (max-width: $breakpoint-mobile-large) {
     .NavContainer{
-      &__box {
+
         &__link{
-          font-size: 1.5vh;
+          font-size: 4vh;
         }
-      }
     }
   }
   
   @media (max-width: $breakpoint-mobile-small) {
     .NavContainer {
-      justify-content: space-around;
-      margin-bottom: 40px;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+       &__link{
+        justify-content: center;
+        font-size: 2vh;
+      }           
+    }
+    .NavBar{
+      justify-content: center;
+      flex-direction: column;
     }
   
     .Logo {

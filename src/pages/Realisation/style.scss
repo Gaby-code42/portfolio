@@ -19,14 +19,15 @@ $breakpoint-tablet: 1024px;
         color: transparent; 
         -webkit-text-fill-color: transparent;
         font-family: "roboto", sans-serif;
-        padding-top: 15vh;
+        padding-top: 5vh;
     }
 } 
 .cards{
     &__list{
     display: flex;
     list-style: none;
-    gap: 25px;
+    justify-content: center;
+    gap: 3vh 3vw;
     flex-wrap: wrap;  
     padding: 0;  
     li{ 
@@ -40,7 +41,7 @@ $breakpoint-tablet: 1024px;
     }
     li:hover{
         transform: scale(1.05); /* Agrandit légèrement l'élément */
-        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);        
     }
     &__card{
         text-decoration: none;
@@ -49,9 +50,14 @@ $breakpoint-tablet: 1024px;
         align-items: center;
         justify-content: center;
         color: white;
+        
     }
     &__icons{
         font-size: 15vh;
+        filter: drop-shadow(0px 0px 20px rgba(0,0,0,0.8));
+    }
+    &__icons:hover{
+        transform: scale(1.2)
     }
     
     }

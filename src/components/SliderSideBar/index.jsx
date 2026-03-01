@@ -31,14 +31,14 @@ const CarouselSidebar = ({
         <h1 className="carouselBox__title">{title}</h1>
         <h2 className="carouselBox__details">{details}</h2>
         <p className="carouselBox__description">{description}</p>
-        <p className="carouselBox__date">{date}</p>
         {currentIndex === 4 && (
-            <div className="carouselBox__link">
-            <a href={ProjectData.link} target="_blank" rel="noopener noreferrer">
-            {ProjectData.link}
-            </a>
-            </div>
-        )}  
+        <p className="carouselBox__link">
+         <a href={ProjectData.link} target="_blank" rel="noopener noreferrer">
+        {ProjectData.link}
+        </a>
+        </p>
+)}
+        <p className="carouselBox__date">{date}</p>
         </div>
         <div className="Carousel__Dots">
             <button onClick={onPrevious} className="Carousel__Button">

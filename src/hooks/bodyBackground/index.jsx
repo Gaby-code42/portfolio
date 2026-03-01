@@ -10,6 +10,7 @@ const useBodyClass = () => {
     if (location.pathname === '/realisation') return 'realisation-background';
     if (location.pathname === '/about') return 'realisation-background'
     if (location.pathname === '/realisation/:id') return 'realisation-background'
+    if (location.pathname === '/competences') return 'realisation-background' 
     if (/^\/realisation\/\d+$/.test(location.pathname)) {
       return 'realisation-background'; // Background pour les projets individuels
     }

@@ -2,6 +2,7 @@ import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home' 
+import Competence from './pages/Competence';
 import About from './pages/About';
 import Realisation from './pages/Realisation'
 import Project from './pages/Project';
@@ -54,6 +55,21 @@ const AppWrapper = () => {
               <About />
             </>
           }
+        />
+
+        <Route
+        path="/competences"
+        element={
+          <><Helmet>
+            <title>Mes compétences - Développeur Fullstack</title>
+           
+          </Helmet> 
+          <Competence />
+          </>
+          
+        }
+        
+        
         />
         <Route
           path="/realisation"

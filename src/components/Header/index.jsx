@@ -1,34 +1,69 @@
-import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import Modal from "../Modal"; // Assurez-vous que le chemin est correct
-import ModalHeader from "../ModalContent/ModalSidebar"
-import Logo from "../../assets/logo pro gaby-02.svg"
+import React from "react";
+import { useLocation, Link } from "react-router-dom";
+import Logo from "../../assets/logo pro gaby-02.svg";
 import "./style.scss";
 
 function Header() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => setIsModalOpen(true);
-
-  const closeModal = () => setIsModalOpen(false);
+  const location = useLocation();
 
   return (
     <div className="NavContainer">
-      
-      <img src={Logo} alt="Logo pro" className="LogoPro"></img>
-      <FontAwesomeIcon
-        className="NavContainer__BurgerButton"
-        icon={faBars}
-        onClick={openModal}
-      />
-      <Modal
-            isOpen={isModalOpen}
-            onClose={closeModal}>
-      <ModalHeader 
-            onClose={closeModal}
-      />
-      </Modal>
+      <div>
+        <Link
+          to="/"
+          className={`NavContainer__link ${
+            location.pathname === "/" ? "active__link" : ""
+          }`}
+        >
+          <img src={Logo} alt="Logo pro" className="LogoPro"></img>
+        </Link>
+      </div>
+      <div>
+        <nav className="NavBar">
+          <li>
+            <Link
+              to="/"
+              className={`NavContainer__link ${
+                location.pathname === "/realisation" ? "active__link" : ""
+              }`}
+            >
+              {" "}
+              Accueil{" "}
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/realisation"
+              className={`NavContainer__link ${
+                location.pathname === "/realisation" ? "active__link" : ""
+              }`}
+            >
+              Réalisations
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/competences"
+              className={`NavContainer__link ${
+                location.pathname === "/competences" ? "active__link" : ""
+              }`}
+            >
+              Compétences
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/about"
+              className={`NavContainer__link ${
+                location.pathname === "/about" ? "active__link" : ""
+              }`}
+            >
+              À propos
+            </Link>
+          </li>
+        </nav>
+        <nav className="NavFidgetContainer"></nav>
+      </div>
     </div>
   );
 }

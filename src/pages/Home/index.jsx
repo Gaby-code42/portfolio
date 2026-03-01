@@ -17,7 +17,7 @@ const Home = () => {
         <h1 className='description__title'>DEVELOPPEUR <br/> WEB</h1>
         <h2 className='description__subtitle'> Je suis Raphaël Bonacina</h2>
         <p className='description__text'>
-        Un développeur web fullstack passionné, spécialisé dans des technologies modernes comme React, JavaScript, Node.js, MongoDB, HTML, CSS et SASS.
+        Un développeur web fullstack passionné, spécialisé dans des technologies modernes comme React, JavaScript, Node.js, MongoDB, HTML, CSS et SCSS.
         Avec une approche centrée sur les méthodes agiles (Scrum, Kanban, Kaizen, Pomodoro), 
         je conçois des sites et applications performants, évolutifs et adaptés à vos besoins.
         Toujours curieux et en quête d’amélioration, 

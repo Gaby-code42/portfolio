@@ -11,7 +11,6 @@ $breakpoint-tablet: 1024px;
   width: 13vh;
   height: auto;
   text-align: center;
-  flex-wrap: wrap;
 }
 
   &__progress-wrapper {
@@ -38,7 +37,7 @@ $breakpoint-tablet: 1024px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 41px;
+    font-size: 4vh;
     font-weight: 600;
     color: white;
   }
@@ -49,6 +48,7 @@ $breakpoint-tablet: 1024px;
     display: flex;
     gap: 40px;
     font-family: 'roboto', sans-serif;
+    flex-wrap: wrap;
   }
   &__wrapper{
     display:flex ;
