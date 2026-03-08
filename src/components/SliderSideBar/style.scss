@@ -43,6 +43,7 @@ $breakpoint-tablet: 1024px;
         -webkit-text-fill-color: transparent;
         font-family: "roboto", sans-serif;
         margin: 0;
+        padding-bottom: 3vh;
     }
     &__details {
         justify-self:  center; 
@@ -54,7 +55,7 @@ $breakpoint-tablet: 1024px;
         justify-self:  center;
         font-family: "roboto", sans-serif;
         width: 30vw;
-        font-size: 1.2vw;
+        font-size: 1vw;
     }
     &__date{
         justify-self:  center;
@@ -93,7 +94,7 @@ $breakpoint-tablet: 1024px;
             height: 15vh;
         }
         .Carousel__Dots {
-            padding: 5vw 10vw;
+            padding: 8vw 10vw;
         }
         
     }
@@ -138,7 +139,8 @@ $breakpoint-tablet: 1024px;
 
 @media (max-width: $breakpoint-mobile-small) {
     .carouselBox{
-        margin-top: 10% ;
+        width: 90%;
+        margin: 7vh 0vh 0vh 2vh;
         flex-direction: column;
         background-image: none;
         gap:0;
@@ -150,7 +152,7 @@ $breakpoint-tablet: 1024px;
             min-height: 36vh;
             border: rgb(0, 225, 233) 2px solid;
             border-top: none;
-            padding: 5px 6.5% 0px 6.5%;
+            padding: 5px 1.5% 0px 6.5%;
             background: rgba(0, 0, 0, 0.6);
             border-radius: 0 0 10px 10px;
         }

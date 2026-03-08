@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation, Link } from "react-router-dom";
 import Logo from "../../assets/logo pro gaby-02.svg";
+import MobileMenu from "../MenuBurger";
 import "./style.scss";
 
 function Header() {
@@ -27,7 +28,6 @@ function Header() {
                 location.pathname === "/realisation" ? "active__link" : ""
               }`}
             >
-              {" "}
               Accueil{" "}
             </Link>
           </li>
@@ -62,6 +62,7 @@ function Header() {
             </Link>
           </li>
         </nav>
+        <MobileMenu />
         <nav className="NavFidgetContainer"></nav>
       </div>
     </div>

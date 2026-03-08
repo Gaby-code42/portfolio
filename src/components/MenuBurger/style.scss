@@ -1,0 +1,76 @@
+.mobile-menu {
+  display: none;
+
+  @media screen and (max-width: 480px) {
+    display: block;
+  }
+}
+
+.burger__btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.terminal {
+  width: 80%;
+  max-width: 400px;
+
+  background: #0a0f0a;
+  border: 2px solid #00ff9c;
+
+  box-shadow: 0 0 20px rgba(0,255,150,0.4);
+
+  font-family: "Courier New", monospace;
+  color: #00ff9c;
+}
+
+.terminal__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+
+  border-bottom: 1px solid #00ff9c;
+}
+
+.terminal__content {
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  a {
+    color: #00ff9c;
+    text-decoration: none;
+
+    &:hover {
+      text-shadow: 0 0 6px #00ff9c;
+    }
+  }
+
+  p {
+    opacity: 0.6;
+  }
+}
+
+.burger__btn__close {
+  background: none;
+  border: none;
+  color: #00ff9c;
+  cursor: pointer;
+}
