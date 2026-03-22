@@ -6,12 +6,11 @@ $breakpoint-tablet: 1024px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3vh 3vh;
+  padding: 0vh 3vh;
   position: sticky;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
   top:0;
-  background: linear-gradient(90deg, rgba(30, 23, 80, 0.6), rgba(91, 19, 19, 0.6));
-  z-index: 2;
+
   img{
     height: 10vh;
   }
@@ -20,10 +19,20 @@ $breakpoint-tablet: 1024px;
         color: white;
         background: none;
         border:none;
-        font-size: 2.5vh;
+        font-size: 1.5em;
         font-weight: 800;
         font-family: 'mulish',sans-serif;
         padding: 0;
+        display: inline-block;
+      }
+      &__link:hover{
+        color: #089FE0;
+        transition: transform 0.3s ease;
+      }
+      &__link:focus{
+        color:#089FE0;
+        transform:scale(1.5);
+        transition: transform 0.3s ease;
       }
     }
 
@@ -45,7 +54,10 @@ $breakpoint-tablet: 1024px;
 .NavBar{
   list-style: none;
   display: flex;
+  gap:4vw;
 }
+
+
 
 .Logo{
   text-decoration: none;
@@ -60,22 +72,23 @@ $breakpoint-tablet: 1024px;
   @media (max-width: $breakpoint-tablet) {
     .NavContainer {
         &__link{
-        font-size: 1.5vh;
+        font-size: 2vh;
     } 
   }
+  .NavBar{
+    gap:4vh;
+
+}
     .Logo {
       font-size: 20px;
     }
   }
-    .NavBar{
-      gap:4vh;
 
-  }
   @media (max-width: $breakpoint-mobile-large) {
     .NavContainer{
 
         &__link{
-          font-size: 4vh;
+          font-size: 2vh;
         }
     }
   }

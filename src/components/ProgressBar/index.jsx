@@ -6,13 +6,13 @@ const CircleProgressBar = ({ percentage, onChange }) => {
   const strokeWidth = 10;
   const circumference = 2 * Math.PI * radius;
 
-  // L'offset est basé sur le pourcentage, calculé à chaque changement.
+
   const [offset, setOffset] = useState(circumference);
 
   useEffect(() => {
     const newOffset = circumference - (percentage / 100) * circumference;
     setOffset(newOffset);
-  }, [percentage, circumference]);   // Le useEffect se déclenche à chaque changement de `percentage`
+  }, [percentage, circumference]);  
 
   return (
     <div className="circle__container">
@@ -31,11 +31,11 @@ const CircleProgressBar = ({ percentage, onChange }) => {
             className="circle__progress-foreground"
             strokeWidth={strokeWidth}
             fill="none"
-            stroke="url(#gradient)"  // Applique le gradient à la barre de progression
-            strokeDasharray={circumference}  // La longueur totale du cercle
-            strokeDashoffset={offset}  // Décale la progression pour correspondre au pourcentage
+            stroke="url(#gradient)"  
+            strokeDasharray={circumference} 
+            strokeDashoffset={offset}  
             style={{
-              transition: 'stroke-dashoffset 2s ease',  // Animation fluide
+              transition: 'stroke-dashoffset 1s ease',  
             }}
           />
         </svg>

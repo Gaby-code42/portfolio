@@ -3,13 +3,21 @@ import CircleProgressBar from '../../components/ProgressBar';
 import './style.scss'
 
 const Home = () => {
-  const circlesData = [
+  const circlesDataFront = [
     { title: 'Html', percentage: 90 },
     { title: 'React', percentage: 75 },
-    { title: 'Node.js', percentage: 70 },
-    { title: 'MongoDb', percentage: 60 },
     { title: 'Javascript', percentage: 90 }
   ];
+  const circlesDataBack =[ 
+    { title: 'Node.js', percentage: 60}
+  ]
+  const circlesDataDesign = [
+    { title: 'figma', percentage:60 }
+  ]
+  const circlesDataOther = [
+     { title : 'Git & GitHub',percentage: 90 },
+     { title : 'MongoDb', percentage: 70}
+  ]
 
   return (
     <div className="home">
@@ -25,18 +33,52 @@ const Home = () => {
         👉 Explorez mon portfolio et contactez-moi pour vos projets !
         </p>
       </div>
-      <div>
       <h2 className='skill__title'>Skills</h2>
+      <div>
+      <h3>Front-end</h3>
       <div className="circles__container">
-        {circlesData.map((circle, index) => (
+        {circlesDataFront.map((circle, index) => (
           <div key={index} className="circles__wrapper">
-            <h3 
+            <h4 
             className='circles__name'
-            >{circle.title}</h3>
+            >{circle.title}</h4>
             <CircleProgressBar percentage={circle.percentage} onChange={() => {}} />
           </div>
         ))}
       </div>
+      <h3>Back-end</h3>
+      <div className="circles__container">
+        {circlesDataBack.map((circle, index) => (
+          <div key={index} className="circles__wrapper">
+            <h4 
+            className='circles__name'
+            >{circle.title}</h4>
+            <CircleProgressBar percentage={circle.percentage} onChange={() => {}} />
+          </div>
+        ))}
+      </div>
+      </div>
+      <h3>Design</h3>
+      <div className="circles__container">
+        {circlesDataDesign.map((circle, index) => (
+          <div key={index} className="circles__wrapper">
+            <h4 
+            className='circles__name'
+            >{circle.title}</h4>
+            <CircleProgressBar percentage={circle.percentage} onChange={() => {}} />
+          </div>
+        ))}
+      </div>
+      <h3>Others</h3>
+      <div className="circles__container">
+        {circlesDataOther.map((circle, index) => (
+          <div key={index} className="circles__wrapper">
+            <h4 
+            className='circles__name'
+            >{circle.title}</h4>
+            <CircleProgressBar percentage={circle.percentage} onChange={() => {}} />
+          </div>
+        ))}
       </div>
     </div>
   );
