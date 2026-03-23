@@ -25,7 +25,7 @@ function Header() {
             <Link
               to="/"
               className={`NavContainer__link ${
-                location.pathname === "/realisation" ? "active__link" : ""
+                location.pathname === "/" ? "active__link" : ""
               }`}
             >
               Accueil{" "}
@@ -39,16 +39,6 @@ function Header() {
               }`}
             >
               Réalisations
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/competences"
-              className={`NavContainer__link ${
-                location.pathname === "/competences" ? "active__link" : ""
-              }`}
-            >
-              Compétences
             </Link>
           </li>
           <li>

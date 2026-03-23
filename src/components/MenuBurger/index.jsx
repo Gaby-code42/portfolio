@@ -57,9 +57,6 @@ const MobileMenu = () => {
                 <p>&gt; navigate /projects</p>
                 <Link to="/realisation" onClick={closeMenu}>Réalisations</Link>
 
-                <p>&gt; navigate /skills</p>
-                <Link to="/competences" onClick={closeMenu}>Compétences</Link>
-
                 <p>&gt; navigate /about</p>
                 <Link to="/about" onClick={closeMenu}>À propos</Link>
 

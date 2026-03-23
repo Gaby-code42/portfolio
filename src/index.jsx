@@ -2,10 +2,8 @@ import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home' 
-import Competence from './pages/Competence';
 import About from './pages/About';
 import Realisation from './pages/Realisation'
-import Project from './pages/Project';
 import Footer from './components/Footer'
 import Header from './components/Header'
 import useBodyClass from './hooks/bodyBackground';
@@ -56,21 +54,6 @@ const AppWrapper = () => {
             </>
           }
         />
-
-        <Route
-        path="/competences"
-        element={
-          <><Helmet>
-            <title>Mes compétences - Développeur Fullstack</title>
-           
-          </Helmet> 
-          <Competence />
-          </>
-          
-        }
-        
-        
-        />
         <Route
           path="/realisation"
           element={
@@ -79,17 +62,6 @@ const AppWrapper = () => {
                 <title>Réalisations - Mes projets</title>
               </Helmet>
               <Realisation />
-            </>
-          }
-        />
-        <Route
-          path="/realisation/:id"
-          element={
-            <>
-              <Helmet>
-                <title>Détail du projet</title>
-              </Helmet>
-              <Project />
             </>
           }
         />

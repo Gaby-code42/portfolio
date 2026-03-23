@@ -2,98 +2,240 @@ $breakpoint-mobile-small: 480px;
 $breakpoint-mobile-large: 768px;
 $breakpoint-tablet: 1024px;
 
-.realisation{
-    font-family: 'mulish', sans-serif;
+.realisation {
+    font-family: 'Mulish', sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    margin: 0 5vh;   
+    overflow: hidden; // coupe les cards latérales
+    padding: 0 0 4vh;
 
-    &__title{
+    &__title {
         font-size: calc(3vh + 2vw);
-        background: linear-gradient(180deg, #089FE0, #0FAE62); 
-        background-clip: text; 
-        -webkit-background-clip: text; 
-        color: transparent; 
+        background: linear-gradient(180deg, #089FE0, #0FAE62);
+        background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-family: "roboto", sans-serif;
+        font-family: 'Roboto', sans-serif;
         padding-top: 5vh;
-    }
-} 
-.cards{
-    &__list{
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    gap: 3vh 3vw;
-    flex-wrap: wrap;  
-    padding: 0;  
-    li{ 
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        width: 21.5%;
-        background-color:rgb(0, 247, 255, 0.1);
-        padding: 20px;
-        border-radius: 25px;
-        border: rgb(0, 225, 233) 2px solid;
-        box-shadow: 0px 0px 20px rgba(0, 247, 255, 0.6);
-    }
-    li:hover{
-        transform: scale(1.05); /* Agrandit légèrement l'élément */
-        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);        
-    }
-    &__card{
-        text-decoration: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        
-    }
-    &__icons{
-        font-size: 15vh;
-        filter: drop-shadow(0px 0px 20px rgba(0,0,0,0.8));
-    }
-    &__icons:hover{
-        transform: scale(1.2)
-    }
-    
+        margin-bottom: 3vh;
     }
 }
 
-  @media (max-width: $breakpoint-tablet) {
-    .cards{
-        &__list{
-            gap:24px;
-            li{
-                width: 27%;
-            }
-        }
+.carousel {
+    width: 100%;
+    overflow: visible; // laisse les cards latérales déborder
+    cursor: grab;
+
+    &:active { cursor: grabbing; }
+
+    &__track {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        padding: 20px 0;
     }
 
-  }
-
-  @media (max-width: $breakpoint-mobile-large) {
-    .cards{
-        &__list{
-            gap:31px;
-            li{
-                width: 41%;
-            }
-        }
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-top: 1.5rem;
     }
-  }
 
-  @media (max-width: $breakpoint-mobile-small) {
-    .cards{
-        &__list{
-            gap:31px;
-            li{
-                width: 100%;
-            }
-        }
+    &__btn {
+        background: transparent;
+        border: 2px solid #11c220;
+        color: #11c220;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 1.4rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+
+        &:hover { background: rgba(17, 194, 32, 0.1); }
     }
-  }
+
+    &__dots {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+        transition: background 0.2s;
+
+        &--active { background: #11c220; }
+    }
+}
+
+// ============
+// CARDS
+// ============
+.card {
+    flex-shrink: 0;
+    background: rgba(0, 247, 255, 0.05);
+    border: 2px solid rgba(0, 225, 233, 0.3);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     
+
+    &--large {
+        width: 220px;
+        min-height: 300px;
+        opacity: 1;
+        transform: scale(1);
+        border-color: rgba(0, 225, 233, 0.5);
+
+        &:hover { border-color: #11c220; }
+    }
+
+    &--small {
+        width: 160px;
+        min-height: 220px;
+        opacity: 0.5;
+        transform: scale(0.85);
+    }
+
+    &__icon {
+        font-size: 3rem;
+        transition: font-size 0.4s;
+
+        .card--small & { font-size: 2rem; }
+    }
+
+    &__title {
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        text-align: center;
+
+        .card--small & { font-size: 0.85rem; }
+    }
+
+    &__desc {
+        color: #8892b0;
+        font-size: 0.78rem;
+        line-height: 1.5;
+        text-align: center;
+        overflow: hidden;
+        max-height: 80px;
+        opacity: 1;
+        transition: max-height 0.4s, opacity 0.4s;
+
+        .card--small & { max-height: 0; opacity: 0; }
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        justify-content: center;
+        overflow: hidden;
+        max-height: 60px;
+        opacity: 1;
+        transition: max-height 0.4s, opacity 0.4s;
+
+        .card--small & { max-height: 0; opacity: 0; }
+    }
+
+    &__tag {
+        background: rgba(8, 159, 224, 0.15);
+        border: 1px solid rgba(8, 159, 224, 0.4);
+        color: #089FE0;
+        font-size: 0.7rem;
+        padding: 2px 8px;
+        border-radius: 20px;
+        font-weight: 600;
+    }
+
+    &__btns {
+        display: flex;
+        gap: 6px;
+        width: 100%;
+        margin-top: auto;
+        overflow: hidden;
+        max-height: 50px;
+        opacity: 1;
+        transition: max-height 0.4s, opacity 0.4s;
+
+        .card--small & { max-height: 0; opacity: 0; }
+    }
+
+    &__btn {
+        flex: 1;
+        padding: 7px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 0.78rem;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        transition: all 0.2s;
+
+        &--github {
+            background: transparent;
+            border: 2px solid #11c220;
+            color: #11c220;
+
+            &:hover { background: rgba(17, 194, 32, 0.1); }
+        }
+
+        &--demo {
+            background: #089FE0;
+            border: 2px solid #089FE0;
+            color: white;
+
+            &:hover { opacity: 0.85; }
+        }
+
+        &--disabled {
+            background: rgba(255, 255, 255, 0.03);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            color: #444;
+            cursor: not-allowed;
+        }
+    }
+}
+
+// ============
+// RESPONSIVE
+// ============
+@media (max-width: $breakpoint-tablet) {
+    .card {
+        &--large { width: 200px; }
+        &--small { width: 140px; }
+    }
+}
+
+@media (max-width: $breakpoint-mobile-large) {
+    .card {
+        &--large { width: 180px; }
+        &--small { width: 120px; }
+    }
+}
+
+@media (max-width: $breakpoint-mobile-small) {
+    .card {
+        &--large { width: 220px; }
+        &--small { display: none; } // cache les petites sur mobile
+    }
+}
+
