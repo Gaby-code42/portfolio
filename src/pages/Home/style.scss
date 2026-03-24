@@ -1,6 +1,8 @@
 $breakpoint-mobile-small: 480px;
 $breakpoint-mobile-large: 768px;
 $breakpoint-tablet: 1024px;
+$green-primary: rgb(0, 229, 160);
+$green-light: rgba(16, 97, 73, 0.15);
 
 // ============
 // LAYOUT
@@ -80,7 +82,7 @@ $breakpoint-tablet: 1024px;
     padding: 8px 20px;
     color: white;
     text-decoration: none;
-    box-shadow: 0 0 10px rgba(8, 231, 75, 1),
+    box-shadow: 0 0 10px rgba($green-primary, 1),
                 inset 0 0 20px rgba(15, 241, 7, 0.1);
     font-weight: 700;
     transition: transform 0.2s ease;
@@ -88,8 +90,8 @@ $breakpoint-tablet: 1024px;
 
     &--primary {
         background: transparent;
-        border: 3px solid #11c220;
-        color: #11c220;
+        border: 3px solid $green-primary;
+        color: $green-primary;
 
         &:hover { transform: scale(1.15); }
     }
@@ -132,8 +134,7 @@ $breakpoint-tablet: 1024px;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 0 0 1rem;
-    border-left: 3px solid #11c220;
-    padding-left: 8px;
+    border-left: 3px solid $green-primary;
     font-weight: 400;
 }
 
@@ -157,7 +158,7 @@ $breakpoint-tablet: 1024px;
     transition: all 0.2s;
 
     &:hover {
-        border-color: #11c220;
+        border-color: $green-primary;
         background: rgba(17, 194, 32, 0.08);
         transform: translateY(-2px);
     }
@@ -198,8 +199,8 @@ $breakpoint-tablet: 1024px;
     position: absolute;
     inset: 0;
     border-radius: 50%;
-    border: 4px solid #11c220;
-    box-shadow: 0 0 20px rgba(8, 231, 75, 1),
+    border: 4px solid $green-primary;
+    box-shadow: 0 0 20px rgba($green-primary, 1),
                 inset 0 0 20px rgba(15, 241, 7, 0.1);
     z-index: 10;
     pointer-events: none;
