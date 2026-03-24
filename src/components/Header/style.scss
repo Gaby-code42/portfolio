@@ -70,7 +70,7 @@ $breakpoint-tablet: 1024px;
   @media (max-width: $breakpoint-tablet) {
     .NavContainer {
         &__link{
-        font-size: 2vh;
+        font-size: 1rem;
     } 
   }
   .NavBar{
@@ -86,7 +86,7 @@ $breakpoint-tablet: 1024px;
     .NavContainer{
 
         &__link{
-          font-size: 3vh;
+          font-size: 1rem;
         }
     }
   }
