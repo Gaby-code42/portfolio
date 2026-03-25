@@ -37,13 +37,13 @@ const routerConfig = {
 const AppWrapper = () => {
   useBodyClass()
 
-  // ← RETRAIT : plus besoin de scrollPct, popupVisible, useEffect scroll
+
 
   return (
-    // ← AJOUT : PortfolioProvider englobe tout (doit être DANS BrowserRouter
-    //           pour avoir accès à useLocation)
+
+
     <PortfolioProvider>
-      <Header />   {/* ← Header contient déjà <LifeBar /> — voir Header.jsx */}
+      <Header />  
       <LifeBar />
       <Routes>
         <Route path="/" element={<><Helmet><title>Accueil - Développeur Fullstack</title></Helmet><Home /></>} />
@@ -53,15 +53,10 @@ const AppWrapper = () => {
 
       <Footer />
 
-      {/* ← AJOUT : Popup géré par le context — plus besoin de passer visible/onDismiss manuellement */}
       <PopupConnector />
     </PortfolioProvider>
   )
 }
-
-// Petit composant pour brancher le popup sur le context
-// (évite de faire remonter la logique dans AppWrapper)
-
 
 
 function PopupConnector() {
@@ -82,17 +77,3 @@ root.render(
   </React.StrictMode>
 )
 
-// ============================================================
-//  Header.jsx — ajouter <LifeBar /> quelque part dans le header
-//
-//  import { LifeBar } from '../ProgressBar/LifeBar'
-//
-//  export default function Header() {
-//    return (
-//      <header>
-//        <nav>...</nav>
-//        <LifeBar />       ← une seule ligne à ajouter
-//      </header>
-//    )
-//  }
-// ============================================================
