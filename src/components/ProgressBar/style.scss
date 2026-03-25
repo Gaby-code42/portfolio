@@ -1,107 +1,145 @@
-$breakpoint-mobile-small: 480px;
-$breakpoint-mobile-large: 767px;
-$breakpoint-tablet: 1024px;
+/* ============================================================
+   LifeBar.css — barre de progression retro gaming pour Header
+   ============================================================ */
 
-.circle{
-  &__container {
-  z-index: -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 13vh;
-  height: auto;
-  text-align: center;
-}
+   @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-  &__progress-wrapper {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-  &__progress-wrapper svg {
-    width: 100%;
-    height: 100%;
-}
-
-  &__progress-foreground {
-    stroke: url(#gradient); /* Couleur avec gradient */
-    stroke-width: 18;
-    stroke-linecap:butt; /* Arrondir le tracé pour un effet smooth */
- 
-}
-
-  &__percentage {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 4vh;
-    font-weight: 600;
-    color: white;
-  }
-}
-
-.circles{
-  &__container{
-    display: flex;
-    gap: 40px;
-    font-family: 'roboto', sans-serif;
-    flex-wrap: wrap;
-  }
-  &__wrapper{
-    display:flex ;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-  }
-  &__name{
-    font-size: 28px;
-    font-family: 'roboto',sans-serif;
-  }
-}
-
-@media (max-width: $breakpoint-tablet) {
-  .circle__container {
-    width: 12vh;
-  }
-
-  .circle__percentage {
-    font-size: 30px;
-  }
-
-  .circles__container {
-    gap: 20px;
-  }
-  .circles__name{
-    font-size: 19px;
-  }
-}
-
-@media (max-width: $breakpoint-mobile-large) {
-  .circle{
-    &__percentage {
-    font-size: 18px;
-    }
-  }
-  .circles__name{
-    font-size: 19px;
-  }
-  
-}
-
-@media (max-width: $breakpoint-mobile-small) {
-  .circle__container {
-    width: 6vh;
-  }
-
-  .circles__container {
-    justify-content: center;
-  }
-
-  .circles__name {
-    font-size: 12px;
-  }
-}
+   :root {
+     --lb-green:      #00ff88;
+     --lb-green-glow: rgba(0, 255, 136, .5);
+     --lb-bg:         transparent;
+     --lb-border:     #0a2018;
+     --lb-block-off:  #040e09;
+     --lb-block-border: #0a2015;
+     --lb-text-off:   #1a4030;
+     --lb-font:       'Press Start 2P', 'Courier New', monospace;
+   }
+   
+   .lb-root {
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+     padding: 9px 14px;
+     background: var(--lb-bg);
+     border: 1px solid var(--lb-border);
+     /* s'adapte à la largeur du header — ajuste max-width selon ton layout */
+     width: 100%;
+     max-width: 380px;
+   }
+   
+   /* ── Ligne haute : label + blocs + % ── */
+   .lb-top {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+   }
+   
+   .lb-label {
+     font-family: var(--lb-font);
+     font-size: 6px;
+     color: var(--lb-green);
+     letter-spacing: .12em;
+     white-space: nowrap;
+     text-shadow: 0 0 8px var(--lb-green-glow);
+   }
+   
+   .lb-blocks {
+     display: flex;
+     gap: 2px;
+     flex: 1;
+   }
+   
+   .lb-block {
+     flex: 1;
+     height: 16px;
+     background: var(--lb-block-off);
+     border: 1px solid var(--lb-block-border);
+     position: relative;
+     overflow: hidden;
+     transition: background .3s, box-shadow .3s;
+   }
+   
+   /* scanlines horizontales style LCD */
+   .lb-block::after {
+     content: '';
+     position: absolute;
+     inset: 0;
+     background: repeating-linear-gradient(
+       90deg,
+       transparent,
+       transparent 3px,
+       rgba(0, 0, 0, .18) 3px,
+       rgba(0, 0, 0, .18) 4px
+     );
+   }
+   
+   .lb-block.lit {
+     background: var(--lb-green);
+     box-shadow: 0 0 8px var(--lb-green-glow);
+   }
+   
+   /* reflet en haut du bloc allumé */
+   .lb-block.lit::before {
+     content: '';
+     position: absolute;
+     top: 0; left: 0; right: 0;
+     height: 38%;
+     background: rgba(255, 255, 255, .18);
+     z-index: 1;
+   }
+   
+   .lb-pct {
+     font-family: var(--lb-font);
+     font-size: 7px;
+     color: var(--lb-green);
+     flex-shrink: 0;
+     text-shadow: 0 0 6px var(--lb-green-glow);
+   }
+   
+   /* ── Barre fine ── */
+   .lb-track {
+     height: 2px;
+     background: var(--lb-block-border);
+   }
+   
+   .lb-fill {
+     height: 100%;
+     background: var(--lb-green);
+     box-shadow: 0 0 6px var(--lb-green-glow);
+     transition: width .55s cubic-bezier(.22, 1, .36, 1);
+   }
+   
+   /* ── Noms des pages ── */
+   .lb-pages {
+     display: flex;
+     justify-content: space-between;
+     margin-top: 2px;
+   }
+   
+   .lb-page {
+     font-family: var(--lb-font);
+     font-size: 5px;
+     color: var(--lb-text-off);
+     display: flex;
+     align-items: center;
+     gap: 3px;
+     transition: color .3s;
+   }
+   
+   .lb-page.done {
+     color: var(--lb-green);
+     text-shadow: 0 0 6px var(--lb-green-glow);
+   }
+   
+   .lb-dot {
+     width: 4px;
+     height: 4px;
+     flex-shrink: 0;
+     background: var(--lb-block-border);
+     transition: background .3s, box-shadow .3s;
+   }
+   
+   .lb-page.done .lb-dot {
+     background: var(--lb-green);
+     box-shadow: 0 0 4px var(--lb-green);
+   }

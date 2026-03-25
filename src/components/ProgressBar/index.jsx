@@ -1,48 +1,45 @@
-import React, { useEffect, useState } from 'react';
-import './style.scss';
+import { useEffect, useRef} from 'react'
+import { useProgress } from '../Provider/index'
+import './style.scss'
 
-const CircleProgressBar = ({ percentage, onChange }) => {
-  const radius = 50;
-  const strokeWidth = 10;
-  const circumference = 2 * Math.PI * radius;
+export function LifeBar() {
+  const { percent, visited, pages } = useProgress()
+  const prevPct = useRef(percent)
+  const TOTAL_BLOCKS = 9
 
+  useEffect(() => { prevPct.current = percent }, [percent])
 
-  const [offset, setOffset] = useState(circumference);
-
-  useEffect(() => {
-    const newOffset = circumference - (percentage / 100) * circumference;
-    setOffset(newOffset);
-  }, [percentage, circumference]);  
+  const litBlocks = Math.round((percent / 100) * TOTAL_BLOCKS)
 
   return (
-    <div className="circle__container">
-      <div className="circle__progress-wrapper">
-        <svg viewBox="0 0 120 120" preserveAspectRatio="xMidYMid meet">
-          <defs>
-            <linearGradient id="gradient" x1="35%" y1="0%" x2="80%" y2="90%">
-              <stop offset="0%" style={{ stopColor: "#16CFB3", stopOpacity: 1 }} />
-              <stop offset="100%" style={{ stopColor: "#A444FF", stopOpacity: 1 }} />
-            </linearGradient>
-          </defs>
-          <circle
-            cx="60"
-            cy="60"
-            r={radius}
-            className="circle__progress-foreground"
-            strokeWidth={strokeWidth}
-            fill="none"
-            stroke="url(#gradient)"  
-            strokeDasharray={circumference} 
-            strokeDashoffset={offset}  
-            style={{
-              transition: 'stroke-dashoffset 1s ease',  
-            }}
-          />
-        </svg>
-        <div className="circle__percentage">{Math.round(percentage)}%</div>
-      </div>
-    </div>
-  );
-};
+    <div className="lb-root">
 
-export default CircleProgressBar;
+      <div className="lb-top">
+        <span className="lb-label">SCAN</span>
+        <div className="lb-blocks">
+          {Array.from({ length: TOTAL_BLOCKS }, (_, i) => (
+            <div key={i} className={`lb-block${i < litBlocks ? ' lit' : ''}`} />
+          ))}
+        </div>
+        <span className="lb-pct">{percent}%</span>
+      </div>
+
+      <div className="lb-track">
+        <div className="lb-fill" style={{ width: `${percent}%` }} />
+      </div>
+
+      <div className="lb-pages">
+        {pages.map(p => {
+          const done = visited.has(p.path)
+          return (
+            <div key={p.path} className={`lb-page${done ? ' done' : ''}`}>
+              <div className="lb-dot" />
+              <span>{p.label}</span>
+            </div>
+          )
+        })}
+      </div>
+
+    </div>
+  )
+}
