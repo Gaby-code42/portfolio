@@ -81,5 +81,25 @@ $green-light: rgba(16, 97, 73, 0.15);
 
     }
   }
+  &__CtnParcours{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  
+  &__Parcours {
+    width: 50%;
+
+  }
+  &__Parcours ul{
+    list-style-type: none;
+  }
+  &__Motivation{
+    width: 50%;
+  }
+  &__Motivation ul{
+    list-style-type: none;
+  }
+
 
 }

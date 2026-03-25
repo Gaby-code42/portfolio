@@ -30,20 +30,12 @@ const About = () => {
         <p>Projet</p>
       </li>
       <li>
-        <h3>2</h3>
+        <h3>∞</h3>
         <p>Envie d'apprendre</p>
       </li>
     </ul>
   </div>
-  <div className='About__CtnParcours'>
-    <div className='About__Parcours'>
-      
-
-    </div>
-    <div className='About__Motivation'>
-
-    </div>
-  </div>
+  
 
 
 
