@@ -1,66 +1,64 @@
-/* ============================================================
-   LifeBar.css — barre de progression retro gaming pour Header
-   ============================================================ */
+
 
    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
    :root {
-     --lb-green:      #00ff88;
-     --lb-green-glow: rgba(0, 255, 136, .5);
-     --lb-bg:         transparent;
-     --lb-border:     #0a2018;
-     --lb-block-off:  #040e09;
-     --lb-block-border: #0a2015;
-     --lb-text-off:   #1a4030;
-     --lb-font:       'Press Start 2P', 'Courier New', monospace;
+     --pb-green:      #00ff88;
+     --pb-green-glow: rgba(0, 255, 136, .5);
+     --pb-bg:         transparent;
+     --pb-border:     #0a2018;
+     --pb-block-off:  #040e09;
+     --pb-block-border: #0a2015;
+     --pb-text-off:   #1a4030;
+     --pb-font:       'Press Start 2P', 'Courier New', monospace;
    }
    
-   .lb-root {
+   .pb-root {
      display: flex;
      flex-direction: column;
      gap: 5px;
      padding: 9px 14px;
-     background: var(--lb-bg);
-     border: 1px solid var(--lb-border);
-     /* s'adapte à la largeur du header — ajuste max-width selon ton layout */
+     background: var(--pb-bg);
+     border: 1px solid var(--pb-border);
      width: 100%;
      max-width: 380px;
+    
    }
    
-   /* ── Ligne haute : label + blocs + % ── */
-   .lb-top {
+
+   .pb-top {
      display: flex;
      align-items: center;
      gap: 10px;
+     
    }
    
-   .lb-label {
-     font-family: var(--lb-font);
+   .pb-label {
+     font-family: var(--pb-font);
      font-size: 6px;
-     color: var(--lb-green);
+     color: var(--pb-green);
      letter-spacing: .12em;
      white-space: nowrap;
-     text-shadow: 0 0 8px var(--lb-green-glow);
+     text-shadow: 0 0 8px var(--pb-green-glow);
    }
    
-   .lb-blocks {
+   .pb-blocks {
      display: flex;
      gap: 2px;
      flex: 1;
    }
    
-   .lb-block {
+   .pb-block {
      flex: 1;
      height: 16px;
-     background: var(--lb-block-off);
-     border: 1px solid var(--lb-block-border);
+     background: var(--pb-block-off);
+     border: 1px solid var(--pb-block-border);
      position: relative;
      overflow: hidden;
      transition: background .3s, box-shadow .3s;
    }
    
-   /* scanlines horizontales style LCD */
-   .lb-block::after {
+   .pb-block::after {
      content: '';
      position: absolute;
      inset: 0;
@@ -73,13 +71,13 @@
      );
    }
    
-   .lb-block.lit {
-     background: var(--lb-green);
-     box-shadow: 0 0 8px var(--lb-green-glow);
+   .pb-block.lit {
+     background: var(--pb-green);
+     box-shadow: 0 0 8px var(--pb-green-glow);
    }
    
-   /* reflet en haut du bloc allumé */
-   .lb-block.lit::before {
+
+   .pb-block.lit::before {
      content: '';
      position: absolute;
      top: 0; left: 0; right: 0;
@@ -88,58 +86,58 @@
      z-index: 1;
    }
    
-   .lb-pct {
-     font-family: var(--lb-font);
+   .pb-pct {
+     font-family: var(--pb-font);
      font-size: 7px;
-     color: var(--lb-green);
+     color: var(--pb-green);
      flex-shrink: 0;
-     text-shadow: 0 0 6px var(--lb-green-glow);
+     text-shadow: 0 0 6px var(--pb-green-glow);
    }
    
-   /* ── Barre fine ── */
-   .lb-track {
+
+   .pb-track {
      height: 2px;
-     background: var(--lb-block-border);
+     background: var(--pb-block-border);
    }
    
-   .lb-fill {
+   .pb-fill {
      height: 100%;
-     background: var(--lb-green);
-     box-shadow: 0 0 6px var(--lb-green-glow);
+     background: var(--pb-green);
+     box-shadow: 0 0 6px var(--pb-green-glow);
      transition: width .55s cubic-bezier(.22, 1, .36, 1);
    }
    
-   /* ── Noms des pages ── */
-   .lb-pages {
+
+   .pb-pages {
      display: flex;
      justify-content: space-between;
      margin-top: 2px;
    }
    
-   .lb-page {
-     font-family: var(--lb-font);
+   .pb-page {
+     font-family: var(--pb-font);
      font-size: 5px;
-     color: var(--lb-text-off);
+     color: var(--pb-text-off);
      display: flex;
      align-items: center;
      gap: 3px;
      transition: color .3s;
    }
    
-   .lb-page.done {
-     color: var(--lb-green);
-     text-shadow: 0 0 6px var(--lb-green-glow);
+   .pb-page.done {
+     color: var(--pb-green);
+     text-shadow: 0 0 6px var(--pb-green-glow);
    }
    
-   .lb-dot {
+   .pb-dot {
      width: 4px;
      height: 4px;
      flex-shrink: 0;
-     background: var(--lb-block-border);
+     background: var(--pb-block-border);
      transition: background .3s, box-shadow .3s;
    }
    
-   .lb-page.done .lb-dot {
-     background: var(--lb-green);
-     box-shadow: 0 0 4px var(--lb-green);
+   .pb-page.done .pb-dot {
+     background: var(--pb-green);
+     box-shadow: 0 0 4px var(--pb-green);
    }

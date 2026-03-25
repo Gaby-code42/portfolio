@@ -12,28 +12,28 @@ export function LifeBar() {
   const litBlocks = Math.round((percent / 100) * TOTAL_BLOCKS)
 
   return (
-    <div className="lb-root">
+    <div className="pb-root">
 
-      <div className="lb-top">
-        <span className="lb-label">SCAN</span>
-        <div className="lb-blocks">
+      <div className="pb-top">
+        <span className="pb-label">SCAN</span>
+        <div className="pb-blocks">
           {Array.from({ length: TOTAL_BLOCKS }, (_, i) => (
-            <div key={i} className={`lb-block${i < litBlocks ? ' lit' : ''}`} />
+            <div key={i} className={`pb-block${i < litBlocks ? ' lit' : ''}`} />
           ))}
         </div>
-        <span className="lb-pct">{percent}%</span>
+        <span className="pb-pct">{percent}%</span>
       </div>
 
-      <div className="lb-track">
-        <div className="lb-fill" style={{ width: `${percent}%` }} />
+      <div className="pb-track">
+        <div className="pb-fill" style={{ width: `${percent}%` }} />
       </div>
 
-      <div className="lb-pages">
+      <div className="pb-pages">
         {pages.map(p => {
           const done = visited.has(p.path)
           return (
-            <div key={p.path} className={`lb-page${done ? ' done' : ''}`}>
-              <div className="lb-dot" />
+            <div key={p.path} className={`pb-page${done ? ' done' : ''}`}>
+              <div className="pb-dot" />
               <span>{p.label}</span>
             </div>
           )

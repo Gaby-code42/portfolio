@@ -47,8 +47,8 @@ const AppWrapper = () => {
       <LifeBar />
       <Routes>
         <Route path="/" element={<><Helmet><title>Accueil - Développeur Fullstack</title></Helmet><Home /></>} />
-        <Route path="/about" element={<><Helmet><title>À propos - Développeur Fullstack</title></Helmet><About /></>} />
         <Route path="/realisation" element={<><Helmet><title>Réalisations - Mes projets</title></Helmet><Realisation /></>} />
+        <Route path="/about" element={<><Helmet><title>À propos - Développeur Fullstack</title></Helmet><About /></>} />
       </Routes>
 
       <Footer />

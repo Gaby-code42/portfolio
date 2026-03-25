@@ -5,8 +5,8 @@ import { useLocation } from 'react-router-dom'
 
 export const PORTFOLIO_PAGES = [
   { path: '/',            label: 'Accueil',      icon: '🏠' },
-  { path: '/about',       label: 'À propos',     icon: '👾' },
   { path: '/realisation', label: 'Réalisations',  icon: '🗺️' },
+  { path: '/about',       label: 'À propos',     icon: '👾' },
 ]
 
 // ─── Context ──────────────────────────────────────────────────────

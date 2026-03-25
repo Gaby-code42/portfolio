@@ -1,4 +1,5 @@
 import { useEffect} from 'react'
+import CVPdf from '../../assets/cv04.pdf'
 import './style.scss'
 
 
@@ -64,7 +65,7 @@ export function CongratulationsPopup({
           <div className="cpop-actions">
           <button
           className="cpop-btn-main"
-          onClick={() => window.open('CVPdf', "_blank")}>
+          onClick={() => window.open(CVPdf, "_blank")}>
           {ctaLabel}
           </button>
             <button className="cpop-btn-skip" onClick={onDismiss}>
