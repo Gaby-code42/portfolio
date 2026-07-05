@@ -35,7 +35,30 @@ const About = () => {
       </li>
     </ul>
   </div>
-  
+  <div className='About__CtnParcours'>
+    <div className='About__Parcours'>
+      <h2>formations </h2>
+      <ul>
+        <li> 
+          <h3> OpenClassroom : Développeur Web </h3>
+          <p></p>
+        </li>
+
+      </ul>
+     
+
+    </div>
+    <div className='About__Motivation'>
+      <h2>Motivations</h2>
+      <ul>
+        <li>
+          <h3>Gaming</h3>
+        </li>
+      </ul>
+      
+
+    </div>
+  </div>
 
 
 

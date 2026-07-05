@@ -1,5 +1,5 @@
 import { useEffect} from 'react'
-import CVPdf from '../../assets/cv04.pdf'
+import CVPdf from '../../assets/CVpro.pdf'
 import './style.scss'
 
 
