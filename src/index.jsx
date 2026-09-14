@@ -14,6 +14,7 @@ import { CongratulationsPopup } from './components/CongratPopUP'
 import { PortfolioProvider, useProgress } from './components/Provider'
 
 import useBodyClass from './hooks/bodyBackground'
+import useScrollToTop from './hooks/scrollToTop'
 import './styleGlobal/app.scss'
 
 const routerConfig = {
@@ -36,6 +37,7 @@ function PopupConnector() {
 
 const AppWrapper = () => {
   useBodyClass()
+  useScrollToTop()
 
   return (
     <PortfolioProvider>

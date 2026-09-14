@@ -44,16 +44,34 @@ export function PortfolioProvider({ children }) {
     const page = PORTFOLIO_PAGES.find(p => p.path === location.pathname)
     if (!page?.scrollRequired) return
 
-    const handleScroll = () => {
-      const scrollTop  = window.scrollY
-      const docHeight  = document.body.scrollHeight - window.innerHeight
-      if (docHeight <= 0) return
-      const pct = Math.round((scrollTop / docHeight) * 100)
+    const verifier = () => {
+      const hauteurPage = document.body.scrollHeight
+      // Mise en page pas encore mesurable (premier rendu, environnement de test).
+      if (hauteurPage === 0) return
+
+      const aFaireDefiler = hauteurPage - window.innerHeight
+      // Grand écran ou zoom arrière : la page tient entièrement dans la
+      // fenêtre. Il n'y a rien à faire défiler, donc tout a déjà été vu —
+      // sans ça l'événement `scroll` ne part jamais et la page reste bloquée.
+      if (aFaireDefiler <= 0) {
+        markVisited(page.path)
+        return
+      }
+
+      const pct = Math.round((window.scrollY / aFaireDefiler) * 100)
       if (pct >= 100) markVisited(page.path)
     }
 
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', verifier, { passive: true })
+    window.addEventListener('resize', verifier)
+    // On mesure après la première peinture, quand la hauteur est stabilisée.
+    const frame = requestAnimationFrame(verifier)
+
+    return () => {
+      cancelAnimationFrame(frame)
+      window.removeEventListener('scroll', verifier)
+      window.removeEventListener('resize', verifier)
+    }
   }, [location.pathname, markVisited])
 
   const percent = Math.round((visited.size / PORTFOLIO_PAGES.length) * 100)

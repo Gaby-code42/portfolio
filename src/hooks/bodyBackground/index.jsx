@@ -1,33 +1,25 @@
-import { useEffect, useCallback } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+
+// Le fond de page est porté par <body> pour couvrir toute la hauteur, y
+// compris sous le header et le footer.
+const FONDS = {
+  '/': 'home-background',
+  '/realisation': 'realisation-background',
+  '/about': 'realisation-background',
+}
 
 const useBodyClass = () => {
-  
-  const location = useLocation();
-
-  const getBodyClass = useCallback(() => {
-    if (location.pathname === '/') return 'home-background';
-    if (location.pathname === '/realisation') return 'realisation-background';
-    if (location.pathname === '/about') return 'realisation-background'
-    if (location.pathname === '/realisation/:id') return 'realisation-background'
-    if (location.pathname === '/competences') return 'realisation-background' 
-    if (/^\/realisation\/\d+$/.test(location.pathname)) {
-      return 'realisation-background';
-    }
-  }, [location]); 
+  const { pathname } = useLocation()
 
   useEffect(() => {
-   
-    const bodyClass = getBodyClass();
-    document.body.className = ''; 
-    if (bodyClass) {
-      document.body.classList.add(bodyClass); 
-    }
+    const classe = FONDS[pathname]
+    document.body.className = classe || ''
 
     return () => {
-      document.body.className = ''; 
-    };
-  }, [getBodyClass]); 
-};
+      document.body.className = ''
+    }
+  }, [pathname])
+}
 
-export default useBodyClass;
+export default useBodyClass
