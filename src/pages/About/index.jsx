@@ -17,7 +17,7 @@ const About = () => {
               Raphaël <span className='About__TitleCtnNom'>Bonacina</span>
             </h2>
             <p className='About__TitleCtn About__TitleRole'>
-              Développeur <span className='About__TitleCtnNom'>Web React</span>
+              Développeur web full-stack <span className='About__TitleCtnNom'>React / Next.js</span>
             </p>
           </div>
           <p>

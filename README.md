@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/Gaby-code42/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/Gaby-code42/portfolio/actions/workflows/ci.yml)
 
-Portfolio personnel de Raphaël Bonacina, développeur web front-end.
+Portfolio personnel de Raphaël Bonacina, développeur web full-stack React / Next.js.
 L'interface reprend les codes du jeu vidéo : thème terminal / cyber, et un
 système de progression qui se remplit à mesure que le visiteur explore le site.
 
@@ -57,6 +57,16 @@ Le site est alors disponible sur http://localhost:3000.
 > `npm run deploy` déclenche automatiquement `predeploy`, qui copie
 > `index.html` en `404.html`. GitHub Pages ne connaît pas les routes côté
 > client : sans ce fichier, un accès direct à `/realisation` renverrait une 404.
+>
+> Limite assumée : ces pages sont bien affichées, mais avec un statut HTTP 404.
+> C'est pourquoi `public/sitemap.xml` ne déclare que la racine. Un hébergeur
+> gérant les réécritures (Vercel, Netlify) lèverait cette limite.
+
+## Performance
+
+Les fonds de page étaient des SVG exportés d'Illustrator qui embarquaient un
+PNG de 4022 px en base64 : ~930 Ko chacun, soit plus que tout le JavaScript.
+Ils sont désormais rastérisés en WebP 1920 px (~25 Ko), sans perte visible.
 
 ## Structure
 

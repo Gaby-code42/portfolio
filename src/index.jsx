@@ -51,7 +51,7 @@ const AppWrapper = () => {
             element={
               <>
                 <Helmet>
-                  <title>Raphaël Bonacina — Développeur web front-end</title>
+                  <title>Raphaël Bonacina — Développeur web full-stack React / Next.js</title>
                 </Helmet>
                 <Home />
               </>

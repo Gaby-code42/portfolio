@@ -27,9 +27,9 @@ const Home = () => {
         <div className='description'>
 
           <p className='description__subtitle'>Je suis Raphaël Bonacina</p>
-          <h1 className='description__title'>DÉVELOPPEUR WEB</h1>
+          <h1 className='description__title'>DÉVELOPPEUR WEB FULL-STACK</h1>
           <p className='description__text'>
-          Développeur web fullstack curieux et persévérant, toujours motivé à apprendre et à créer des projets performants et sur mesure.
+          Développeur React / Next.js curieux et persévérant, toujours motivé à apprendre et à créer des projets performants et sur mesure.
           </p>
           <p className='description__textBanner'>
             🎓 Actuellement à la recherche d'une alternance en développement web.
@@ -56,7 +56,9 @@ const Home = () => {
       <div className='skill__badge'><span className='skill__icon skill__icon--html'>H5</span> HTML</div>
       <div className='skill__badge'><span className='skill__icon skill__icon--css'>CSS</span> CSS</div>
       <div className='skill__badge'><span className='skill__icon skill__icon--js'>JS</span> JavaScript</div>
+      <div className='skill__badge'><span className='skill__icon skill__icon--ts'>TS</span> TypeScript</div>
       <div className='skill__badge'><span className='skill__icon skill__icon--react'>⚛</span> React</div>
+      <div className='skill__badge'><span className='skill__icon skill__icon--next'>N</span> Next.js</div>
       <div className='skill__badge'><span className='skill__icon skill__icon--scss'>Sc</span> SCSS</div>
     </div>
   </div>
@@ -65,7 +67,9 @@ const Home = () => {
     <h3 className='skill__category-title'>Back-end</h3>
     <div className='skill__grid'>
       <div className='skill__badge'><span className='skill__icon skill__icon--node'>N</span> Node.js</div>
+      <div className='skill__badge'><span className='skill__icon skill__icon--supabase'>S</span> Supabase</div>
       <div className='skill__badge'><span className='skill__icon skill__icon--mongo'>M</span> MongoDB</div>
+      <div className='skill__badge'><span className='skill__icon skill__icon--mysql'>SQL</span> MySQL</div>
     </div>
   </div>
 
@@ -74,6 +78,7 @@ const Home = () => {
     <div className='skill__grid'>
       <div className='skill__badge'><span className='skill__icon skill__icon--figma'>F</span> Figma</div>
       <div className='skill__badge'><span className='skill__icon skill__icon--git'>G</span> Git & GitHub</div>
+      <div className='skill__badge'><span className='skill__icon skill__icon--vercel'>▲</span> Vercel</div>
     </div>
   </div>
 </div>

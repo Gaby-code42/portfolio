@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation, Link } from "react-router-dom";
-import Logo from "../../assets/logo pro gaby-02.svg";
+import Logo from "../../assets/logo.svg";
 import MobileMenu from "../MenuBurger";
 import "./style.scss";
 

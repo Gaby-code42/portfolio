@@ -8,19 +8,14 @@ body {
   overflow-x: hidden;
 }
 
+// Fonds exportés d'Illustrator puis rastérisés en WebP : les SVG d'origine
+// embarquaient un PNG 4022 px en base64 (~930 Ko chacun contre ~25 Ko ici).
 .home-background {
-  background-color: black;
-  background: url('../assets/fondHome.svg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background: black url('../assets/bg-home.webp') center center / cover no-repeat;
 }
 
 .realisation-background {
-  background-color: black;
-  background: url('../assets/background\ realisations_Plan\ de\ travail\ 1.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: black url('../assets/bg-realisations.webp') 0 0 / cover no-repeat;
 }
 
 @media (max-width: $breakpoint-tablet) {

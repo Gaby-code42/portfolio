@@ -171,6 +171,11 @@
     &--figma { background: #f24e1e; color: white; font-size: 12px; }
     &--git   { background: #f05032; color: white; font-size: 12px; }
     &--scss  { background: #cc6699; color: white; }
+    &--next  { background: #000;    color: white; border: 1px solid #555; }
+    &--ts    { background: #3178c6; color: white; font-size: 11px; }
+    &--supabase { background: #1c1c1c; color: #3ecf8e; }
+    &--mysql { background: #00758f; color: white; font-size: 11px; }
+    &--vercel { background: #000;   color: white; border: 1px solid #555; font-size: 12px; }
 }
 
 // Avatar
