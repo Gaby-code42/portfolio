@@ -31,6 +31,11 @@ const Realisation = () => {
         else if (diff < -60) go(-1)
     }
 
+    const onKeyDown = (e) => {
+        if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1) }
+        else if (e.key === 'ArrowRight') { e.preventDefault(); go(1) }
+    }
+
     const onTouchStart = (e) => { startX.current = e.touches[0].clientX }
     const onTouchEnd = (e) => {
         const diff = startX.current - e.changedTouches[0].clientX
@@ -60,16 +65,22 @@ const Realisation = () => {
 
             <div
                 className='carousel'
+                role='group'
+                aria-roledescription='carrousel'
+                aria-label='Mes projets'
+                tabIndex={0}
+                onKeyDown={onKeyDown}
                 onMouseDown={onMouseDown}
                 onMouseUp={onMouseUp}
                 onTouchStart={onTouchStart}
                 onTouchEnd={onTouchEnd}
             >
-                <div className='carousel__track'>
+                <div className='carousel__track' id='carousel-track' aria-live='polite'>
                     {visibleCards.map(({ id, title, icon, shortdescription, tags, github, demo, offset }) => (
                         <div
                             key={id}
                             className={getCardClass(offset)}
+                            aria-hidden={offset !== 0}
                         >
                             <FontAwesomeIcon
                                 className='card__icon'
@@ -87,15 +98,23 @@ const Realisation = () => {
                             </div>
 
                             <div className='card__btns'>
-                                <a
-                                    href={github}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className='card__btn card__btn--github'
-                                    onClick={e => e.stopPropagation()}
-                                >
-                                    <FontAwesomeIcon icon={faGithub} /> GitHub
-                                </a>
+                                {github ? (
+                                    <a
+                                        href={github}
+                                        target='_blank'
+                                        rel='noreferrer'
+                                        className='card__btn card__btn--github'
+                                        tabIndex={offset === 0 ? undefined : -1}
+                                        onClick={e => e.stopPropagation()}
+                                    >
+                                        <span className='sr-only'>{`Code source de ${title} sur `}</span>
+                                        <FontAwesomeIcon icon={faGithub} /> GitHub
+                                    </a>
+                                ) : (
+                                    <span className='card__btn card__btn--disabled'>
+                                        Code privé
+                                    </span>
+                                )}
 
                                 {demo ? (
                                     <a
@@ -103,9 +122,10 @@ const Realisation = () => {
                                         target="_blank"
                                         rel="noreferrer"
                                         className="card__btn card__btn--demo"
+                                        tabIndex={offset === 0 ? undefined : -1}
                                         onClick={(e) => e.stopPropagation()}
                                     >
-                                        Démo live
+                                        Démo live<span className='sr-only'>{` de ${title}`}</span>
                                     </a>
                                 ) : (
                                     <span className='card__btn card__btn--disabled'>
@@ -119,19 +139,38 @@ const Realisation = () => {
             </div>
 
             <div className='carousel__nav'>
-                <button className='carousel__btn' onClick={() => go(-1)}>{'<'}</button>
+                <button
+                    type='button'
+                    className='carousel__btn'
+                    onClick={() => go(-1)}
+                    aria-label='Projet précédent'
+                    aria-controls='carousel-track'
+                >
+                    <span aria-hidden='true'>{'<'}</span>
+                </button>
 
                 <div className='carousel__dots'>
-                    {Data.map((_, i) => (
-                        <span
-                            key={i}
+                    {Data.map((project, i) => (
+                        <button
+                            key={project.id}
+                            type='button'
                             className={`carousel__dot ${i === current ? 'carousel__dot--active' : ''}`}
                             onClick={() => setCurrent(i)}
+                            aria-label={`Afficher le projet ${project.title}`}
+                            aria-current={i === current ? 'true' : undefined}
                         />
                     ))}
                 </div>
 
-                <button className='carousel__btn' onClick={() => go(1)}>{'>'}</button>
+                <button
+                    type='button'
+                    className='carousel__btn'
+                    onClick={() => go(1)}
+                    aria-label='Projet suivant'
+                    aria-controls='carousel-track'
+                >
+                    <span aria-hidden='true'>{'>'}</span>
+                </button>
             </div>
         </div>
     )

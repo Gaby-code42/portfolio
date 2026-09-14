@@ -12,7 +12,7 @@ const useBodyClass = () => {
     if (location.pathname === '/realisation/:id') return 'realisation-background'
     if (location.pathname === '/competences') return 'realisation-background' 
     if (/^\/realisation\/\d+$/.test(location.pathname)) {
-      return 'realisation-background'; // Background pour les projets individuels
+      return 'realisation-background';
     }
   }, [location]); 
 
@@ -24,7 +24,6 @@ const useBodyClass = () => {
       document.body.classList.add(bodyClass); 
     }
 
-    // Nettoyage
     return () => {
       document.body.className = ''; 
     };

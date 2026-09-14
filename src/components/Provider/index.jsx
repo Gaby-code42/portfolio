@@ -1,14 +1,12 @@
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 
-
 export const PORTFOLIO_PAGES = [
   { path: '/',            label: 'Accueil',      icon: '🏠', scrollRequired: false },
   { path: '/about',       label: 'À propos',     icon: '👾', scrollRequired: true  },
   { path: '/realisation', label: 'Réalisations', icon: '🗺️', scrollRequired: false },
 ]
 
-// ─── Context ──────────────────────────────────────────────────────
 const ProgressCtx = createContext(null)
 
 export function useProgress() {
@@ -17,7 +15,6 @@ export function useProgress() {
   return ctx
 }
 
-// ─── Provider ─────────────────────────────────────────────────────
 export function PortfolioProvider({ children }) {
   const location = useLocation()
   const [visited, setVisited]           = useState(() => new Set())
@@ -36,7 +33,6 @@ export function PortfolioProvider({ children }) {
     })
   }, [])
 
-  // ── Pages sans scroll requis : validées à la navigation ──
   useEffect(() => {
     const page = PORTFOLIO_PAGES.find(p => p.path === location.pathname)
     if (page && !page.scrollRequired) {
@@ -44,7 +40,6 @@ export function PortfolioProvider({ children }) {
     }
   }, [location.pathname, markVisited])
 
-  // ── Pages avec scroll requis : validées à 100% de scroll ──
   useEffect(() => {
     const page = PORTFOLIO_PAGES.find(p => p.path === location.pathname)
     if (!page?.scrollRequired) return

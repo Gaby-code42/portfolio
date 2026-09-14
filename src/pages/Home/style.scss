@@ -1,12 +1,6 @@
-$breakpoint-mobile-small: 480px;
-$breakpoint-mobile-large: 768px;
-$breakpoint-tablet: 1024px;
-$green-primary: rgb(0, 229, 160);
-$green-light: rgba(16, 97, 73, 0.15);
+@use '../../styleGlobal/variables' as *;
 
-// ============
-// LAYOUT
-// ============
+// Layout
 .home {
     padding: 10vh 5vh 0;
     box-sizing: border-box;
@@ -24,9 +18,7 @@ $green-light: rgba(16, 97, 73, 0.15);
     padding-bottom: 10vh;
 }
 
-// ============
-// DESCRIPTION
-// ============
+// Description
 .description {
     display: flex;
     flex-direction: column;
@@ -40,7 +32,7 @@ $green-light: rgba(16, 97, 73, 0.15);
     }
 
     &__title {
-        background: linear-gradient(90deg, #089FE0, #0FAE62);
+        background: linear-gradient(90deg, $blue-accent, $green-mid);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -71,9 +63,7 @@ $green-light: rgba(16, 97, 73, 0.15);
     }
 }
 
-// ============
-// BOUTONS
-// ============
+// Boutons
 .btn {
     position: relative;
     overflow: hidden;
@@ -98,21 +88,19 @@ $green-light: rgba(16, 97, 73, 0.15);
 
     &--secondary {
         background: transparent;
-        border: 3px solid #089FE0;
-        color: #089FE0;
+        border: 3px solid $blue-accent;
+        color: $blue-accent;
 
         &:hover { transform: scale(1.15); }
     }
 }
 
-// ============
-// SKILLS
-// ============
+// Skills
 
 .skill__title {
     margin-top: 20px;
     margin-bottom: 0;
-    background: linear-gradient(90deg, #089FE0, #0FAE62);
+    background: linear-gradient(90deg, $blue-accent, $green-mid);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -129,7 +117,7 @@ $green-light: rgba(16, 97, 73, 0.15);
 }
 
 .skill__category-title {
-    color: #8892b0;
+    color: $grey-muted;
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -185,9 +173,7 @@ $green-light: rgba(16, 97, 73, 0.15);
     &--scss  { background: #cc6699; color: white; }
 }
 
-// ============
-// AVATAR
-// ============
+// Avatar
 .avatar-container {
     position: relative;
     width: 450px;
@@ -266,9 +252,7 @@ $green-light: rgba(16, 97, 73, 0.15);
     animation: img-glitch-red 2s infinite;
 }
 
-// ============
-// ANIMATIONS
-// ============
+// Animations
 @keyframes scan {
     0%   { top: 0%; }
     100% { top: 100%; }
@@ -294,9 +278,7 @@ $green-light: rgba(16, 97, 73, 0.15);
     97% { opacity: 0; }
 }
 
-// ============
-// RESPONSIVE
-// ============
+// Responsive
 @media (max-width: $breakpoint-tablet) {
     .heroSection {
         flex-direction: column;

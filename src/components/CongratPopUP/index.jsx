@@ -1,78 +1,120 @@
-import { useEffect} from 'react'
+import { useEffect, useRef } from 'react'
 import CVPdf from '../../assets/CVpro.pdf'
 import './style.scss'
 
+const DEFAULT_MESSAGE =
+  "Vous avez pris le temps d'explorer chaque page — c'est rare. Si mon profil retient votre attention, je serai heureux d'échanger avec vous."
+
+const FOCUSABLE = 'a[href], button:not([disabled])'
 
 export function CongratulationsPopup({
   visible,
   onDismiss,
-  onCTA,
   ctaLabel = 'Télécharger mon CV',
   message,
 }) {
-  const defaultMessage =
-    "Vous avez pris le temps d'explorer chaque page — c'est rare. Si mon profil retient votre attention, je serai heureux d'échanger avec vous."
-
+  const cardRef = useRef(null)
+  const lastFocusedRef = useRef(null)
 
   useEffect(() => {
-    if (visible) {
-      document.body.style.overflow = 'hidden'
-    } else {
+    if (!visible) return
+    document.body.style.overflow = 'hidden'
+    return () => {
       document.body.style.overflow = ''
     }
-    return () => { document.body.style.overflow = '' }
   }, [visible])
+
+  useEffect(() => {
+    if (!visible) return
+
+    lastFocusedRef.current = document.activeElement
+    const card = cardRef.current
+    card?.querySelector(FOCUSABLE)?.focus()
+
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        onDismiss?.()
+        return
+      }
+      if (e.key !== 'Tab' || !card) return
+
+      const items = Array.from(card.querySelectorAll(FOCUSABLE))
+      if (items.length === 0) return
+      const first = items[0]
+      const last = items[items.length - 1]
+
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault()
+        last.focus()
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault()
+        first.focus()
+      }
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+    return () => {
+      window.removeEventListener('keydown', onKeyDown)
+      lastFocusedRef.current?.focus?.()
+    }
+  }, [visible, onDismiss])
 
   if (!visible) return null
 
   return (
-       
+    <div className="cpop-overlay" onClick={onDismiss}>
+      <div className="cpop-scanline" aria-hidden="true" />
 
-      <div className="cpop-overlay" onClick={onDismiss}>
-        <div className="cpop-scanline" />
+      <div
+        className="cpop-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cpop-title"
+        aria-describedby="cpop-msg"
+        ref={cardRef}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="cpop-corner cpop-corner-tl" aria-hidden="true" />
+        <div className="cpop-corner cpop-corner-tr" aria-hidden="true" />
+        <div className="cpop-corner cpop-corner-bl" aria-hidden="true" />
+        <div className="cpop-corner cpop-corner-br" aria-hidden="true" />
 
-        <div className="cpop-card" onClick={e => e.stopPropagation()}>
-        
-          <div className="cpop-corner cpop-corner-tl" />
-          <div className="cpop-corner cpop-corner-tr" />
-          <div className="cpop-corner cpop-corner-bl" />
-          <div className="cpop-corner cpop-corner-br" />
+        <p className="cpop-badge">
+          <span className="cpop-badge-dot" aria-hidden="true" />
+          MISSION COMPLETE
+        </p>
 
-          <div className="cpop-badge">
-            <div className="cpop-badge-dot" />
-            MISSION COMPLETE
-          </div>
+        <h2 className="cpop-title" id="cpop-title">
+          PORTFOLIO
+          <span className="cpop-title-accent">EXPLORÉ À 100%</span>
+        </h2>
 
+        <div className="cpop-divider" aria-hidden="true" />
 
-          <div className="cpop-title">
-            PORTFOLIO
-            <span className="cpop-title-accent">EXPLORÉ À 100%</span>
-          </div>
+        <p className="cpop-msg" id="cpop-msg">
+          {message || DEFAULT_MESSAGE}
+        </p>
 
-          <div className="cpop-divider" />
+        <div className="cpop-cubes-row" aria-hidden="true">
+          <div className="cpop-cube" />
+          <div className="cpop-cube" />
+          <div className="cpop-cube" />
+        </div>
 
-
-          <p className="cpop-msg">{message || defaultMessage}</p>
-
-
-          <div className="cpop-cubes-row">
-            <div className="cpop-cube" />
-            <div className="cpop-cube" />
-            <div className="cpop-cube" />
-          </div>
-
-          {/* Actions */}
-          <div className="cpop-actions">
-          <button
-          className="cpop-btn-main"
-          onClick={() => window.open(CVPdf, "_blank")}>
-          {ctaLabel}
+        <div className="cpop-actions">
+          <a
+            className="cpop-btn-main"
+            href={CVPdf}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {ctaLabel}
+          </a>
+          <button type="button" className="cpop-btn-skip" onClick={onDismiss}>
+            CONTINUER L'EXPLORATION
           </button>
-            <button className="cpop-btn-skip" onClick={onDismiss}>
-              CONTINUER L'EXPLORATION
-            </button>
-          </div>
         </div>
       </div>
+    </div>
   )
 }

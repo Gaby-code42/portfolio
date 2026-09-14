@@ -1,3 +1,4 @@
+@use '../../styleGlobal/variables' as *;
 .mobile-menu {
   display: none;
 
@@ -31,12 +32,12 @@
   max-width: 400px;
 
   background: #0a0f0a;
-  border: 2px solid #00ff9c;
+  border: 2px solid $green-signal;
 
   box-shadow: 0 0 20px rgba(0,255,150,0.4);
 
   font-family: "Courier New", monospace;
-  color: #00ff9c;
+  color: $green-signal;
 }
 
 .terminal__header {
@@ -44,7 +45,7 @@
   justify-content: space-between;
   padding: 10px;
 
-  border-bottom: 1px solid #00ff9c;
+  border-bottom: 1px solid $green-signal;
 }
 
 .terminal__content {
@@ -55,11 +56,11 @@
   margin-bottom: 16px;
 
   a {
-    color: #00ff9c;
+    color: $green-signal;
     text-decoration: none;
 
     &:hover {
-      text-shadow: 0 0 6px #00ff9c;
+      text-shadow: 0 0 6px $green-signal;
     }
   }
 
@@ -71,6 +72,6 @@
 .burger__btn__close {
   background: none;
   border: none;
-  color: #00ff9c;
+  color: $green-signal;
   cursor: pointer;
 }

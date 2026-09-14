@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# Portfolio — Raphaël Bonacina
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![CI](https://github.com/Gaby-code42/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/Gaby-code42/portfolio/actions/workflows/ci.yml)
 
-## Available Scripts
+Portfolio personnel de Raphaël Bonacina, développeur web front-end.
+L'interface reprend les codes du jeu vidéo : thème terminal / cyber, et un
+système de progression qui se remplit à mesure que le visiteur explore le site.
 
-In the project directory, you can run:
+**🔗 [Voir le site en ligne](https://gaby-code42.github.io/portfolio/)**
 
-### `npm start`
+![Aperçu du portfolio](public/og-image.jpg)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Le concept
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Chaque page visitée fait progresser une barre de « scan » affichée en haut de
+l'écran. Une fois les trois pages parcourues, une modale « MISSION COMPLETE »
+apparaît et propose le CV en téléchargement. L'idée : transformer la visite
+d'un portfolio — un exercice généralement passif — en quelque chose qu'on a
+envie de terminer.
 
-### `npm test`
+La logique vit dans un contexte React (`src/components/Provider`) qui écoute la
+navigation et, pour les pages qui l'exigent, le pourcentage de scroll.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Stack
 
-### `npm run build`
+| | |
+|---|---|
+| Framework | React 18 |
+| Routing | React Router 6 |
+| Styles | SCSS (7-1 allégé, un fichier par composant) |
+| Animations | Framer Motion |
+| Icônes | Font Awesome |
+| Méta / SEO | react-helmet-async |
+| Build | Create React App |
+| Hébergement | GitHub Pages |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/Gaby-code42/portfolio.git
+cd portfolio
+npm install
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Le site est alors disponible sur http://localhost:3000.
 
-### `npm run eject`
+## Scripts
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Commande | Effet |
+|---|---|
+| `npm start` | Serveur de développement |
+| `npm run build` | Build de production dans `build/` |
+| `npm test` | Lance les tests |
+| `npm run deploy` | Build, génère le `404.html` puis publie sur GitHub Pages (manuel) |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> `npm run deploy` déclenche automatiquement `predeploy`, qui copie
+> `index.html` en `404.html`. GitHub Pages ne connaît pas les routes côté
+> client : sans ce fichier, un accès direct à `/realisation` renverrait une 404.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+src/
+├── assets/          # Logo, fonds, CV
+├── components/      # Composants réutilisables (un dossier = un composant + son SCSS)
+│   ├── CongratPopUP/   # Modale de fin d'exploration
+│   ├── Footer/
+│   ├── Header/
+│   ├── MenuBurger/     # Menu mobile façon terminal
+│   ├── ProgressBar/    # Barre de progression « scan »
+│   ├── Provider/       # Contexte de progression
+│   └── SocialLinks/
+├── data/            # index.json — les projets, hors du JSX
+├── hooks/           # useBodyClass — fond de page selon la route
+├── pages/           # Home, Realisation, About
+└── styleGlobal/     # Styles globaux et utilitaires
+```
 
-## Learn More
+## Ajouter un projet
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Tout se passe dans `src/data/index.json` :
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```json
+{
+  "id": 6,
+  "title": "Nom du projet",
+  "icon": "faReact",
+  "shortdescription": "Une phrase qui décrit le projet.",
+  "tags": ["React", "SCSS"],
+  "github": "https://github.com/…",
+  "demo": "https://…"
+}
+```
 
-### Code Splitting
+`icon` accepte `faHtml5`, `faJs`, `faReact`, `faNode` ou `faGlobe`.
+`demo` peut valoir `null` : la carte affiche alors « Pas de démo ».
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Licence
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Code sous licence MIT. Les contenus personnels (photo, CV, textes) restent la
+propriété de leur auteur.

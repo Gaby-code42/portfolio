@@ -1,6 +1,4 @@
-$breakpoint-mobile-small: 480px;
-$breakpoint-mobile-large: 768px;
-$breakpoint-tablet: 1024px;
+@use 'variables' as *;
 
 
 
@@ -38,4 +36,16 @@ body {
   .home-background {
     margin-bottom: 26vh;
   }
+}
+// Contenu réservé aux lecteurs d'écran
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

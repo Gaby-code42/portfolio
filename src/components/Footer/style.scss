@@ -1,6 +1,4 @@
-$breakpoint-mobile-small: 480px;
-$breakpoint-mobile-large: 767px;
-$breakpoint-tablet: 1024px;
+@use '../../styleGlobal/variables' as *;
 
 .footer{
   &__container{
@@ -66,20 +64,22 @@ $breakpoint-tablet: 1024px;
   &__design{
     margin: 25px 0px;
   }
-}
 
-.reseaux{
-  list-style-type: none;
-  display: flex;
-  gap: 20px;
-  padding: 0;
-  justify-content: center;
-  padding-top: 10px;
+  &__mail{
+    display: inline-block;
+    margin-top: 12px;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 
-  &__link{
-    color:white
+    &:hover{
+      color: $green-primary;
+      border-bottom-color: $green-primary;
+    }
   }
 }
+
 @media (max-width: $breakpoint-tablet) {
   .footer{
     &__container{
@@ -133,9 +133,5 @@ $breakpoint-tablet: 1024px;
       margin: 0;
       margin-top: 15px;
     }
-  }
-.reseaux{
-  gap:10px;
-  padding:0;
   }
 }

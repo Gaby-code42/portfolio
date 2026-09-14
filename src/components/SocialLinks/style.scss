@@ -1,0 +1,30 @@
+@use '../../styleGlobal/variables' as *;
+.reseaux {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  padding-top: 10px;
+  justify-content: center;
+
+  &__link {
+    color: white;
+
+    &:hover {
+      color: $green-primary;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $green-primary;
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .reseaux {
+    gap: 10px;
+    padding: 0;
+  }
+}

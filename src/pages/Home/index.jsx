@@ -1,8 +1,7 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faLinkedin,faGithub} from '@fortawesome/free-brands-svg-icons';
-import Avatar from '../../data/image/avatar.png'
 import { Link } from 'react-router-dom'
+import Avatar from '../../data/image/avatar.jpg'
+import SocialLinks from '../../components/SocialLinks'
 import './style.scss'
 
 const Home = () => {
@@ -43,19 +42,7 @@ const Home = () => {
             <a href="mailto:raphael.bonacina@hotmail.fr" className='btn btn--secondary'>Me contacter</a>
           </div>
           
-          <nav>
-                    <ul className='reseaux'>
-                       <li>
-                            <a href="https://www.instagram.com/raphael.bonacina/" target="_blank" rel="noopener noreferrer" className="reseaux__link" aria-label="lien vers la page instagram de Raphael"><FontAwesomeIcon icon={faInstagram} size="2x" /></a>
-                       </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/raphael-bonacina-40478333b/" target="_blank" rel="noopener noreferrer" className="reseaux__link" aria-label="lien vers la page linkdin de Raphael"><FontAwesomeIcon icon={faLinkedin} size="2x" /></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/Gaby-code42/" target="_blank" rel="noopener noreferrer" className="reseaux__link" aria-label="lien vers la page github de Raphael"><FontAwesomeIcon icon={faGithub} size="2x" /></a>
-                        </li>
-                    </ul>
-                </nav> 
+          <SocialLinks label='Réseaux sociaux de Raphaël Bonacina' />
         </div>
 
       </div>      

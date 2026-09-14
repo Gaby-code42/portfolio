@@ -1,8 +1,4 @@
-$breakpoint-mobile-small: 480px;
-$breakpoint-mobile-large: 768px;
-$breakpoint-tablet: 1024px;
-$green-primary: rgb(0, 229, 160);
-$green-light: rgba(16, 97, 73, 0.15);
+@use '../../styleGlobal/variables' as *;
 
 .realisation {
     font-family: 'Mulish', sans-serif;
@@ -14,7 +10,7 @@ $green-light: rgba(16, 97, 73, 0.15);
 
     &__title {
         font-size: calc(3vh + 2vw);
-        background: linear-gradient(180deg, #089FE0, #0FAE62);
+        background: linear-gradient(180deg, $blue-accent, $green-mid);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -49,6 +45,11 @@ $green-light: rgba(16, 97, 73, 0.15);
         height: 40px;
         border-radius: 50%;
         cursor: pointer;
+
+        &:focus-visible {
+            outline: 2px solid $green-primary;
+            outline-offset: 3px;
+        }
     }
 
     &__dots {
@@ -59,14 +60,22 @@ $green-light: rgba(16, 97, 73, 0.15);
     &__dot {
         width: 8px;
         height: 8px;
+        padding: 0;
+        border: none;
         border-radius: 50%;
         background: rgba(255,255,255,0.2);
+        cursor: pointer;
 
         &--active { background: $green-primary; }
+
+        &:focus-visible {
+            outline: 2px solid $green-primary;
+            outline-offset: 3px;
+        }
     }
 }
 
-// ===== CARDS =====
+// Cards
 
 .card {
     position: absolute;
@@ -88,13 +97,13 @@ $green-light: rgba(16, 97, 73, 0.15);
     
 }
 
-// CENTRE
+// Centre
 .card--center {
     transform: translateX(-50%) scale(1);
     z-index: 5;
 }
 
-// GAUCHE / DROITE
+// Gauche / droite
 .card--large:nth-child(2) {
     transform: translateX(calc(-50% - 260px)) scale(0.9);
     z-index: 4;
@@ -105,7 +114,7 @@ $green-light: rgba(16, 97, 73, 0.15);
     z-index: 4;
 }
 
-// EXTREMES
+// Extremes
 .card--small:nth-child(1) {
     transform: translateX(calc(-50% - 490px)) scale(0.75);
     opacity: 0.4;
@@ -116,7 +125,7 @@ $green-light: rgba(16, 97, 73, 0.15);
     opacity: 0.4;
 }
 
-// CONTENU
+// Contenu
 
 .card__icon {
     font-size: 3rem;
@@ -129,7 +138,7 @@ $green-light: rgba(16, 97, 73, 0.15);
 }
 
 .card__desc {
-    color: #8892b0;
+    color: $grey-muted;
     font-size: 0.8rem;
     text-align: center;
 }
@@ -168,7 +177,7 @@ $green-light: rgba(16, 97, 73, 0.15);
 }
 
 .card__btn--demo {
-    background: #089FE0;
+    background: $blue-accent;
     color: white;
 }
 

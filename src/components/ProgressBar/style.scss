@@ -1,15 +1,12 @@
-
-
-   @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
+@use '../../styleGlobal/variables' as *;
    :root {
-     --pb-green:      #00ff88;
+     --pb-green:      #{$green-neon};
      --pb-green-glow: rgba(0, 255, 136, .5);
      --pb-bg:         transparent;
-     --pb-border:     #0a2018;
-     --pb-block-off:  #040e09;
-     --pb-block-border: #0a2015;
-     --pb-text-off:   #1a4030;
+     --pb-border:     #{$dark-800};
+     --pb-block-off:  #{$dark-600};
+     --pb-block-border: #{$dark-700};
+     --pb-text-off:   #{$green-deep};
      --pb-font:       'Press Start 2P', 'Courier New', monospace;
    }
    
@@ -112,6 +109,8 @@
      display: flex;
      justify-content: space-between;
      margin-top: 2px;
+     list-style: none;
+     padding: 0;
    }
    
    .pb-page {

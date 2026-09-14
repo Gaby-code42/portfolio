@@ -1,47 +1,56 @@
 [
-    {
-      "id": 1,
-      "title": "Booki",
-      "icon": "faHtml5",
-      "shortdescription": "Intégration d'une maquette Figma — site d'hébergement responsive.",
-      "tags": ["HTML", "CSS"],
-      "github": "https://github.com/Gaby-code42/Booki",
-      "demo": null
-    },
-    {
-      "id": 2,
-      "title": "Sophie Bluel",
-      "icon": "faJs",
-      "shortdescription": "Portfolio d'architecte avec gestion de projets et authentification.",
-      "tags": ["JavaScript", "API REST"],
-      "github": "https://github.com/Gaby-code42/Sophie-Bruel",
-      "demo": null
-    },
-    {
-      "id": 3,
-      "title": "Kasa",
-      "icon": "faReact",
-      "shortdescription": "Interface utilisateur pour un site de location immobilière.",
-      "tags": ["React", "SCSS"],
-      "github": "https://github.com/Gaby-code42/Kasa",
-      "demo": null
-    },
-    {
-      "id": 4,
-      "title": "Mon Vieux Grimoire",
-      "icon": "faNode",
-      "shortdescription": "API REST pour une librairie en ligne avec gestion des livres.",
-      "tags": ["Node.js", "MongoDB", "Express"],
-      "github": "https://github.com/Gaby-code42/Backend",
-      "demo": null
-    },
-    {
-        "id": 5,
-        "title": "Nina Carducci",
-        "icon": "faGlobe",
-        "shortdescription": "Optimisation SEO et accessibilité d'un site de photographe.",
-        "tags": ["SEO", "Accessibilité", "HTML", "CSS"],
-        "github": "https://github.com/Gaby-code42/SEO",
-        "demo": null
-    }
-  ]
+  {
+    "id": 1,
+    "title": "Holi Therapy",
+    "icon": "faReact",
+    "shortdescription": "Premier site livré à un client : vitrine, prestations et réservation en ligne connectée à une base de données.",
+    "tags": ["Next.js", "React", "Supabase"],
+    "github": null,
+    "demo": "https://www.holitherapy-facialiste.fr/"
+  },
+  {
+    "id": 2,
+    "title": "Mon Vieux Grimoire",
+    "icon": "faNode",
+    "shortdescription": "API REST pour une librairie en ligne avec gestion des livres.",
+    "tags": ["Node.js", "MongoDB", "Express"],
+    "github": "https://github.com/Gaby-code42/Backend",
+    "demo": null
+  },
+  {
+    "id": 3,
+    "title": "Kasa",
+    "icon": "faReact",
+    "shortdescription": "Interface utilisateur pour un site de location immobilière.",
+    "tags": ["React", "SCSS"],
+    "github": "https://github.com/Gaby-code42/Kasa",
+    "demo": null
+  },
+  {
+    "id": 4,
+    "title": "Sophie Bluel",
+    "icon": "faJs",
+    "shortdescription": "Portfolio d'architecte avec gestion de projets et authentification.",
+    "tags": ["JavaScript", "API REST"],
+    "github": "https://github.com/Gaby-code42/Sophie-Bruel",
+    "demo": null
+  },
+  {
+    "id": 5,
+    "title": "Nina Carducci",
+    "icon": "faGlobe",
+    "shortdescription": "Optimisation SEO et accessibilité d'un site de photographe.",
+    "tags": ["SEO", "Accessibilité", "HTML", "CSS"],
+    "github": "https://github.com/Gaby-code42/SEO",
+    "demo": null
+  },
+  {
+    "id": 6,
+    "title": "Booki",
+    "icon": "faHtml5",
+    "shortdescription": "Intégration d'une maquette Figma — site d'hébergement responsive.",
+    "tags": ["HTML", "CSS"],
+    "github": "https://github.com/Gaby-code42/Booki",
+    "demo": null
+  }
+]

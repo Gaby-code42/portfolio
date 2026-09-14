@@ -4,58 +4,44 @@ import Logo from "../../assets/logo pro gaby-02.svg";
 import MobileMenu from "../MenuBurger";
 import "./style.scss";
 
+const LINKS = [
+  { to: "/", label: "Accueil" },
+  { to: "/realisation", label: "Réalisations" },
+  { to: "/about", label: "À propos" },
+];
+
 function Header() {
   const location = useLocation();
 
+  const linkClass = (to) =>
+    `NavContainer__link ${location.pathname === to ? "active__link" : ""}`;
+
   return (
-    <div className="NavContainer">
+    <header className="NavContainer">
       <div>
-        <Link
-          to="/"
-          className={`NavContainer__link ${
-            location.pathname === "/" ? "active__link" : ""
-          }`}
-        >
-          <img src={Logo} alt="Logo pro" className="LogoPro"></img>
+        <Link to="/" className={linkClass("/")}>
+          <img src={Logo} alt="Raphaël Bonacina — accueil" className="LogoPro" />
         </Link>
       </div>
       <div>
-        <nav className="NavBar">
-          <li>
-            <Link
-              to="/"
-              className={`NavContainer__link ${
-                location.pathname === "/" ? "active__link" : ""
-              }`}
-            >
-              Accueil{" "}
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/realisation"
-              className={`NavContainer__link ${
-                location.pathname === "/realisation" ? "active__link" : ""
-              }`}
-            >
-              Réalisations
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/about"
-              className={`NavContainer__link ${
-                location.pathname === "/about" ? "active__link" : ""
-              }`}
-            >
-              À propos
-            </Link>
-          </li>
+        <nav className="NavBar" aria-label="Navigation principale">
+          <ul>
+            {LINKS.map(({ to, label }) => (
+              <li key={to}>
+                <Link
+                  to={to}
+                  className={linkClass(to)}
+                  aria-current={location.pathname === to ? "page" : undefined}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </nav>
         <MobileMenu />
-        <nav className="NavFidgetContainer"></nav>
       </div>
-    </div>
+    </header>
   );
 }
 
