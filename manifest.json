@@ -1,6 +1,8 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "R. Bonacina",
+  "name": "Portfolio de Raphaël Bonacina — Développeur web",
+  "description": "Portfolio de Raphaël Bonacina, développeur web front-end (React, JavaScript, Node.js).",
+  "lang": "fr",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +22,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0a2018",
+  "background_color": "#0a2018"
 }

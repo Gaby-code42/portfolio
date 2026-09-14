@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Seule la racine est déclarée. Sur GitHub Pages, /realisation et /about
+  sont servis par 404.html : le visiteur voit bien la page, mais le statut
+  HTTP renvoyé reste 404. Les déclarer ici ferait remonter des erreurs dans
+  la Search Console. À rétablir le jour où le site passe sur un hébergeur
+  qui gère un vrai fallback en 200 (Netlify, Vercel).
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://gaby-code42.github.io/portfolio/</loc><priority>1.0</priority></url>
+</urlset>
