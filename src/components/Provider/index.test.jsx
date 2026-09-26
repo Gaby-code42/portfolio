@@ -16,11 +16,15 @@ const afficherSurLaPage = (chemin) =>
     </MemoryRouter>
   )
 
-test("arriver sur l'accueil valide une page sur trois", () => {
+// Le pourcentage dépend du nombre de pages : on le calcule plutôt que de
+// l'écrire en dur, sinon chaque page ajoutée casse les tests.
+const pourcentagePourUnePage = String(Math.round(100 / PORTFOLIO_PAGES.length))
+
+test("arriver sur l'accueil valide une page", () => {
   afficherSurLaPage('/')
 
   const barre = screen.getByRole('progressbar')
-  expect(barre).toHaveAttribute('aria-valuenow', '33')
+  expect(barre).toHaveAttribute('aria-valuenow', pourcentagePourUnePage)
 })
 
 test('une page qui exige un scroll complet ne se valide pas à la simple arrivée', () => {
@@ -42,7 +46,7 @@ test('une page trop courte pour défiler se valide toute seule', async () => {
   afficherSurLaPage(pageAvecScroll.path)
 
   await waitFor(() =>
-    expect(screen.getByRole('progressbar')).toHaveAttribute('aria-valuenow', '33')
+    expect(screen.getByRole('progressbar')).toHaveAttribute('aria-valuenow', pourcentagePourUnePage)
   )
 
   jest.restoreAllMocks()

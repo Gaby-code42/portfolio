@@ -6,6 +6,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async'
 import Home from './pages/Home'
 import About from './pages/About'
 import Realisation from './pages/Realisation'
+import Services from './pages/Services'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -65,6 +66,21 @@ const AppWrapper = () => {
                   <title>Réalisations — Raphaël Bonacina</title>
                 </Helmet>
                 <Realisation />
+              </>
+            }
+          />
+          <Route
+            path="/services"
+            element={
+              <>
+                <Helmet>
+                  <title>Services — Création de sites web sur mesure | Raphaël Bonacina</title>
+                  <meta
+                    name="description"
+                    content="Création de sites vitrines, sites avec réservation en ligne et optimisation de sites existants. Développeur web freelance React / Next.js. Devis gratuit."
+                  />
+                </Helmet>
+                <Services />
               </>
             }
           />

@@ -6,8 +6,13 @@
      --pb-border:     #{$dark-800};
      --pb-block-off:  #{$dark-600};
      --pb-block-border: #{$dark-700};
-     --pb-text-off:   #{$green-deep};
+     // Le vert précédent était si sombre que les pages non visitées
+     // disparaissaient sur le fond noir.
+     --pb-text-off:   #{$green-dim};
      --pb-font:       'Press Start 2P', 'Courier New', monospace;
+     // Rajdhani reste lisible là où Press Start 2P, très pixelisé, ne l'est
+     // plus : les libellés de pages sous la jauge.
+     --pb-font-label: 'Rajdhani', sans-serif;
    }
    
    .pb-root {
@@ -18,8 +23,8 @@
      background: var(--pb-bg);
      border: 1px solid var(--pb-border);
      width: 100%;
-     max-width: 380px;
-    
+     max-width: 440px;
+
    }
    
 
@@ -32,7 +37,7 @@
    
    .pb-label {
      font-family: var(--pb-font);
-     font-size: 6px;
+     font-size: 9px;
      color: var(--pb-green);
      letter-spacing: .12em;
      white-space: nowrap;
@@ -85,7 +90,7 @@
    
    .pb-pct {
      font-family: var(--pb-font);
-     font-size: 7px;
+     font-size: 10px;
      color: var(--pb-green);
      flex-shrink: 0;
      text-shadow: 0 0 6px var(--pb-green-glow);
@@ -107,19 +112,24 @@
 
    .pb-pages {
      display: flex;
+     flex-wrap: wrap;
      justify-content: space-between;
-     margin-top: 2px;
+     gap: 4px 10px;
+     margin-top: 4px;
      list-style: none;
      padding: 0;
    }
    
    .pb-page {
-     font-family: var(--pb-font);
-     font-size: 5px;
+     font-family: var(--pb-font-label);
+     font-size: 12px;
+     font-weight: 600;
+     letter-spacing: .04em;
+     text-transform: uppercase;
      color: var(--pb-text-off);
      display: flex;
      align-items: center;
-     gap: 3px;
+     gap: 5px;
      transition: color .3s;
    }
    
@@ -129,8 +139,8 @@
    }
    
    .pb-dot {
-     width: 4px;
-     height: 4px;
+     width: 6px;
+     height: 6px;
      flex-shrink: 0;
      background: var(--pb-block-border);
      transition: background .3s, box-shadow .3s;

@@ -1,0 +1,243 @@
+@use '../../styleGlobal/variables' as *;
+
+.services {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-bottom: 8vh;
+
+    &__title {
+        font-size: calc(3vh + 2vw);
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(180deg, $blue-accent, $green-mid);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        padding-top: 5vh;
+        margin-bottom: 2vh;
+        text-align: center;
+    }
+
+    &__intro {
+        max-width: 720px;
+        margin: 0 auto 8vh;
+        text-align: center;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.82);
+    }
+
+    &__section-title {
+        font-size: 1.6rem;
+        color: white;
+        margin: 0 0 2rem;
+        padding-left: 12px;
+        border-left: 4px solid $green-primary;
+    }
+
+    &__note {
+        margin: 2rem 0 0;
+        padding: 1rem 1.2rem;
+        border-left: 3px solid rgba($blue-accent, 0.6);
+        background: rgba($blue-accent, 0.06);
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 0.92rem;
+        line-height: 1.6;
+    }
+}
+
+// Offres
+
+.offers {
+    margin-bottom: 9vh;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        gap: 1.6rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.offer {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 1.6rem;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        border-color: rgba($green-primary, 0.55);
+    }
+
+    &__icon {
+        font-size: 1.9rem;
+        color: $green-primary;
+        margin-bottom: 1rem;
+        align-self: flex-start;
+    }
+
+    &__title {
+        margin: 0 0 0.6rem;
+        font-size: 1.3rem;
+        color: white;
+    }
+
+    &__text {
+        margin: 0 0 1.2rem;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 0.92rem;
+        line-height: 1.55;
+    }
+
+    &__items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        // Les listes restent alignées d'une carte à l'autre même si les
+        // descriptions n'ont pas la même longueur.
+        margin-top: auto;
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        gap: 9px;
+        margin-bottom: 0.6rem;
+        font-size: 0.87rem;
+        line-height: 1.45;
+        color: rgba(255, 255, 255, 0.85);
+
+        svg {
+            color: $green-primary;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+    }
+}
+
+// Déroulé
+
+.steps {
+    margin-bottom: 9vh;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        gap: 1.8rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        counter-reset: none;
+    }
+}
+
+.step {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+
+    &__number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid $green-primary;
+        color: $green-primary;
+        font-weight: 800;
+        background: rgba($green-primary, 0.1);
+    }
+
+    &__title {
+        margin: 0.4rem 0 0.5rem;
+        font-size: 1.1rem;
+        color: white;
+    }
+
+    &__text {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 0.9rem;
+        line-height: 1.55;
+    }
+}
+
+// Preuve
+
+.proof {
+    margin-bottom: 9vh;
+
+    &__text {
+        max-width: 760px;
+        margin: 0 0 1.2rem;
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.6;
+    }
+
+    &__link {
+        display: inline-block;
+        color: $green-primary;
+        font-weight: 700;
+        text-decoration: none;
+        border-bottom: 2px solid rgba($green-primary, 0.5);
+        padding-bottom: 2px;
+
+        &:hover { border-bottom-color: $green-primary; }
+    }
+}
+
+// Contact
+
+.contact {
+    text-align: center;
+    border: 1px solid rgba($green-primary, 0.35);
+    border-radius: 20px;
+    background: rgba($green-primary, 0.05);
+    padding: 2.5rem 1.5rem;
+
+    &__title {
+        margin: 0 0 1rem;
+        font-size: 1.9rem;
+        color: white;
+    }
+
+    &__text {
+        max-width: 620px;
+        margin: 0 auto 1.8rem;
+        color: rgba(255, 255, 255, 0.78);
+        line-height: 1.6;
+    }
+
+    &__btn {
+        display: inline-block;
+        padding: 13px 30px;
+        border-radius: 10px;
+        background: $green-primary;
+        color: $dark-900;
+        font-weight: 800;
+        font-size: 1.05rem;
+        text-decoration: none;
+        transition: transform 0.2s ease;
+
+        &:hover { transform: scale(1.06); }
+    }
+}
+
+@media (max-width: $breakpoint-mobile-large) {
+    .services {
+        width: 92%;
+
+        &__intro {
+            font-size: 1rem;
+        }
+    }
+}

@@ -4,14 +4,28 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  // Avec l'arrivée de « Services », quatre liens doivent tenir à côté du
+  // logo : on autorise le retour à la ligne plutôt que le débordement.
+  flex-wrap: wrap;
+  gap: 10px;
   padding: 0vh 3vh;
   position: sticky;
   margin-bottom: 5vh;
   top:0;
   z-index: 100;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  &--scrolled {
+    background-color: rgba($dark-900, 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+  }
 
   img{
-    height: 10vh;
+    // Bornée : en pur `vh`, le logo atteignait 170 px sur une fenêtre haute et
+    // poussait la navigation hors de l'écran.
+    height: clamp(48px, 10vh, 84px);
   }
       &__link{
         text-decoration: none;
@@ -51,7 +65,9 @@
   ul{
     list-style: none;
     display: flex;
-    gap: 4vw;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 1rem 3vw;
     margin: 0;
     padding: 0;
   }
@@ -114,8 +130,8 @@
     .Logo {
       display: none;
     }
-    .description{  
-      &__textBanner {
+    .description{
+      &__badge {
       font-size: 0.8rem;
   }
   &__title{

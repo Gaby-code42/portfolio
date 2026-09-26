@@ -7,6 +7,7 @@ const FONDS = {
   '/': 'home-background',
   '/realisation': 'realisation-background',
   '/about': 'realisation-background',
+  '/services': 'realisation-background',
 }
 
 const useBodyClass = () => {

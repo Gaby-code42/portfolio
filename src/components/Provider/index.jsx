@@ -5,9 +5,16 @@ export const PORTFOLIO_PAGES = [
   { path: '/',            label: 'Accueil',      icon: '🏠', scrollRequired: false },
   { path: '/about',       label: 'À propos',     icon: '👾', scrollRequired: true  },
   { path: '/realisation', label: 'Réalisations', icon: '🗺️', scrollRequired: false },
+  { path: '/services',    label: 'Services',     icon: '💼', scrollRequired: false },
 ]
 
 const ProgressCtx = createContext(null)
+
+// La popup est modale : tant qu'elle est ouverte, la page derrière n'est plus
+// lisible. Sur un grand écran, « À propos » est marquée vue dès l'arrivée
+// (rien à faire défiler), donc 600 ms suffisaient à la faire apparaître avant
+// même qu'on ait lu la page. On laisse le temps d'en prendre connaissance.
+const POPUP_DELAY_MS = 6000
 
 export function useProgress() {
   const ctx = useContext(ProgressCtx)
@@ -27,7 +34,7 @@ export function PortfolioProvider({ children }) {
       const next = new Set(prev).add(path)
       if (!completedRef.current && next.size === PORTFOLIO_PAGES.length) {
         completedRef.current = true
-        setTimeout(() => setPopupVisible(true), 600)
+        setTimeout(() => setPopupVisible(true), POPUP_DELAY_MS)
       }
       return next
     })

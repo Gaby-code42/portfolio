@@ -6,6 +6,7 @@ import "./style.scss";
 const LINKS = [
   { to: "/", label: "Accueil", command: "> navigate /home" },
   { to: "/realisation", label: "Réalisations", command: "> navigate /projects" },
+  { to: "/services", label: "Services", command: "> navigate /services" },
   { to: "/about", label: "À propos", command: "> navigate /about" },
 ];
 

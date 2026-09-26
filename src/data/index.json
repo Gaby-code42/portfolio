@@ -2,8 +2,25 @@
   {
     "id": 1,
     "title": "Holi Therapy",
-    "icon": "faReact",
+    "icon": "react",
+    "cover": "holi-therapy.webp",
+    "featured": true,
+    "kind": "Site client en production",
     "shortdescription": "Premier site livré à un client : vitrine, prestations et réservation en ligne connectée à une base de données.",
+    "story": [
+      {
+        "label": "Le besoin",
+        "text": "Une praticienne en soins du visage n'avait aucune présence en ligne : ses rendez-vous se prenaient par téléphone et par messages, au fil de l'eau."
+      },
+      {
+        "label": "Ce que j'ai fait",
+        "text": "Conception et développement du site complet en Next.js : présentation des prestations, et un module de réservation adossé à Supabase qui enregistre les créneaux et évite les doubles réservations."
+      },
+      {
+        "label": "Le résultat",
+        "text": "Site en production, réservations reçues directement en ligne, et une vitrine que la cliente peut envoyer à ses prospects."
+      }
+    ],
     "tags": ["Next.js", "React", "Supabase"],
     "github": null,
     "demo": "https://www.holitherapy-facialiste.fr/"
@@ -11,8 +28,10 @@
   {
     "id": 2,
     "title": "Mon Vieux Grimoire",
-    "icon": "faNode",
-    "shortdescription": "API REST pour une librairie en ligne avec gestion des livres.",
+    "icon": "nodedotjs",
+    "cover": null,
+    "kind": "Projet de formation",
+    "shortdescription": "API REST pour une librairie en ligne : gestion des livres, notation et upload d'images optimisées.",
     "tags": ["Node.js", "MongoDB", "Express"],
     "github": "https://github.com/Gaby-code42/Backend",
     "demo": null
@@ -20,8 +39,10 @@
   {
     "id": 3,
     "title": "Kasa",
-    "icon": "faReact",
-    "shortdescription": "Interface utilisateur pour un site de location immobilière.",
+    "icon": "react",
+    "cover": null,
+    "kind": "Projet de formation",
+    "shortdescription": "Interface d'un site de location immobilière : composants réutilisables, routage et galeries.",
     "tags": ["React", "SCSS"],
     "github": "https://github.com/Gaby-code42/Kasa",
     "demo": null
@@ -29,8 +50,10 @@
   {
     "id": 4,
     "title": "Sophie Bluel",
-    "icon": "faJs",
-    "shortdescription": "Portfolio d'architecte avec gestion de projets et authentification.",
+    "icon": "javascript",
+    "cover": null,
+    "kind": "Projet de formation",
+    "shortdescription": "Portfolio d'architecte en JavaScript natif : galerie dynamique, authentification et espace d'édition.",
     "tags": ["JavaScript", "API REST"],
     "github": "https://github.com/Gaby-code42/Sophie-Bruel",
     "demo": null
@@ -38,8 +61,10 @@
   {
     "id": 5,
     "title": "Nina Carducci",
-    "icon": "faGlobe",
-    "shortdescription": "Optimisation SEO et accessibilité d'un site de photographe.",
+    "icon": "html5",
+    "cover": null,
+    "kind": "Audit & optimisation",
+    "shortdescription": "Audit puis optimisation du site d'une photographe : performances, référencement et accessibilité.",
     "tags": ["SEO", "Accessibilité", "HTML", "CSS"],
     "github": "https://github.com/Gaby-code42/SEO",
     "demo": null
@@ -47,8 +72,10 @@
   {
     "id": 6,
     "title": "Booki",
-    "icon": "faHtml5",
-    "shortdescription": "Intégration d'une maquette Figma — site d'hébergement responsive.",
+    "icon": "html5",
+    "cover": null,
+    "kind": "Projet de formation",
+    "shortdescription": "Intégration fidèle d'une maquette Figma en HTML/CSS, responsive du mobile au grand écran.",
     "tags": ["HTML", "CSS"],
     "github": "https://github.com/Gaby-code42/Booki",
     "demo": null

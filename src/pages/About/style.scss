@@ -5,30 +5,35 @@
   margin: auto;
   font-family: 'Mulish', sans-serif;
 
+  // Le cadre + bordure faisaient lire ce titre comme un bouton cliquable. On
+  // reprend le dégradé des titres des autres pages.
   &__Title{
-    display: inline-block;
-    padding: 5px;
-    border-radius: 5px;
-    border: $green-primary 2px solid;
-    color: $green-primary ;
-    margin-bottom: 10vh;
-    margin-top: 10vh;
+    font-size: calc(3vh + 2vw);
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(180deg, $blue-accent, $green-mid);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 7vh;
+    margin-top: 8vh;
   }
 
-  &__Logo{
-    font-size: 2rem;
-    border: $green-primary 2px solid;
-    color:$green-primary;
-    background-color: $green-light;
-    box-shadow: 1px 1px 20px rgb(0, 229, 160,0.8);
+  &__Avatar{
+    width: 180px;
+    height: 180px;
+    flex-shrink: 0;
+    object-fit: cover;
+    object-position: top;
+    border: $green-primary 3px solid;
+    box-shadow: 0 0 25px rgba($green-primary, 0.5);
     border-radius: 50%;
-    padding: 30px;
   }
   &__Container{
     display: flex;
-    flex-wrap: wrap;        
-    gap: 2vw;                    
-    align-items: start;  
+    flex-wrap: wrap;
+    gap: 2vw;
+    align-items: center;
 
   }
   &__TitleCtn{
@@ -43,12 +48,31 @@
     font-weight: 700;
     margin-bottom: 1rem;
   }
+  &__Availability{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+  }
+
   &__BannerRh{
-    display: inline-block;   
-    padding: 10px 20px;      
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
     border: 2px solid $green-primary;
     color: $green-primary;
-    border-radius: 5px;
+    background: rgba($green-primary, 0.08);
+    border-radius: 999px;
+    font-weight: 600;
+
+    &--freelance{
+      border-color: $blue-accent;
+      color: $blue-accent;
+      background: rgba($blue-accent, 0.08);
+    }
   }
 
   &__Cards{
@@ -63,12 +87,20 @@
     ul li {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    flex: 1 1 200px;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding: 1.2rem 1rem;
     background-color: rgb(128, 128, 128,0.1);
     border: 1px solid rgb(128, 128, 128,0.8) ;
     border-radius: 10px;
+    }
+
+    ul li p:last-child {
+      margin: 0.3rem 0 0;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.9rem;
     }
 
     ul li:hover{

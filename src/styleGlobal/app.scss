@@ -2,10 +2,14 @@
 
 
 
+// Police par défaut de tout le site. Sans ça, chaque bloc qui oublie son
+// `font-family` (les badges de Skills, par exemple) retombe sur le serif du
+// navigateur — du Times New Roman au milieu du reste.
 body {
   margin: 0;
   color: white;
   overflow-x: hidden;
+  font-family: 'Mulish', sans-serif;
 }
 
 // Fonds exportés d'Illustrator puis rastérisés en WebP : les SVG d'origine

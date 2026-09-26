@@ -13,7 +13,7 @@ système de progression qui se remplit à mesure que le visiteur explore le site
 ## Le concept
 
 Chaque page visitée fait progresser une barre de « scan » affichée en haut de
-l'écran. Une fois les trois pages parcourues, une modale « MISSION COMPLETE »
+l'écran. Une fois toutes les pages parcourues, une modale « MISSION COMPLETE »
 apparaît et propose le CV en téléchargement. L'idée : transformer la visite
 d'un portfolio — un exercice généralement passif — en quelque chose qu'on a
 envie de terminer.
@@ -29,7 +29,7 @@ navigation et, pour les pages qui l'exigent, le pourcentage de scroll.
 | Routing | React Router 6 |
 | Styles | SCSS (7-1 allégé, un fichier par composant) |
 | Animations | Framer Motion |
-| Icônes | Font Awesome |
+| Icônes | Font Awesome + logos Simple Icons (tracés générés dans le dépôt) |
 | Méta / SEO | react-helmet-async |
 | Build | Create React App |
 | Hébergement | GitHub Pages |
@@ -80,10 +80,11 @@ src/
 │   ├── MenuBurger/     # Menu mobile façon terminal
 │   ├── ProgressBar/    # Barre de progression « scan »
 │   ├── Provider/       # Contexte de progression
-│   └── SocialLinks/
-├── data/            # index.json — les projets, hors du JSX
+│   ├── SocialLinks/
+│   └── TechIcon/       # Logos de technos (icons.js généré, cf. plus bas)
+├── data/            # index.json (projets) et skills.js (compétences)
 ├── hooks/           # useBodyClass — fond de page selon la route
-├── pages/           # Home, Realisation, About
+├── pages/           # Home, Realisation, Services, About
 └── styleGlobal/     # Styles globaux et utilitaires
 ```
 
@@ -95,7 +96,9 @@ Tout se passe dans `src/data/index.json` :
 {
   "id": 6,
   "title": "Nom du projet",
-  "icon": "faReact",
+  "icon": "react",
+  "cover": "nom-du-projet.webp",
+  "kind": "Projet de formation",
   "shortdescription": "Une phrase qui décrit le projet.",
   "tags": ["React", "SCSS"],
   "github": "https://github.com/…",
@@ -103,8 +106,42 @@ Tout se passe dans `src/data/index.json` :
 }
 ```
 
-`icon` accepte `faHtml5`, `faJs`, `faReact`, `faNode` ou `faGlobe`.
-`demo` peut valoir `null` : la carte affiche alors « Pas de démo ».
+| Champ | Rôle |
+|---|---|
+| `icon` | Slug d'un logo de `src/components/TechIcon/icons.js` (`react`, `nextdotjs`, `nodedotjs`, `html5`…) |
+| `cover` | Nom d'un fichier de `public/projects/`, ou `null` |
+| `kind` | Étiquette affichée au-dessus du titre (« Site client en production », « Projet de formation »…) |
+| `featured` | `true` sur **un seul** projet : il passe en grand, en haut de la page, avec son récit |
+| `story` | Uniquement pour le projet mis en avant : liste de `{ label, text }` (le besoin → ce que j'ai fait → le résultat) |
+| `github` / `demo` | `null` masque simplement le lien — pas de bouton grisé |
+
+### Les captures d'écran
+
+Pour un portfolio de développeur web, la capture est l'argument principal : sans
+elle, le visiteur ne voit jamais à quoi ressemblent les sites.
+
+1. Déposer l'image dans `public/projects/`.
+2. Renseigner son nom de fichier dans `cover`.
+
+Format conseillé : WebP, ratio 16/10, 1200 px de large environ. Les cartes
+cadrent en haut de l'image (`object-position: top`), donc une capture du haut de
+page fonctionne mieux qu'une page entière réduite.
+
+Sans `cover`, la carte retombe sur un panneau au logo de la techno — jamais sur
+une image cassée.
+
+## Les logos de technos
+
+`src/components/TechIcon/icons.js` est **généré** : il contient les tracés SVG de
+[Simple Icons](https://simpleicons.org) (CC0), recopiés dans le dépôt pour
+éviter une dépendance à l'exécution et un appel réseau au chargement.
+
+Pour ajouter un logo, ajouter son slug dans `SLUGS` (`scripts/generate-tech-icons.js`) puis :
+
+```bash
+npm install --no-save simple-icons@16
+node scripts/generate-tech-icons.js
+```
 
 ## Licence
 

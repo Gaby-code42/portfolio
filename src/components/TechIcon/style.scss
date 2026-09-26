@@ -1,0 +1,8 @@
+.tech-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  // Les tracés Simple Icons sont monochromes : ils se peignent avec la couleur
+  // de marque passée par le composant.
+  fill: var(--tech-icon-color, currentColor);
+}
