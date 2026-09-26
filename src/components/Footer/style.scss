@@ -2,72 +2,54 @@
 
 .footer{
   &__container{
-
     display: flex;
-    margin-top: 150px;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    max-width: 1100px;
+    margin: 150px auto 0;
+    padding: 0 40px 40px;
     position: relative;
-    justify-content: space-around;
-    font-family: "mulish", sans-serif;
-    
-  
+    box-sizing: border-box;
   }
 
+  // Trait lumineux au-dessus du footer
   &__container::after {
     content: '';
     position: absolute;
-    height: 3px; /* Épaisseur totale de la bordure */
+    height: 3px;
     top: -50px;
     left: 0;
     right: 0;
-    background: linear-gradient(to right, 
-      rgba(255, 255, 255, 0) 0%, 
-      rgba(255, 255, 255, 1) 25%, 
-      rgba(255, 255, 255, 1) 75%, 
+    background: linear-gradient(to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 25%,
+      rgba(255, 255, 255, 1) 75%,
       rgba(255, 255, 255, 0) 100%);
     clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
   }
 
-  &__name{
-    justify-self: center;
-    border-bottom: 1px solid white;
-    padding: 10px 5px 26px 5px;
-    font-size: 20px;    
-    font-weight: 800;
-  }
-
-  &__job{
-    justify-self: center;
-    padding: 10px 5px 10px 5px;
-    font-size: 20px;
-    font-weight: 800;
-  }
-
-  &__nav {
+  &__social{
     display: flex;
     flex-direction: column;
-    list-style-type: none;
-    margin: 0;
-    gap:10px;
-    padding: 0;
+    align-items: flex-start;
+    gap: 12px;
 
     &__title{
-      font-size: 24px;
+      margin: 0;
+      font-size: 20px;
     }
 
-    &__link{
-      text-decoration: none;
-      color: white;
-      font-family: 'mulish', sans-serif;
+    // Les icônes sont centrées par défaut (accueil) : ici on les aligne
+    // sur le titre et l'adresse mail.
+    .reseaux{
+      justify-content: flex-start;
+      margin: 0;
+      padding: 0;
     }
-  }
-
-  &__design{
-    margin: 25px 0px;
   }
 
   &__mail{
-    display: inline-block;
-    margin-top: 12px;
     color: white;
     font-size: 14px;
     text-decoration: none;
@@ -78,60 +60,56 @@
       border-bottom-color: $green-primary;
     }
   }
+
+  &__design{
+    margin: 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+  }
 }
 
 @media (max-width: $breakpoint-tablet) {
-  .footer{
-    &__container{
-      margin-top: 100px;
-      gap:10px;
-      padding: 0vh 4vh;
-    }
+  .footer__container{
+    margin-top: 100px;
   }
-      
 }
 
+// Sur mobile, tout passe en une colonne centrée
 @media (max-width: $breakpoint-mobile-large) {
-  
+  .footer{
+    &__container{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px 32px;
+    }
+
+    &__container::after {
+      top: -40px;
+    }
+
+    &__social{
+      align-items: center;
+
+      .reseaux{
+        justify-content: center;
+      }
+    }
+  }
 }
 
 @media (max-width: $breakpoint-mobile-small) {
   .footer{
     &__container{
       margin-top: 80px;
-      padding: 0;
-      flex-wrap: wrap
     }
 
-    &__container::after {
-      top:-35px;
+    &__social__title{
+      font-size: 16px;
     }
-    &__name{
-      font-size: 12px;
-      margin-top: 6px;
-    }
-    &__job{
-      font-size: 12px;
-    }
-    &__nav{
-      padding: 0;
-      gap:5px;
-      &__title{
-        font-size: 16px;
-      }
-      &__link{
-        font-size: 12px;
-      }
-    }
-    &__social{
-      &__title{
-        font-size: 16px;
-      } 
-    }
+
     &__design{
       font-size: 12px;
-      margin: 0;
-      margin-top: 15px;
     }
   }
 }
