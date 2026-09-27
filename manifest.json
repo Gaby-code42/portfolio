@@ -1,0 +1,27 @@
+{
+  "short_name": "R. Bonacina",
+  "name": "Portfolio de Raphaël Bonacina — Développeur web full-stack",
+  "description": "Portfolio de Raphaël Bonacina, développeur web full-stack (React, Next.js, TypeScript, Node.js).",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0a2018",
+  "background_color": "#0a2018"
+}
