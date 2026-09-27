@@ -1,6 +1,7 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, fireEvent, within, waitFor } from '@testing-library/react'
 import Realisation from './index'
 import Data from '../../data/index.json'
+import codeSnippets from '../../data/codeSnippets'
 
 test('tous les projets sont visibles sans interaction', () => {
   render(<Realisation />)
@@ -8,7 +9,12 @@ test('tous les projets sont visibles sans interaction', () => {
   // Le carrousel n'en montrait qu'un lisible à la fois : la grille doit tous
   // les afficher d'un coup.
   Data.forEach((projet) => {
-    expect(screen.getByText(projet.title)).toBeInTheDocument()
+    // Le titre revient aussi dans la fenêtre d'aperçu du code : on cible le
+    // titre de la carte (h3) ou du projet mis en avant (h2).
+    const niveau = projet.featured ? 2 : 3
+    expect(
+      screen.getByRole('heading', { name: projet.title, level: niveau })
+    ).toBeInTheDocument()
   })
 })
 
@@ -39,4 +45,39 @@ test('chaque projet sans capture retombe sur le panneau au logo', () => {
 
   const sansCapture = Data.filter((projet) => !projet.cover).length
   expect(container.querySelectorAll('.cover__fallback')).toHaveLength(sansCapture)
+})
+
+test('chaque projet de formation propose un aperçu de son code', () => {
+  render(<Realisation />)
+
+  // Un extrait orphelin (id supprimé ou renommé) ne s'afficherait nulle part
+  // sans que personne ne le remarque.
+  Object.keys(codeSnippets).forEach((id) => {
+    const projet = Data.find((p) => p.id === Number(id))
+    expect(projet).toBeDefined()
+    expect(
+      screen.getByRole('button', { name: `Aperçu du code de ${projet.title}` })
+    ).toBeInTheDocument()
+  })
+})
+
+test("l'aperçu s'ouvre sur l'extrait coloré puis se referme", async () => {
+  const [id, extrait] = Object.entries(codeSnippets)[0]
+  const projet = Data.find((p) => p.id === Number(id))
+  render(<Realisation />)
+
+  fireEvent.click(
+    screen.getByRole('button', { name: `Aperçu du code de ${projet.title}` })
+  )
+  const fenetre = screen.getByRole('dialog', { name: projet.title })
+  expect(fenetre).toHaveAttribute('open')
+  expect(within(fenetre).getByText(extrait.file)).toBeInTheDocument()
+
+  // La coloration arrive dans un second temps (chunk chargé à la demande).
+  await waitFor(() => {
+    expect(fenetre.querySelector('code [class^="hljs-"]')).not.toBeNull()
+  })
+
+  fireEvent.click(within(fenetre).getByRole('button', { name: "Fermer l'aperçu" }))
+  expect(fenetre).not.toHaveAttribute('open')
 })

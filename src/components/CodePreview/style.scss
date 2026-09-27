@@ -1,0 +1,146 @@
+@use '../../styleGlobal/variables' as *;
+
+// Le bouton reprend .links__btn (pages/Realisation) pour s'aligner avec
+// « Code source » ; seule sa couleur change.
+.links__btn--preview {
+    border: 2px solid rgba($blue-accent, 0.55);
+    background: rgba($blue-accent, 0.1);
+    color: white;
+    font-family: inherit;
+    cursor: pointer;
+
+    &:hover { border-color: $blue-accent; }
+}
+
+.code-preview {
+    width: min(760px, calc(100vw - 32px));
+    max-height: calc(100vh - 48px);
+    padding: 0;
+    border: 1px solid rgba($green-primary, 0.35);
+    border-radius: 16px;
+    background: $dark-900;
+    color: white;
+    box-shadow: 0 0 60px rgba($green-primary, 0.12);
+
+    &::backdrop {
+        background: rgba(0, 0, 0, 0.75);
+        backdrop-filter: blur(3px);
+    }
+
+    &[open] {
+        animation: code-preview-in 0.2s ease-out;
+    }
+
+    &__panel {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.4rem;
+    }
+
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 1.4rem;
+    }
+
+    &__file {
+        margin: 0.3rem 0 0;
+        font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+        font-size: 0.8rem;
+        color: $green-primary;
+    }
+
+    &__close {
+        flex-shrink: 0;
+        width: 36px;
+        height: 36px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        background: transparent;
+        color: white;
+        font-size: 1.1rem;
+        cursor: pointer;
+
+        &:hover { border-color: $green-primary; }
+    }
+
+    &__note {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 0.92rem;
+        line-height: 1.5;
+    }
+
+    // Les extraits sont courts : la hauteur suffit presque toujours, mais les
+    // lignes longues défilent dans le bloc plutôt que d'élargir la fenêtre.
+    &__code {
+        margin: 0;
+        padding: 1rem 1.1rem;
+        overflow: auto;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+        font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+        font-size: 0.8rem;
+        line-height: 1.6;
+        tab-size: 2;
+
+        &:focus-visible { outline: 2px solid $green-primary; }
+    }
+
+    &__repo {
+        align-self: flex-start;
+        color: $green-primary;
+        font-weight: 700;
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes code-preview-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: none; }
+}
+
+// Couleurs de coloration syntaxique, calées sur la palette du site plutôt
+// qu'un thème highlight.js importé tel quel.
+.code-preview .hljs {
+    color: #d6deeb;
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-meta { color: #c792ea; }
+
+    .hljs-string,
+    .hljs-attr + .hljs-string { color: $green-primary; }
+
+    .hljs-number,
+    .hljs-literal { color: #f78c6c; }
+
+    .hljs-title,
+    .hljs-title.function_ { color: #82aaff; }
+
+    .hljs-attr,
+    .hljs-attribute,
+    .hljs-property { color: #7fdbca; }
+
+    .hljs-name,
+    .hljs-tag { color: $blue-accent; }
+
+    .hljs-selector-class,
+    .hljs-selector-id,
+    .hljs-variable { color: #ffcb6b; }
+
+    .hljs-comment { color: $grey-muted; font-style: italic; }
+}
+
+@media (max-width: $breakpoint-mobile-large) {
+    .code-preview__panel { padding: 1rem; }
+    .code-preview__code { font-size: 0.74rem; }
+}

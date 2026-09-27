@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import TechIcon from '../../components/TechIcon'
+import CodePreview from '../../components/CodePreview'
+import codeSnippets from '../../data/codeSnippets'
 import './style.scss'
 
 // Les captures vivent dans public/projects/ : le nom de fichier est stocké
@@ -38,7 +40,7 @@ const Tags = ({ tags }) => (
 // Un projet livré à un client et un exercice de formation ne se défendent pas
 // pareil : on n'affiche que les liens qui existent, plutôt qu'un « Pas de
 // démo » grisé qui donne l'impression d'un travail inachevé.
-const Links = ({ project, demoLabel = 'Voir le site' }) => (
+const Links = ({ project, demoLabel = 'Voir le site', snippet }) => (
     <div className='links'>
         {project.demo && (
             <a
@@ -65,6 +67,8 @@ const Links = ({ project, demoLabel = 'Voir le site' }) => (
                 <span className='sr-only'>{` de ${project.title} sur GitHub, nouvel onglet`}</span>
             </a>
         )}
+
+        {snippet && <CodePreview project={project} snippet={snippet} />}
     </div>
 )
 
@@ -107,7 +111,11 @@ const ProjectCard = ({ project }) => (
             <h3 className='card__title'>{project.title}</h3>
             <p className='card__desc'>{project.shortdescription}</p>
             <Tags tags={project.tags} />
-            <Links project={project} demoLabel='Voir la démo' />
+            <Links
+                project={project}
+                demoLabel='Voir la démo'
+                snippet={codeSnippets[project.id]}
+            />
         </div>
     </li>
 )
