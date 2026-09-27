@@ -26,39 +26,6 @@
     "demo": "https://www.holitherapy-facialiste.fr/"
   },
   {
-    "id": 2,
-    "title": "Mon Vieux Grimoire",
-    "icon": "nodedotjs",
-    "cover": null,
-    "kind": "Projet de formation",
-    "shortdescription": "API REST pour une librairie en ligne : gestion des livres, notation et upload d'images optimisées.",
-    "tags": ["Node.js", "MongoDB", "Express"],
-    "github": "https://github.com/Gaby-code42/Backend",
-    "demo": null
-  },
-  {
-    "id": 3,
-    "title": "Kasa",
-    "icon": "react",
-    "cover": null,
-    "kind": "Projet de formation",
-    "shortdescription": "Interface d'un site de location immobilière : composants réutilisables, routage et galeries.",
-    "tags": ["React", "SCSS"],
-    "github": "https://github.com/Gaby-code42/Kasa",
-    "demo": null
-  },
-  {
-    "id": 4,
-    "title": "Sophie Bluel",
-    "icon": "javascript",
-    "cover": "sophie-bluel.webp",
-    "kind": "Projet de formation",
-    "shortdescription": "Portfolio d'architecte en JavaScript natif : galerie dynamique, authentification et espace d'édition.",
-    "tags": ["JavaScript", "API REST"],
-    "github": "https://github.com/Gaby-code42/Sophie-Bruel",
-    "demo": null
-  },
-  {
     "id": 5,
     "title": "Nina Carducci",
     "icon": "html5",
@@ -78,6 +45,39 @@
     "shortdescription": "Intégration fidèle d'une maquette Figma en HTML/CSS, responsive du mobile au grand écran.",
     "tags": ["HTML", "CSS"],
     "github": "https://github.com/Gaby-code42/Booki",
+    "demo": null
+  },
+  {
+    "id": 4,
+    "title": "Sophie Bluel",
+    "icon": "javascript",
+    "cover": "sophie-bluel.webp",
+    "kind": "Projet de formation",
+    "shortdescription": "Portfolio d'architecte en JavaScript natif : galerie dynamique, authentification et espace d'édition.",
+    "tags": ["JavaScript", "API REST"],
+    "github": "https://github.com/Gaby-code42/Sophie-Bruel",
+    "demo": null
+  },
+  {
+    "id": 2,
+    "title": "Mon Vieux Grimoire",
+    "icon": "nodedotjs",
+    "cover": null,
+    "kind": "Projet de formation",
+    "shortdescription": "API REST pour une librairie en ligne : gestion des livres, notation et upload d'images optimisées.",
+    "tags": ["Node.js", "MongoDB", "Express"],
+    "github": "https://github.com/Gaby-code42/Backend",
+    "demo": null
+  },
+  {
+    "id": 3,
+    "title": "Kasa",
+    "icon": "react",
+    "cover": null,
+    "kind": "Projet de formation",
+    "shortdescription": "Interface d'un site de location immobilière : composants réutilisables, routage et galeries.",
+    "tags": ["React", "SCSS"],
+    "github": "https://github.com/Gaby-code42/Kasa",
     "demo": null
   }
 ]
