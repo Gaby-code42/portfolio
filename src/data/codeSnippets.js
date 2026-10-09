@@ -7,44 +7,6 @@
 // components/CodePreview (javascript, xml pour le HTML, css).
 
 const codeSnippets = {
-  2: {
-    file: 'controllers/books.js',
-    language: 'javascript',
-    note: "Notation d'un livre : la note est validée, un utilisateur qui revote remplace sa note au lieu d'en ajouter une, puis la moyenne est recalculée.",
-    code: `exports.addRating = (req, res, next) => {
-  const bookId = req.params.id
-  const { userId, rating } = req.body
-
-  if (typeof rating !== 'number' || isNaN(rating)) {
-    return res.status(400).json({ message: 'Le rating doit être un nombre' })
-  }
-  if (rating < 1 || rating > 5) {
-    return res.status(400).json({ message: "La note doit être comprise entre 1 et 5" })
-  }
-
-  Book.findById(bookId)
-    .then(book => {
-      if (!book) {
-        return res.status(404).json({ message: 'Livre non trouvé' })
-      }
-
-      const existingRating = book.ratings.find(r => r.userId === userId)
-      if (existingRating) {
-        existingRating.grade = rating
-      } else {
-        book.ratings.push({ userId, grade: rating })
-      }
-
-      const totalGrade = book.ratings.reduce((sum, r) => sum + r.grade, 0)
-      book.averageRating = totalGrade / book.ratings.length
-
-      return book.save()
-    })
-    .then(book => res.status(200).json(book))
-    .catch(error => res.status(500).json({ message: 'Erreur serveur', error }))
-}`,
-  },
-
   3: {
     file: 'src/components/Slider/index.jsx',
     language: 'javascript',
