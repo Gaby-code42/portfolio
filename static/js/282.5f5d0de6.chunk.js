@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[282],{282:(e,a,g)=>{g.r(a),g.d(a,{default:()=>l});var r=g(211),t=g(779),s=g(503),u=g(425);r.A.registerLanguage("javascript",t.A),r.A.registerLanguage("xml",s.A),r.A.registerLanguage("css",u.A);const l=e=>{let{code:a,language:g}=e;return r.A.highlight(a,{language:g}).value}}}]);
